@@ -1,0 +1,47 @@
+{
+  "extends": ["config:base", ":disablePeerDependencies"],
+  "includePaths": ["package.json", "examples/**", "themes/**", "www"],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "^eslint",
+        "@typescript-eslint",
+        "prettier",
+        "typescript",
+        "@types"
+      ],
+      "groupName": "Linting & Formatting + TypeScript"
+    },
+    {
+      "packagePatterns": ["gatsby"],
+      "groupName": "Gatsby"
+    },
+    {
+      "packagePatterns": ["@mdx-js"],
+      "groupName": "MDX"
+    },
+    {
+      "packagePatterns": ["@testing-library"],
+      "groupName": "@testing-library"
+    },
+    {
+      "packageNames": ["react", "react-dom"],
+      "groupName": "React"
+    },
+    {
+      "packagePatterns": ["theme-ui", "@theme-ui"],
+      "groupName": "Theme UI"
+    }
+  ],
+  "labels": ["renovate"],
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 15,
+  "rangeStrategy": "bump",
+  "bumpVersion": null,
+  "semanticCommits": true,
+  "schedule": ["before 8am on Monday"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  }
+}

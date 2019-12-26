@@ -1,8 +1,17 @@
-{
-  "packages": [
+{  "packages": [
     "packages/*"
   ],
   "version": "independent",
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "loglevel": "success",
+  "registry": "https://registry.npmjs.org/",
+  "ignoreChanges": ["CHANGELOG.md", "**/__tests__/**", "**/__mocks__/**"],
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "message": "chore(release): Publish"
+    }
+  }
 }
