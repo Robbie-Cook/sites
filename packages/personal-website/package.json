@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "personal-website",
+  "name": "@robbie-cook/personal-website",
   "version": "0.0.16",
   "author": "Robbie Cook",
   "license": "MIT",
