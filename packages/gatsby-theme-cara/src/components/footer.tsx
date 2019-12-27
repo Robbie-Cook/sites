@@ -16,7 +16,7 @@ const Footer = () => {
         type="button"
         aria-label="Toggle dark mode"
       >
-        {isDark ? `Light` : `Dark`}
+        {isDark ? `Light` : `Dark`} Theme
       </button>
       Copyright &copy; {new Date().getFullYear()}. All rights reserved.
       <br />
@@ -30,20 +30,6 @@ const Footer = () => {
           a: { color: `text` },
         }}
       >
-        <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
-        {` `}
-        <Styled.a
-          aria-label="Link to the theme's GitHub repository"
-          sx={{ ml: 2 }}
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara"
-        >
-          Theme
-        </Styled.a>
-        <div sx={{ mx: 1 }}>by</div>
-        {` `}
-        <Styled.a aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
-          LekoArts
-        </Styled.a>
       </Flex>
     </ThemeFooter>
   )

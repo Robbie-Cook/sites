@@ -9,7 +9,7 @@ import AboutMDX from "../sections/about.mdx"
 
 const About = ({ offset }: { offset: number }) => (
   <div>
-    <Divider bg="divider" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={offset} />
+    <Divider bg="divider" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} factor={2} offset={offset} />
     <Divider speed={0.1} offset={offset}>
       <UpDown>
         <SVG icon="box" hiddenMobile width={6} color="icon_blue" left="50%" top="75%" />
@@ -29,7 +29,7 @@ const About = ({ offset }: { offset: number }) => (
       <SVG icon="box" width={12} color="icon_darkest" left="20%" top="30%" />
       <SVG icon="hexa" width={8} stroke color="icon_darkest" left="80%" top="70%" />
     </Divider>
-    <Content speed={0.4} offset={offset}>
+    <Content speed={0.4} offset={offset} factor={2}>
       <Inner>
         <AboutMDX />
       </Inner>
