@@ -1,4 +1,2 @@
 [build]
   base = "personal-website/"
-  publish = "personal-website/public"
-  command = "gatsby build"
