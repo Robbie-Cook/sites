@@ -1,7 +1,6 @@
 {
   "name": "root",
   "devDependencies": {
-    "eslint-config-airbnb": "^18.0.1",
     "lerna": "^3.19.0"
   },
   "private": true,
