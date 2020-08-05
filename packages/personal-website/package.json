@@ -14,7 +14,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@robbie-cook/gatsby-theme-cara": "^1.0.14",
+    "@robbie-cook/gatsby-theme-cara": "../gatsby-theme-cara",
     "eslint-config-airbnb": "^18.0.1",
     "gatsby": "^2.13.72",
     "gatsby-plugin-google-analytics": "^2.1.8",
