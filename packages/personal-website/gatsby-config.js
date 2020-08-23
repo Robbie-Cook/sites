@@ -1,12 +1,26 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Robbie Cook - Developer`,
+    siteUrl: "https://robbie.pw/",
+    siteTitle: ``,
+    siteHeadline: ``,
+    siteDescription: ``,
+    siteLanguage: `en`,
+    // siteImage: `/banner.jpg`,
+    author: ``,
+    basePath: '/',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
     {
       resolve: `@robbie-cook/gatsby-theme-cara`,
       options: {},
@@ -46,4 +60,4 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
-}
+};
