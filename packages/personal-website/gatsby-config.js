@@ -10,7 +10,7 @@ module.exports = {
     siteHeadline: ``,
     siteDescription: ``,
     siteLanguage: `en`,
-    // siteImage: `/banner.jpg`,
+    siteImage: `/banner.jpg`,
     author: ``,
     basePath: '/',
   },
