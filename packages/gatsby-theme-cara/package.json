@@ -11,7 +11,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "gatsby": "^2.13.3",
@@ -34,7 +36,8 @@
     "gatsby-source-filesystem": "^2.3.24",
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
-    "theme-ui": "^0.2.49"
+    "theme-ui": "^0.2.49",
+    "typescript": "^4.0.2"
   },
   "keywords": [
     "gatsby",
@@ -51,5 +54,14 @@
     "url": "https://github.com/LekoArts/gatsby-themes.git",
     "directory": "themes/gatsby-theme-cara"
   },
-  "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5"
+  "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-essentials": "^6.0.16",
+    "@storybook/addon-links": "^6.0.16",
+    "@storybook/react": "^6.0.16",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
+  }
 }
