@@ -29,7 +29,7 @@ const Blog = ({ offset }: { offset: number }) => (
       <SVG icon="box" width={12} color="icon_darkest" left="20%" top="30%" />
       <SVG icon="hexa" width={8} stroke color="icon_darkest" left="80%" top="70%" />
     </Divider>
-    <Content speed={0.4} offset={offset} factor={2}>
+    <Content speed={0.4} offset={offset} factor={1}>
       <Inner>
         <BlogMDX />
       </Inner>
