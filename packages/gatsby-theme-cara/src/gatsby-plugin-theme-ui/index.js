@@ -1,4 +1,4 @@
-import { tailwind } from "@theme-ui/presets"
+import { tailwind } from "@theme-ui/presets";
 
 export default {
   ...tailwind,
@@ -168,4 +168,4 @@ export default {
       },
     },
   },
-}
+};

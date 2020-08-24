@@ -3,19 +3,19 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import Blog, { BlogProps } from "../components/blog/Blog";
+import Post, { BlogProps } from "../components/blog/Post";
 
 // import { Button, ButtonProps } from "./Blog";
 
 export default {
-  title: "Blog/Blog",
-  component: Blog,
+  title: "Blog/Post",
+  component: Post,
   argTypes: {
     backgroundColor: { control: "color" },
   },
 } as Meta;
 
-const Template: Story<BlogProps> = (args) => <Blog {...args} />;
+const Template: Story<BlogProps> = (args) => <Post {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
