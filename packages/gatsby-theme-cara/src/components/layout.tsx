@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import React from "react"
-import { Global } from "@emotion/core"
-import { css, Styled, jsx } from "theme-ui"
-import SEO from "./seo"
+import React from "react";
+import { Global } from "@emotion/core";
+import { css, Styled, jsx } from "theme-ui";
+import SEO from "./seo";
 
-type LayoutProps = { children?: React.ReactNode; className?: string }
+type LayoutProps = { children?: React.ReactNode; className?: string };
 
 const Layout = ({ children, className }: LayoutProps) => (
   <Styled.root data-testid="theme-root">
@@ -39,6 +39,6 @@ const Layout = ({ children, className }: LayoutProps) => (
     <SEO />
     <main className={className}>{children}</main>
   </Styled.root>
-)
+);
 
-export default Layout
+export default Layout;
