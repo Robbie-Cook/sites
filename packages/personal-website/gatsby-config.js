@@ -10,9 +10,9 @@ module.exports = {
     siteHeadline: ``,
     siteDescription: ``,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
+    siteImage: ``, // TODO: fill this out
     author: ``,
-    basePath: '/',
+    basePath: "/",
   },
   plugins: [
     {
