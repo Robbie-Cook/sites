@@ -35,33 +35,40 @@ const Post: React.FC<BlogProps> = (props) => {
           <span
             css={css`
               display: flex;
+              align-items: center;
             `}
           >
             <p
               css={css`
-                margin-right: 20px;
-                display: flex;
-
-                &::after {
-                  content: "";
-                  display: fles;
-                  width: 20px;
-                  height: 20px;
-
-                  mask: url(${Dot}) no-repeat 0 0 / contain;
-                  -webkit-mask: url(${Dot}) no-repeat 0 0 / contain;
-                  background-image: unset;
-                  background-color: white;
-                  background-repeat: no-repeat;
-                  background-size: contain;
-                  will-change: mask;
-                  flex-shrink: 0;
-                }
+                margin: 0;
               `}
             >
               {date.format(new Date(props.date), "D MMMM Y")}
             </p>
-            <p>{props.author}</p>
+            <span
+              css={css`
+                display: flex;
+                width: 10px;
+                height: 10px;
+                margin: 0 10px;
+
+                mask: url(${Dot}) no-repeat 0 0 / contain;
+                -webkit-mask: url(${Dot}) no-repeat 0 0 / contain;
+                background-image: unset;
+                background-color: white;
+                background-repeat: no-repeat;
+                background-size: contain;
+                will-change: mask;
+                flex-shrink: 0;
+              `}
+            ></span>
+            <p
+              css={css`
+                margin: 0;
+              `}
+            >
+              {props.author}
+            </p>
           </span>
         </div>
         <div>{props.content}</div>
