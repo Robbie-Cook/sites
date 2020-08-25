@@ -25,6 +25,7 @@
     "@emotion/styled": "^10.0.23",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
+    "@robbie-cook/react-components": "^5.0.0",
     "@theme-ui/presets": "^0.2.44",
     "antd": "^4.6.1",
     "date-and-time": "^0.14.1",
@@ -61,7 +62,9 @@
     "@storybook/addon-actions": "^6.0.16",
     "@storybook/addon-essentials": "^6.0.16",
     "@storybook/addon-links": "^6.0.16",
+    "@storybook/addons": "^6.0.17",
     "@storybook/react": "^6.0.16",
+    "@storybook/theming": "^6.0.17",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1"
   }

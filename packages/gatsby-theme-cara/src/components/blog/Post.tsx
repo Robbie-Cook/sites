@@ -71,7 +71,13 @@ const Post: React.FC<BlogProps> = (props) => {
             </p>
           </span>
         </div>
-        <div>{props.content}</div>
+        <div
+          css={css`
+            margin-top: 20px;
+          `}
+        >
+          {props.content}
+        </div>
       </div>
     </Styled.root>
   );
