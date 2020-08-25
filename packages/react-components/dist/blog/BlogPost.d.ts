@@ -1,12 +1,17 @@
+/** @jsx jsx */
 import React from "react";
 /**
- * Interface for BlogPost props
+ * Interface for Blog props
  */
-interface BlogPostProps {
+export interface BlogProps {
     children?: any;
+    title: string;
+    date: number;
+    author: string;
+    content: string;
 }
 /**
- *  A BlogPost component.
+ *  A Blog component.
  */
-declare const BlogPost: React.FC<BlogPostProps>;
+declare const BlogPost: React.FC<BlogProps>;
 export default BlogPost;

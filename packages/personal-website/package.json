@@ -11,7 +11,9 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@robbie-cook/gatsby-theme-cara": "^1.0.16",
@@ -30,7 +32,14 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.17",
+    "@storybook/addon-essentials": "^6.0.17",
+    "@storybook/addon-links": "^6.0.17",
+    "@storybook/react": "^6.0.17",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^5.2.0",
+    "react-is": "^16.13.1"
   },
   "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5"
 }

@@ -6,12 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack --mode=production",
-    "start": "npx webpack --mode=production --watch"
+    "start": "npx webpack --mode=production --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Robbie Cook",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.17",
+    "@storybook/addon-essentials": "^6.0.17",
+    "@storybook/addon-links": "^6.0.17",
+    "@storybook/react": "^6.0.17",
     "@types/node": "^14.6.0",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1",
+    "svg-inline-loader": "^0.8.2",
     "ts-loader": "^8.0.3",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2",
@@ -22,7 +32,10 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@types/date-and-time": "^0.13.0",
+    "date-and-time": "^0.14.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "svg-loader": "0.0.2"
   }
 }
