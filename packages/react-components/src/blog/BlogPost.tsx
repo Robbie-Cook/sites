@@ -3,6 +3,7 @@ import React from "react";
 import { css, jsx } from "@emotion/core";
 import date from "date-and-time";
 import { H3, P } from "../typography/Typography";
+import { Theme } from "../theme/Theme";
 
 // import Dot from "./Dot.svg";
 
@@ -14,7 +15,11 @@ export interface BlogProps {
   title: string;
   date: number;
   author: string;
-  content: string;
+  content: any;
+  /**
+   * Whether this is a shortened post or a long
+   */
+  short: boolean;
 }
 
 /**
@@ -69,11 +74,27 @@ const BlogPost: React.FC<BlogProps> = (props) => {
         </span>
       </div>
       <div
-        css={css`
+        css={(theme: Theme) => css`
           margin-top: 20px;
+          ${theme.type === "dark"
+            ? "color: white; font-family: sans-serif;"
+            : ""};
         `}
       >
-        {props.content}
+        {props.short ? (
+          <div
+            css={css`
+              max-height: 100px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            `}
+          >
+            {props.content}
+          </div>
+        ) : (
+          props.content
+        )}
       </div>
     </div>
   );
