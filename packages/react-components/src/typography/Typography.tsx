@@ -13,9 +13,17 @@ const headingBaseStyles = css`
 const H1: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
   return (
     <h1
-      css={css`
-        ${headingBaseStyles};
-      `}
+      css={
+        // css`
+
+        // `,
+        (theme: Theme) =>
+          css`
+            color: ${theme.type === "dark" ? `white` : `black`};
+            margin: 1.2rem 0;
+            ${headingBaseStyles};
+          `
+      }
     >
       {props.children}
     </h1>
@@ -27,12 +35,17 @@ const H1: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
 const H2: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
   return (
     <h2
-      css={[
-        css`
-          ${headingBaseStyles};
-          ${props.css};
-        `,
-      ]}
+      css={
+        // css`
+
+        // `,
+        (theme: Theme) =>
+          css`
+            color: ${theme.type === "dark" ? `white` : `black`};
+            margin: 1.2rem 0;
+            ${headingBaseStyles};
+          `
+      }
     >
       {props.children}
     </h2>
@@ -57,7 +70,6 @@ const H3: React.FC<{
           css`
             color: ${theme.type === "dark" ? `white` : `black`};
             margin: 1.2rem 0;
-            ${headingBaseStyles};
           `
       }
       className={props.className}
@@ -77,11 +89,19 @@ const P: React.FC<{
   console.log(props);
   return (
     <p
-      css={css`
-        margin: 1.2rem 0;
-        font-family: sans-serif;
-        font-size: 1.05rem;
-      `}
+      css={
+        // css`
+
+        // `,
+        (theme: Theme) =>
+          css`
+            color: ${theme.type === "dark" ? `white` : `black`};
+            margin: 1.2rem 0;
+            font-family: sans-serif;
+            font-size: 1.05rem;
+            ${headingBaseStyles};
+          `
+      }
       className={props.className}
     >
       {props.children}
