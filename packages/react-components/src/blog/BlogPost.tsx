@@ -76,6 +76,7 @@ const BlogPost: React.FC<BlogProps> = (props) => {
       <div
         css={(theme: Theme) => css`
           margin-top: 20px;
+          line-height: 1.8rem;
           ${theme.type === "dark"
             ? "color: white; font-family: sans-serif;"
             : ""};
