@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx, SerializedStyles } from "@emotion/core";
 import React from "react";
+import { Theme } from "@storybook/theming";
 
 const headingBaseStyles = css`
   font-family: "Lexend Peta", sans-serif;
@@ -48,10 +49,17 @@ const H3: React.FC<{
   console.log(props);
   return (
     <h3
-      css={css`
-        margin: 1.2rem 0;
-        ${headingBaseStyles};
-      `}
+      css={
+        // css`
+
+        // `,
+        (theme: Theme) =>
+          css`
+            color: ${theme.type === "dark" ? `white` : `black`};
+            margin: 1.2rem 0;
+            ${headingBaseStyles};
+          `
+      }
       className={props.className}
     >
       {props.children}
@@ -71,7 +79,7 @@ const P: React.FC<{
     <p
       css={css`
         margin: 1.2rem 0;
-        font-family: sans-serif; 
+        font-family: sans-serif;
         font-size: 1.05rem;
       `}
       className={props.className}

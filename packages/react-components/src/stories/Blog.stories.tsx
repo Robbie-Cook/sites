@@ -3,6 +3,7 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import BlogPost, { BlogProps } from "../blog/BlogPost";
+import { Theme } from "../theme/Theme";
 
 export default {
   title: "Blog/BlogPost",
@@ -12,9 +13,6 @@ export default {
   },
 } as Meta;
 
-interface Theme {
-  type: "light" | "dark";
-}
 
 import { ThemeProvider } from "emotion-theming";
 
@@ -28,12 +26,21 @@ const Template: Story<BlogProps & Theme> = (args) => (
   </ThemeProvider>
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Dark = Template.bind({});
+Dark.args = {
   title: "My blog post",
   author: "Robbie Cook",
   content: "This is some test content",
   date: Date.now(),
 
   type: "dark",
+};
+export const Light = Template.bind({});
+Light.args = {
+  title: "My blog post",
+  author: "Robbie Cook",
+  content: "This is some test content",
+  date: Date.now(),
+
+  type: "light",
 };

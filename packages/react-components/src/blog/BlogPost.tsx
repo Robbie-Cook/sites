@@ -2,7 +2,7 @@
 import React from "react";
 import { css, jsx } from "@emotion/core";
 import date from "date-and-time";
-import { H3, P } from "../../typography/Typography";
+import { H3, P } from "../typography/Typography";
 
 // import Dot from "./Dot.svg";
 
