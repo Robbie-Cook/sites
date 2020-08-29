@@ -12,7 +12,21 @@ export default {
   },
 } as Meta;
 
-const Template: Story<BlogProps> = (args) => <BlogPost {...args} />;
+interface Theme {
+  type: "light" | "dark";
+}
+
+import { ThemeProvider } from "emotion-theming";
+
+const Template: Story<BlogProps & Theme> = (args) => (
+  <ThemeProvider
+    theme={{
+      type: args.type,
+    }}
+  >
+    <BlogPost {...args} />
+  </ThemeProvider>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -20,4 +34,6 @@ Primary.args = {
   author: "Robbie Cook",
   content: "This is some test content",
   date: Date.now(),
+
+  type: "dark",
 };

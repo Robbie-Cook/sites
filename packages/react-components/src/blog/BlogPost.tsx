@@ -2,6 +2,8 @@
 import React from "react";
 import { css, jsx } from "@emotion/core";
 import date from "date-and-time";
+import { H3, P } from "../../typography/Typography";
+
 // import Dot from "./Dot.svg";
 
 /**
@@ -22,27 +24,26 @@ const BlogPost: React.FC<BlogProps> = (props) => {
   return (
     <div css={css``}>
       <div>
-        <h3
+        <H3
           css={css`
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
           `}
         >
           {props.title}
-        </h3>
+        </H3>
         <span
           css={css`
             display: flex;
             align-items: center;
           `}
         >
-          <p
+          <P
             css={css`
               margin: 0;
             `}
           >
             {date.format(new Date(props.date), "D MMMM Y")}
-          </p>
+          </P>
           <span
             css={css`
               display: flex;
@@ -58,13 +59,13 @@ const BlogPost: React.FC<BlogProps> = (props) => {
               flex-shrink: 0;
             `}
           ></span>
-          <p
+          <P
             css={css`
               margin: 0;
             `}
           >
             {props.author}
-          </p>
+          </P>
         </span>
       </div>
       <div
