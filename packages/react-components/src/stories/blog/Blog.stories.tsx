@@ -2,13 +2,13 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import BlogPost, { BlogProps } from "../../blog/BlogPost";
+import Blog, { BlogProps } from "../../blog/Blog";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 
 export default {
-  title: "Blog/BlogPost",
-  component: BlogPost,
+  title: "Blog/Blog",
+  component: Blog,
   argTypes: {
     backgroundColor: { control: "color" },
   },
@@ -22,39 +22,44 @@ const Template: Story<BlogProps & Theme> = (args) => (
       type: args.type,
     }}
   >
-    <BlogPost {...args} />
+    <Blog {...args} />
   </ThemeProvider>
 );
 
 export const Dark = Template.bind({});
 Dark.args = {
-  title: "My blog post",
-  author: "Robbie Cook",
-  content: PlaceholderBlogText,
-  date: Date.now(),
-  short: false,
-
-  type: "dark",
-};
-
-export const Short = Template.bind({});
-Short.args = {
-  title: "My blog post",
-  author: "Robbie Cook",
-  content: PlaceholderBlogText,
-  date: Date.now(),
-  short: true,
-
+  posts: [
+    {
+      title: "My blog post",
+      author: "Robbie Cook",
+      content: PlaceholderBlogText,
+      date: Date.now(),
+    },
+    {
+      title: "My blog post",
+      author: "Robbie Cook",
+      content: PlaceholderBlogText,
+      date: Date.now(),
+    },
+  ],
   type: "dark",
 };
 
 export const Light = Template.bind({});
 Light.args = {
-  title: "My blog post",
-  author: "Robbie Cook",
-  content: PlaceholderBlogText,
-  date: Date.now(),
-  short: false,
-
+  posts: [
+    {
+      title: "My blog post",
+      author: "Robbie Cook",
+      content: PlaceholderBlogText,
+      date: Date.now(),
+    },
+    {
+      title: "My blog post",
+      author: "Robbie Cook",
+      content: PlaceholderBlogText,
+      date: Date.now(),
+    },
+  ],
   type: "light",
 };

@@ -10,7 +10,7 @@ import { Theme } from "../theme/Theme";
 /**
  * Interface for Blog props
  */
-export interface BlogProps {
+export interface BlogPostProps {
   children?: any;
   title: string;
   date: number;
@@ -25,7 +25,7 @@ export interface BlogProps {
 /**
  *  A Blog component.
  */
-const BlogPost: React.FC<BlogProps> = (props) => {
+const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
     <div css={css``}>
       <div>
