@@ -6,6 +6,7 @@ import Blog, { BlogProps } from "../../blog/Blog";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 
+// @ts-ignore
 import TestPost from "./TestPost.md";
 
 export default {
@@ -24,7 +25,7 @@ const Template: Story<BlogProps & Theme> = (args) => (
       type: args.type,
     }}
   >
-    <Blog {...args} />
+    <Blog posts={args.posts} />
   </ThemeProvider>
 );
 

@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { BlogPost } from "@robbie-cook/react-components";
+import { Blog, Theme } from "@robbie-cook/react-components";
+import { ThemeProvider, useTheme } from "emotion-theming";
 
 /**
  * Interface for Blog props
@@ -13,8 +14,22 @@ interface BlogProps {
 /**
  *  A Blog component.
  */
-const Blog: React.FC<BlogProps> = (props) => {
-  return <BlogPost></BlogPost>;
+const MyBlog: React.FC<BlogProps> = (props) => {
+  console.log("log", useTheme());
+  return (
+    <ThemeProvider theme={{ type: "dark" } as Theme}>
+      <Blog
+        posts={[
+          {
+            title: "My Blog Post",
+            author: "Robbie Cook",
+            content: "hello!",
+            date: Date.now(),
+          },
+        ]}
+      />
+    </ThemeProvider>
+  );
 };
 
-export default Blog;
+export default MyBlog;

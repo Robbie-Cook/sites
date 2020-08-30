@@ -2,6 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import BlogPost, { BlogPostProps } from "./BlogPost";
+import { useTheme } from 'emotion-theming';
 
 export interface BlogProps {
   posts: Array<Omit<BlogPostProps, "short">>;
@@ -11,6 +12,8 @@ export interface BlogProps {
  *  A Blog component.
  */
 const Blog: React.FC<BlogProps> = (props) => {
+
+  console.log('Blog theme', useTheme())
   return (
     <div>
       {props.posts.map((post) => (

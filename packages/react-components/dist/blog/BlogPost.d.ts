@@ -3,15 +3,19 @@ import React from "react";
 /**
  * Interface for Blog props
  */
-export interface BlogProps {
+export interface BlogPostProps {
     children?: any;
     title: string;
     date: number;
     author: string;
-    content: string;
+    content: string | JSX.Element;
+    /**
+     * Whether this is a shortened post or a long
+     */
+    short: boolean;
 }
 /**
  *  A Blog component.
  */
-declare const BlogPost: React.FC<BlogProps>;
+declare const BlogPost: React.FC<BlogPostProps>;
 export default BlogPost;

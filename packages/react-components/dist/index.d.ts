@@ -1,2 +1,4 @@
 import BlogPost from "./blog/BlogPost";
-export { BlogPost };
+import Blog from "./blog/Blog";
+import { Theme } from './theme/Theme';
+export { BlogPost, Blog, Theme };

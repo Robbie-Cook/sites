@@ -58,19 +58,20 @@ const H2: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
 const H3: React.FC<{
   children?: any;
   className?: string;
+
 }> = (props) => {
   console.log(props);
   return (
     <h3
       css={
-        // css`
+        (theme: Theme) => {
+          console.log("important theme", theme);
 
-        // `,
-        (theme: Theme) =>
-          css`
+          return css`
             color: ${theme.type === "dark" ? `white` : `black`};
             margin: 1.2rem 0;
-          `
+          `;
+        }
       }
       className={props.className}
     >

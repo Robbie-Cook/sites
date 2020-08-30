@@ -74,13 +74,16 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
         </span>
       </div>
       <div
-        css={(theme: Theme) => css`
-          margin-top: 20px;
-          line-height: 1.8rem;
-          ${theme.type === "dark"
-            ? "color: white; font-family: sans-serif;"
-            : ""};
-        `}
+        css={(theme: Theme) => {
+          console.log("Blog post theme ", theme);
+          return css`
+            margin-top: 20px;
+            line-height: 1.8rem;
+            ${theme.type === "dark"
+              ? "color: white; font-family: sans-serif;"
+              : ""};
+          `;
+        }}
       >
         {props.short ? (
           <div

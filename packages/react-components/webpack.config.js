@@ -52,7 +52,7 @@ module.exports = {
         test: /\.md$/,
         exclude: /node_modules/,
         loader: "markdown-loader",
-      },
+      }
     ],
   },
 
