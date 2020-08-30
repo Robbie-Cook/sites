@@ -15,7 +15,7 @@ export interface BlogPostProps {
   title: string;
   date: number;
   author: string;
-  content: any;
+  content: string | JSX.Element;
   /**
    * Whether this is a shortened post or a long
    */

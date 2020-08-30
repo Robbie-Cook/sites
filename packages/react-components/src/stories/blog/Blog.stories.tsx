@@ -6,6 +6,8 @@ import Blog, { BlogProps } from "../../blog/Blog";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 
+import TestPost from "./TestPost.md";
+
 export default {
   title: "Blog/Blog",
   component: Blog,
@@ -32,7 +34,7 @@ Dark.args = {
     {
       title: "My blog post",
       author: "Robbie Cook",
-      content: PlaceholderBlogText,
+      content: <div dangerouslySetInnerHTML={{ __html: TestPost }} />,
       date: Date.now(),
     },
     {

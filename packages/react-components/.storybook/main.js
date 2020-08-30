@@ -15,8 +15,9 @@ module.exports = {
 
     // Make whatever fine-grained changes you need
     config.module.rules.push({
-      test: /\.mdx?$/,
-      use: ["babel-loader", "@mdx-js/loader"],
+      test: /\.md$/,
+      exclude: /node_modules/,
+      loader: "markdown-loader",
     });
 
     // Return the altered config

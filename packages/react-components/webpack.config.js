@@ -48,6 +48,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: "source-map-loader",
       },
+      {
+        test: /\.md$/,
+        exclude: /node_modules/,
+        loader: "markdown-loader",
+      },
     ],
   },
 
