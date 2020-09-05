@@ -1,9 +1,12 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { Blog, Theme, ReactComponentsContext } from "@robbie-cook/react-components";
+import {
+  Blog,
+  Theme,
+  ReactComponentsContext,
+} from "@robbie-cook/react-components";
 import { ThemeProvider, useTheme } from "emotion-theming";
-
 
 console.log("blog", Blog);
 /**
@@ -22,7 +25,7 @@ console.log(window.React1 === window.React2);
  */
 const MyBlog: React.FC<BlogProps> = (props) => {
   return (
-    <ReactComponentsContext.Provider value={{ test: "awesome" }}>
+    <ReactComponentsContext.Provider value={{ type: "dark" }}>
       <Blog
         posts={[
           {

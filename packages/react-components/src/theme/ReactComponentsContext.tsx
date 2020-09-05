@@ -1,5 +1,20 @@
-import React from 'react';
+import React from "react";
 
-const ReactComponentsContext = React.createContext({ test: "initial!" });
+export type ReactComponentsContextInterface = {
+  type: "light" | "dark";
+};
+
+const defaultValue: ReactComponentsContextInterface = {
+  type: "light",
+};
+
+const ReactComponentsContext = React.createContext(defaultValue);
+
+/**
+ * Hook function
+ */
+export function useTheme() {
+  return React.useContext(ReactComponentsContext);
+}
 
 export default ReactComponentsContext;

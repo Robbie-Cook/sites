@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { css, jsx, SerializedStyles } from "@emotion/core";
-import React from "react";
-import { Theme } from "@storybook/theming";
+import React, { useContext } from "react";
+import ReactComponentsContext, {
+  useTheme,
+} from "../theme/ReactComponentsContext";
 
 const headingBaseStyles = css`
   font-family: "Lexend Peta", sans-serif;
@@ -11,13 +13,14 @@ const headingBaseStyles = css`
  *  A H1 component.
  */
 const H1: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
+  const theme = useTheme();
   return (
     <h1
       css={
         // css`
 
         // `,
-        (theme: Theme) =>
+        () =>
           css`
             color: ${theme.type === "dark" ? `white` : `black`};
             margin: 1.2rem 0;
@@ -33,13 +36,14 @@ const H1: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
  *  A H2 component.
  */
 const H2: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
+  const theme = useTheme();
   return (
     <h2
       css={
         // css`
 
         // `,
-        (theme: Theme) =>
+        () =>
           css`
             color: ${theme.type === "dark" ? `white` : `black`};
             margin: 1.2rem 0;
@@ -58,21 +62,17 @@ const H2: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
 const H3: React.FC<{
   children?: any;
   className?: string;
-
 }> = (props) => {
   console.log(props);
+  const theme = useTheme();
   return (
     <h3
-      css={
-        (theme: Theme) => {
-          console.log("important theme", theme);
-
-          return css`
-            color: ${theme.type === "dark" ? `white` : `black`};
-            margin: 1.2rem 0;
-          `;
-        }
-      }
+      css={() => {
+        return css`
+          color: ${theme.type === "dark" ? `white` : `black`};
+          margin: 1.2rem 0;
+        `;
+      }}
       className={props.className}
     >
       {props.children}
@@ -87,14 +87,14 @@ const P: React.FC<{
   children?: any;
   className?: string;
 }> = (props) => {
-  console.log(props);
+  const theme = useTheme();
   return (
     <p
       css={
         // css`
 
         // `,
-        (theme: Theme) =>
+        () =>
           css`
             color: ${theme.type === "dark" ? `white` : `black`};
             margin: 1.2rem 0;
