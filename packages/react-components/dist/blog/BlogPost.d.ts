@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import React from "react";
 /**
  * Interface for Blog props

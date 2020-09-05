@@ -2,7 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import BlogPost, { BlogPostProps } from "./BlogPost";
-import { useTheme } from 'emotion-theming';
+import ReactComponentsContext from "../theme/ReactComponentsContext";
 
 export interface BlogProps {
   posts: Array<Omit<BlogPostProps, "short">>;
@@ -12,20 +12,24 @@ export interface BlogProps {
  *  A Blog component.
  */
 const Blog: React.FC<BlogProps> = (props) => {
-
-  console.log('Blog theme', useTheme())
   return (
-    <div>
-      {props.posts.map((post) => (
-        <div
-          css={css`
-            margin-bottom: 75px;
-          `}
-        >
-          <BlogPost {...post} short={true} />
+    <ReactComponentsContext.Consumer>
+      {(value) => (
+        <div>
+          {JSON.stringify(value)}
+          {props.posts.map((post) => (
+            <div
+              key={post.date}
+              css={css`
+                margin-bottom: 75px;
+              `}
+            >
+              <BlogPost {...post} short={true} />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      )}
+    </ReactComponentsContext.Consumer>
   );
 };
 

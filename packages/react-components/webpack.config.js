@@ -52,10 +52,15 @@ module.exports = {
         test: /\.md$/,
         exclude: /node_modules/,
         loader: "markdown-loader",
-      }
+      },
     ],
   },
 
+  // resolve: {
+  //   alias: {
+  //     // react: path.resolve("./node_modules/react"),
+  //   },
+  // },
   // externals: {
   //   'react': 'react', // Case matters here
   //   'react-dom' : 'react-dom' // Case matters here

@@ -11,6 +11,6 @@ export const wrapPageElement = ({ element, props }) => {
 };
 
 export const wrapRootElement = ({ element }) => (
-  // <ThemeProvider theme={{ type: "dark" }}>{element}</ThemeProvider>
-  element
+  <ThemeProvider theme={{ type: "dark" }}>{element}</ThemeProvider>
+  // element
 );

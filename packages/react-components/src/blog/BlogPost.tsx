@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React from "react";
 import { css, jsx } from "@emotion/core";
+import React from "react";
 import date from "date-and-time";
 import { H3, P } from "../typography/Typography";
 import { Theme } from "../theme/Theme";
@@ -79,9 +79,9 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
           return css`
             margin-top: 20px;
             line-height: 1.8rem;
-            ${theme.type === "dark"
-              ? "color: white; font-family: sans-serif;"
-              : ""};
+            ${theme.type === "light"
+              ? ""
+              : "color: white; font-family: sans-serif;"};
           `;
         }}
       >
