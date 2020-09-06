@@ -31,6 +31,7 @@ Dark.args = {
   author: "Robbie Cook",
   content: PlaceholderBlogText,
   date: Date.now(),
+  link: "#",
 
   type: "dark",
 };
@@ -41,6 +42,7 @@ Light.args = {
   author: "Robbie Cook",
   content: PlaceholderBlogText,
   date: Date.now(),
+  link: "#",
 
   type: "light",
 };

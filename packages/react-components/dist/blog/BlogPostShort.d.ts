@@ -5,6 +5,7 @@ export interface BlogPostProps {
     date: number;
     author: string;
     content: string | JSX.Element;
+    link: string;
 }
 /**
  *  A BlogPost component.

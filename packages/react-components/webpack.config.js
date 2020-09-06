@@ -33,11 +33,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
-        exclude: /node_modules/,
+        test: /\.(png|jp(e*)g|svg|gif)$/,
         use: [
           {
-            loader: "svg-inline-loader",
+            loader: "file-loader",
+            options: {
+              name: "images/[hash]-[name].[ext]",
+            },
           },
         ],
       },
