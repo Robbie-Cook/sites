@@ -1,14 +1,8 @@
 ---
-date: "2020-05-04"
+date: "2020-09-06"
 title: "My first blog post"
 author: "Robbie Cook"
 ---
 ## Hello!
 
-This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.
-This is some test content.
-This is some test content.
-
-This is some test content.This is some test content.This is some test content.
-
-This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.This is some test content.
+Welcome to my blog! This is my first test post.
