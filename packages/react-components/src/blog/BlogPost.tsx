@@ -5,6 +5,7 @@ import { H3, P } from "../typography/Typography";
 import { Theme } from "../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
+import BlogSection from "./BlogSection";
 
 // import Dot from "./Dot.svg";
 
@@ -33,26 +34,7 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
         <BlogHeader>{props.title}</BlogHeader>
         <BlogInfo date={props.date} author={props.author} />
       </div>
-      <div
-        css={(theme) => {
-          return css`
-            margin-top: 20px;
-            line-height: 1.8rem;
-
-            & * {
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-                "Noto Color Emoji";
-              font-size: 1.4rem;
-            }
-
-            ${theme.type === "light" ? "" : "color: white;"};
-          `;
-        }}
-      >
-        {props.content}
-      </div>
+      <BlogSection>{props.content}</BlogSection>
     </div>
   );
 };
