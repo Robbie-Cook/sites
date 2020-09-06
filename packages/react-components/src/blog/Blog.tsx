@@ -14,27 +14,18 @@ export interface BlogProps {
  */
 const Blog: React.FC<BlogProps> = (props) => {
   return (
-    <ReactComponentsContext.Consumer>
-      {(value) => {
-        console.log(`Setting theme ${JSON.stringify(value)}`);
-        return (
-          <ThemeProvider theme={value}>
-            <div>
-              {props.posts.map((post) => (
-                <div
-                  key={post.date}
-                  css={css`
-                    margin-bottom: 75px;
-                  `}
-                >
-                  <BlogPost {...post} short={true} />
-                </div>
-              ))}
-            </div>
-          </ThemeProvider>
-        );
-      }}
-    </ReactComponentsContext.Consumer>
+    <div>
+      {props.posts.map((post) => (
+        <div
+          key={post.date}
+          css={css`
+            margin-bottom: 75px;
+          `}
+        >
+          <BlogPost {...post} short={true} />
+        </div>
+      ))}
+    </div>
   );
 };
 

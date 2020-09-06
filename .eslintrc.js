@@ -12,11 +12,6 @@ module.exports = {
       jsx: true,
     },
   },
-  overrides: [
-    {
-      excludedFiles: "**/*/node_modules/**/*",
-    },
-  ],
   env: {
     browser: true,
     jest: true,

@@ -5,6 +5,8 @@ import {
   Blog,
   Theme,
   ReactComponentsContext,
+  Typography,
+  H1
 } from "@robbie-cook/react-components";
 import { ThemeProvider, useTheme } from "emotion-theming";
 
@@ -26,6 +28,7 @@ console.log(window.React1 === window.React2);
 const MyBlog: React.FC<BlogProps> = (props) => {
   return (
     <ReactComponentsContext.Provider value={{ type: "dark" }}>
+      <H1>Blog</H1>
       <Blog
         posts={[
           {
