@@ -2,23 +2,36 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import { graphql } from "gatsby";
+import {
+  BlogPost,
+  ReactComponentsContext,
+} from "@robbie-cook/react-components";
 
 /**
  * Interface for BlogPost props
  */
-interface BlogPostProps {
+interface BlogPostTemplateProps {
   children?: any;
   data?: any;
 }
 
-const BlogPost: React.FC<BlogPostProps> = (props) => {
+const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
   const post = props.data.markdownRemark;
-  console.log('data', props.data);
   return (
-    <div>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+    <ReactComponentsContext.Provider value={{ type: "dark" }}>
+      <div
+        css={css`
+          padding: 30px 150px;
+        `}
+      >
+        <BlogPost
+          title={post.frontmatter.title}
+          date={post.frontmatter.date}
+          author={post.frontmatter.author}
+          content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+        />
+      </div>
+    </ReactComponentsContext.Provider>
   );
 };
 export const query = graphql`
@@ -27,8 +40,10 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
+        author
       }
     }
   }
 `;
-export default BlogPost;
+export default BlogPostTemplate;

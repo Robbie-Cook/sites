@@ -47,7 +47,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
               <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
             ),
             author: edge.node.frontmatter.author,
-            link: `/blog/post/${edge.node.fields.slug}/`,
+            link: `/blog/posts${edge.node.fields.slug}`,
           }))}
         />
       </div>

@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }, themeOptions) => {
   `);
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/blog/posts/${node.fields.slug}`,
+      path: `/blog/posts${node.fields.slug}`,
       component: path.resolve(`./src/templates/blog-post.tsx`),
       context: {
         // Data passed to context is available

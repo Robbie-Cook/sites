@@ -8,10 +8,6 @@ export interface BlogPostProps {
     date: number;
     author: string;
     content: string | JSX.Element;
-    /**
-     * Whether this is a shortened post or a long
-     */
-    short: boolean;
 }
 /**
  *  A BlogPost component.

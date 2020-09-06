@@ -18,10 +18,6 @@ export interface BlogPostProps {
   date: number;
   author: string;
   content: string | JSX.Element;
-  /**
-   * Whether this is a shortened post or a long
-   */
-  short: boolean;
 }
 
 /**
@@ -34,12 +30,19 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
         <BlogHeader
           css={css`
             text-align: center;
-            margin-bottom: 70px;
           `}
         >
           {props.title}
         </BlogHeader>
-        <BlogInfo date={props.date} author={props.author} />
+        <div
+          css={css`
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px;
+          `}
+        >
+          <BlogInfo date={props.date} author={props.author} />
+        </div>
       </div>
       <BlogSection>{props.content}</BlogSection>
     </div>
