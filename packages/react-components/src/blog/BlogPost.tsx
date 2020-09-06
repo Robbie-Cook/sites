@@ -31,7 +31,14 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
     <div css={css``}>
       <div>
-        <BlogHeader>{props.title}</BlogHeader>
+        <BlogHeader
+          css={css`
+            text-align: center;
+            margin-bottom: 70px;
+          `}
+        >
+          {props.title}
+        </BlogHeader>
         <BlogInfo date={props.date} author={props.author} />
       </div>
       <BlogSection>{props.content}</BlogSection>

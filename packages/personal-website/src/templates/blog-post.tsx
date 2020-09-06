@@ -13,6 +13,7 @@ interface BlogPostProps {
 
 const BlogPost: React.FC<BlogPostProps> = (props) => {
   const post = props.data.markdownRemark;
+  console.log('data', props.data);
   return (
     <div>
       <h1>{post.frontmatter.title}</h1>

@@ -2,14 +2,14 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import BlogPostShort, { BlogPostProps } from "../../blog/BlogPostShort";
+import BlogPost, { BlogPostProps } from "../../blog/BlogPost";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
 
 export default {
   title: "Blog/BlogPost",
-  component: BlogPostShort,
+  component: BlogPost,
   argTypes: {
     backgroundColor: { control: "color" },
   },
@@ -21,7 +21,7 @@ const Template: Story<BlogPostProps & Theme> = (args) => (
       type: args.type,
     }}
   >
-    <BlogPostShort {...args} />
+    <BlogPost {...args} />
   </ReactComponentsContext.Provider>
 );
 

@@ -4,6 +4,7 @@ import React from "react";
  */
 interface BlogHeaderProps {
     children?: any;
+    className?: string;
 }
 /**
  *  A BlogHeader component.

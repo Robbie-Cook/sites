@@ -8,6 +8,7 @@ import { H3 } from "../typography/Typography";
  */
 interface BlogHeaderProps {
   children?: any;
+  className?: string;
 }
 
 /**
@@ -16,6 +17,7 @@ interface BlogHeaderProps {
 const BlogHeader: React.FC<BlogHeaderProps> = (props) => {
   return (
     <H3
+      className={props.className}
       css={css`
         font-size: 3rem;
         font-family: Vollkorn, serif;

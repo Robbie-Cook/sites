@@ -34,7 +34,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           css={css`
             font-size: 4rem;
             text-align: center;
-            margin-bottom: 90px!important;
+            margin-bottom: 90px !important;
           `}
         >
           Blog
@@ -47,6 +47,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
               <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
             ),
             author: edge.node.frontmatter.author,
+            link: `/blog/post/${edge.node.fields.slug}/`,
           }))}
         />
       </div>
@@ -56,6 +57,17 @@ const MyBlog: React.FC<BlogProps> = (props) => {
 
 export const pageQuery = graphql`
   query {
+    allSitePage {
+      edges {
+        node {
+          id
+          context {
+            slug
+          }
+        }
+      }
+    }
+
     allMarkdownRemark {
       edges {
         node {
@@ -73,6 +85,9 @@ export const pageQuery = graphql`
             title
             author
             date
+          }
+          fields {
+            slug
           }
         }
       }
