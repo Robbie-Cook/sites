@@ -10,11 +10,19 @@ module.exports = {
     siteHeadline: ``,
     siteDescription: ``,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
+    siteImage: ``, // TODO: fill this out
     author: ``,
-    basePath: '/',
+    basePath: "/",
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/blog-posts/`,
+      },
+    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
@@ -30,6 +38,9 @@ module.exports = {
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
     },
     {
       resolve: `gatsby-plugin-manifest`,
