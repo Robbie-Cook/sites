@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import date from "date-and-time";
 import { H3, P } from "../typography/Typography";
 import { Theme } from "../theme/Theme";
+import BlogInfo from "./BlogInfo";
+import BlogHeader from "./BlogHeader";
 
 // import Dot from "./Dot.svg";
 
@@ -29,50 +30,8 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
     <div css={css``}>
       <div>
-        <H3
-          css={css`
-            font-size: 3rem;
-            font-family: Vollkorn, serif;
-          `}
-        >
-          {props.title}
-        </H3>
-        <span
-          css={css`
-            display: flex;
-            align-items: center;
-          `}
-        >
-          <P
-            css={css`
-              margin: 0;
-            `}
-          >
-            {date.format(new Date(props.date), "D MMMM Y")}
-          </P>
-          <span
-            css={css`
-              display: flex;
-              width: 10px;
-              height: 10px;
-              margin: 0 10px;
-
-              background-image: unset;
-              background-color: white;
-              background-repeat: no-repeat;
-              background-size: contain;
-              will-change: mask;
-              flex-shrink: 0;
-            `}
-          ></span>
-          <P
-            css={css`
-              margin: 0;
-            `}
-          >
-            {props.author}
-          </P>
-        </span>
+        <BlogHeader>{props.title}</BlogHeader>
+        <BlogInfo date={props.date} author={props.author} />
       </div>
       <div
         css={(theme) => {
