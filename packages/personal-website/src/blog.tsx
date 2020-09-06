@@ -44,7 +44,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
             title: edge.node.frontmatter.title,
             date: edge.node.frontmatter.date,
             content: (
-              <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
+              <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
             ),
             author: edge.node.frontmatter.author,
           }))}
@@ -59,6 +59,7 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
+          excerpt
           id
           html
           headings(depth: h1) {

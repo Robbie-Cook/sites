@@ -92,20 +92,7 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
           `;
         }}
       >
-        {props.short ? (
-          <div
-            css={css`
-              max-height: 100px;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-            `}
-          >
-            {props.content}
-          </div>
-        ) : (
-          props.content
-        )}
+        {props.content}
       </div>
     </div>
   );
