@@ -14,7 +14,7 @@ export interface BlogPostProps {
     short: boolean;
 }
 /**
- *  A Blog component.
+ *  A BlogPost component.
  */
 declare const BlogPost: React.FC<BlogPostProps>;
 export default BlogPost;

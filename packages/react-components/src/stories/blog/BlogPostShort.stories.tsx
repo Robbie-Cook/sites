@@ -8,7 +8,7 @@ import PlaceholderBlogText from "./PlaceholderBlogText";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
 
 export default {
-  title: "Blog/BlogPost",
+  title: "Blog/Blog Post Short",
   component: BlogPostShort,
   argTypes: {
     backgroundColor: { control: "color" },

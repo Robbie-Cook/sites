@@ -22,7 +22,7 @@ const Blog: React.FC<BlogProps> = (props) => {
             margin-bottom: 75px;
           `}
         >
-          <BlogPostShort {...post} short={true} />
+          <BlogPostShort {...post} />
         </div>
       ))}
     </div>

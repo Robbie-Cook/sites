@@ -7,18 +7,27 @@ import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
 
+// import Dot from "./Dot.svg";
+
+/**
+ * Interface for Blog props
+ */
 export interface BlogPostProps {
   children?: any;
   title: string;
   date: number;
   author: string;
   content: string | JSX.Element;
+  /**
+   * Whether this is a shortened post or a long
+   */
+  short: boolean;
 }
 
 /**
  *  A BlogPost component.
  */
-const BlogPostShort: React.FC<BlogPostProps> = (props) => {
+const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
     <div css={css``}>
       <div>
@@ -30,4 +39,4 @@ const BlogPostShort: React.FC<BlogPostProps> = (props) => {
   );
 };
 
-export default BlogPostShort;
+export default BlogPost;
