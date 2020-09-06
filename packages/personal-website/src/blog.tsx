@@ -25,42 +25,31 @@ const MyBlog: React.FC<BlogProps> = (props) => {
   console.log("data", props.data);
   return (
     <ReactComponentsContext.Provider value={{ type: "dark" }}>
-      <H1>Blog</H1>
-      <Blog
-        // posts={[
-        //   {
-        //     title: "My Blog Post",
-        //     author: "Robbie Cook",
-        //     content: "hello!",
-        //     date: Date.now(),
-        //   },
-        //   {
-        //     title: "My Blog Post",
-        //     author: "Robbie Cook",
-        //     content: "hello!",
-        //     date: Date.now(),
-        //   },
-        //   {
-        //     title: "My Blog Post",
-        //     author: "Robbie Cook",
-        //     content: "hello!",
-        //     date: Date.now(),
-        //   },
-        // ]}
-        // posts={data?.markdownRemark.}
-        posts={props.data?.allMarkdownRemark?.edges?.map((edge) => ({
-          title: edge.node.frontmatter.title,
-          date: edge.node.frontmatter.date,
-          content: <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />,
-          // date: number;
-          author: edge.node.frontmatter.author,
-          // content: string | JSX.Element;
-          // /**
-          //  * Whether this is a shortened post or a long
-          //  */
-          // short: boolean;
-        }))}
-      />
+      <div
+        css={css`
+          padding: 30px 150px;
+        `}
+      >
+        <H1
+          css={css`
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 90px!important;
+          `}
+        >
+          Blog
+        </H1>
+        <Blog
+          posts={props.data?.allMarkdownRemark?.edges?.map((edge) => ({
+            title: edge.node.frontmatter.title,
+            date: edge.node.frontmatter.date,
+            content: (
+              <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
+            ),
+            author: edge.node.frontmatter.author,
+          }))}
+        />
+      </div>
     </ReactComponentsContext.Provider>
   );
 };

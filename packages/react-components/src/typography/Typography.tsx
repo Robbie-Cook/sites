@@ -12,21 +12,18 @@ const headingBaseStyles = css`
 /**
  *  A H1 component.
  */
-const H1: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
+const H1: React.FC<{ children?: any; className?: string }> = (props) => {
   const theme = useTheme();
   return (
     <h1
-      css={
-        // css`
-
-        // `,
-        () =>
-          css`
-            color: ${theme.type === "dark" ? `white` : `black`};
-            margin: 1.2rem 0;
-            ${headingBaseStyles};
-          `
+      css={() =>
+        css`
+          color: ${theme.type === "dark" ? `white` : `black`};
+          margin: 1.2rem 0;
+          ${headingBaseStyles};
+        `
       }
+      className={props.className}
     >
       {props.children}
     </h1>

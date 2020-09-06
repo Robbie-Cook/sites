@@ -6,7 +6,7 @@ import React from "react";
  */
 declare const H1: React.FC<{
     children?: any;
-    css?: SerializedStyles;
+    className?: string;
 }>;
 /**
  *  A H2 component.
