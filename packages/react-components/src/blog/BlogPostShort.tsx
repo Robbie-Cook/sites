@@ -27,7 +27,7 @@ export interface BlogPostProps {
 /**
  *  A Blog component.
  */
-const BlogPost: React.FC<BlogPostProps> = (props) => {
+const BlogPostShort: React.FC<BlogPostProps> = (props) => {
   return (
     <div css={css``}>
       <div>
@@ -39,4 +39,4 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
   );
 };
 
-export default BlogPost;
+export default BlogPostShort;

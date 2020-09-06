@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import BlogPost, { BlogPostProps } from "./BlogPost";
+import BlogPostShort, { BlogPostProps } from "./BlogPostShort";
 import ReactComponentsContext from "../theme/ReactComponentsContext";
 import { ThemeProvider } from "emotion-theming";
 
@@ -22,7 +22,7 @@ const Blog: React.FC<BlogProps> = (props) => {
             margin-bottom: 75px;
           `}
         >
-          <BlogPost {...post} short={true} />
+          <BlogPostShort {...post} short={true} />
         </div>
       ))}
     </div>

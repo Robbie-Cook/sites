@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
+import { useTheme } from "../theme/ReactComponentsContext";
 
 /**
  * Interface for BlogSection props
@@ -13,6 +14,7 @@ interface BlogSectionProps {
  *  A BlogSection component.
  */
 const BlogSection: React.FC<BlogSectionProps> = (props) => {
+  const theme = useTheme();
   return (
     <div
       css={css`
@@ -26,6 +28,12 @@ const BlogSection: React.FC<BlogSectionProps> = (props) => {
             "Noto Color Emoji";
           font-size: 1.4rem;
         }
+
+        ${theme.type === "dark"
+          ? css`
+              color: white;
+            `
+          : ``}
       `}
     >
       {props.children}

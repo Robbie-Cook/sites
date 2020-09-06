@@ -1,5 +1,5 @@
 import React from "react";
-import { BlogPostProps } from "./BlogPost";
+import { BlogPostProps } from "./BlogPostShort";
 export interface BlogProps {
     posts: Array<Omit<BlogPostProps, "short">>;
 }
