@@ -28,10 +28,14 @@
     "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-netlify": "^2.1.6",
     "gatsby-plugin-offline": "^2.2.7",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.3.10",
+    "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-transformer-remark": "^2.8.32",
     "gatsby-transformer-sharp": "^2.3.9",
     "react": "^16.13.1",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",

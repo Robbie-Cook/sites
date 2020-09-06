@@ -16,6 +16,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/blog-posts`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts all options defined by `babel-plugin-emotion` plugin.
@@ -30,6 +38,9 @@ module.exports = {
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
     },
     {
       resolve: `gatsby-plugin-manifest`,

@@ -5,22 +5,20 @@ import {
   Blog,
   Theme,
   ReactComponentsContext,
-  Typography,
-  H1
+  H1,
 } from "@robbie-cook/react-components";
 import { ThemeProvider, useTheme } from "emotion-theming";
+import Helmet from "react-helmet";
 
-console.log("blog", Blog);
+// import TestPost from "./blog-posts/test-post.md";
+
+console.log("post", TestPost);
 /**
  * Interface for Blog props
  */
 interface BlogProps {
   children?: any;
 }
-
-require("react-dom");
-window.React2 = require("react");
-console.log(window.React1 === window.React2);
 
 /**
  *  A Blog component.
@@ -37,10 +35,21 @@ const MyBlog: React.FC<BlogProps> = (props) => {
             content: "hello!",
             date: Date.now(),
           },
+          {
+            title: "My Blog Post",
+            author: "Robbie Cook",
+            content: "hello!",
+            date: Date.now(),
+          },
+          {
+            title: "My Blog Post",
+            author: "Robbie Cook",
+            content: "hello!",
+            date: Date.now(),
+          },
         ]}
       />
     </ReactComponentsContext.Provider>
-    // <div></div>
   );
 };
 

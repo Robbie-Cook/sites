@@ -37,6 +37,10 @@ const Layout = ({ children, className }: LayoutProps) => (
       })}
     />
     <SEO />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Vollkorn:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap"
+      rel="stylesheet"
+    ></link>
     <main className={className}>{children}</main>
   </Styled.root>
 );
