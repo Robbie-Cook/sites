@@ -6,6 +6,7 @@ import {
   BlogPost,
   ReactComponentsContext,
 } from "@robbie-cook/react-components";
+import ArrowLeft from "../ArrowLeft";
 
 /**
  * Interface for BlogPost props
@@ -24,7 +25,18 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
           padding: 30px 150px;
         `}
       >
+        <ArrowLeft
+          link="/blog"
+          css={css`
+            position: relative;
+            z-index: 2;
+          `}
+        />
+
         <BlogPost
+          css={css`
+            transform: translate(0, -73px);
+          `}
           title={post.frontmatter.title}
           date={post.frontmatter.date}
           author={post.frontmatter.author}

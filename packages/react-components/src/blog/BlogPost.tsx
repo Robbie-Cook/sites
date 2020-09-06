@@ -18,6 +18,7 @@ export interface BlogPostProps {
   date: number;
   author: string;
   content: string | JSX.Element;
+  className: string;
 }
 
 /**
@@ -25,11 +26,12 @@ export interface BlogPostProps {
  */
 const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
-    <div css={css``}>
+    <div className={props.className} css={css``}>
       <div>
         <BlogHeader
           css={css`
             text-align: center;
+            margin-top: 0;
           `}
         >
           {props.title}

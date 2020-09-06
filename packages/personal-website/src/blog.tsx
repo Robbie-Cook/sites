@@ -9,6 +9,9 @@ import {
 } from "@robbie-cook/react-components";
 import { ThemeProvider, useTheme } from "emotion-theming";
 import { graphql } from "gatsby";
+import ArrowLeft from "./ArrowLeft";
+
+// @ts-ignore
 
 /**
  * Interface for Blog props
@@ -30,15 +33,26 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           padding: 30px 150px;
         `}
       >
-        <H1
+        <div
           css={css`
-            font-size: 4rem;
-            text-align: center;
-            margin-bottom: 90px !important;
+            display: flex;
           `}
         >
-          Blog
-        </H1>
+          <ArrowLeft link="/" />
+          <H1
+            css={css`
+              font-size: 4rem;
+              text-align: center;
+              margin-bottom: 90px !important;
+              margin-top: 0 !important;
+              margin-right: auto !important;
+              margin-left: auto !important;
+              /* transform: translate(-30px, 0); */
+            `}
+          >
+            Blog
+          </H1>
+        </div>
         <Blog
           posts={props.data?.allMarkdownRemark?.edges?.map((edge) => ({
             title: edge.node.frontmatter.title,
