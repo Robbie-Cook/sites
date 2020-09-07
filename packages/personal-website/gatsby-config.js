@@ -14,6 +14,18 @@ module.exports = {
     author: ``,
     basePath: "/",
   },
+  blogMetadata: {
+    siteTitke: `Blog - Robbie Cook`,
+    siteTitleAlt: `Blog`,
+    siteUrl: "https://robbie.pw/blog",
+    siteTitle: `Blog`,
+    siteHeadline: `My Blog`,
+    siteDescription: `Robbie Cook's personal blog`,
+    siteLanguage: `en`,
+    siteImage: ``, // TODO: fill this out
+    author: `@MrRobbieCook`,
+    basePath: "/",
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
