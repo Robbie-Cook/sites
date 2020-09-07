@@ -10,8 +10,7 @@ import {
 import { ThemeProvider, useTheme } from "emotion-theming";
 import { graphql } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
-
-// @ts-ignore
+import facepaint from "facepaint";
 
 /**
  * Interface for Blog props
@@ -20,6 +19,11 @@ interface BlogProps {
   children?: any;
   data?: any;
 }
+
+const mq = facepaint([
+  "@media(min-width: 700px)",
+  "@media(min-width: 1120px)",
+]);
 
 /**
  *  A Blog component.
@@ -34,21 +38,21 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         title: edge.node.frontmatter.title,
         date: edge.node.frontmatter.date,
         content: (
-          <div
-            dangerouslySetInnerHTML={{ __html: edge.node.excerpt }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
         ),
         author: edge.node.frontmatter.author,
         link: `/blog/posts${edge.node.fields.slug}`,
       });
     }
-  })
+  });
   return (
     <ReactComponentsContext.Provider value={{ type: "dark" }}>
       <div
-        css={css`
-          padding: 30px 150px;
-        `}
+        css={css(
+          mq({
+            padding: ["30px 20px", "30px 150px"],
+          })
+        )}
       >
         <div
           css={css`
@@ -70,9 +74,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
             Blog
           </H1>
         </div>
-        <Blog
-          posts={posts}
-        />
+        <Blog posts={posts} />
       </div>
     </ReactComponentsContext.Provider>
   );

@@ -22,6 +22,7 @@
     "contentful": "^7.14.6",
     "emotion-theming": "^10.0.27",
     "eslint-config-airbnb": "^18.0.1",
+    "facepaint": "^1.2.1",
     "gatsby": "^2.24.47",
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-google-analytics": "^2.1.8",

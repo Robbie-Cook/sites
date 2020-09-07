@@ -7,6 +7,9 @@ import {
   ReactComponentsContext,
 } from "@robbie-cook/react-components";
 import ArrowLeft from "../ArrowLeft";
+import facepaint from "facepaint";
+
+const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
 
 /**
  * Interface for BlogPost props
@@ -21,9 +24,11 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
   return (
     <ReactComponentsContext.Provider value={{ type: "dark" }}>
       <div
-        css={css`
-          padding: 30px 150px;
-        `}
+        css={[
+          mq({
+            padding: ["30px 20px", "30px 150px"],
+          }),
+        ]}
       >
         <ArrowLeft
           link="/blog"

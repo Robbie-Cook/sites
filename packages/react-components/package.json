@@ -41,6 +41,7 @@
     "@types/date-and-time": "^0.13.0",
     "date-and-time": "^0.14.1",
     "emotion-theming": "^10.0.27",
+    "facepaint": "^1.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "svg-loader": "0.0.2"
