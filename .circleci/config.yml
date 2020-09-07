@@ -8,6 +8,7 @@ jobs:
       - checkout
       - node/install-packages
       - run: git config --global user.email "robbieck7@gmail.com"
+      - run: git config --global user.name "Robbie-Cook"
       - run : npm set //https://registry.npmjs.org/:_authToken $NPM_TOKEN
       - run: npx lerna publish -y
 
