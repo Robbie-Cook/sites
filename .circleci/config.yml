@@ -14,11 +14,10 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - publish
-          filters:
-            branches:
-              only: /master\/.*/
-
+      - publish:
+        filters:
+          branches:
+            only: master
 # executors:
 #   node:
 #     parameters:
