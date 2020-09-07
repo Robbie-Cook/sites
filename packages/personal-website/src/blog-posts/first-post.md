@@ -2,7 +2,7 @@
 date: 2020-09-07 00:00:00
 title: Construction of A Blog
 author: Robbie Cook
-publish: false
+publish: true
 ---
 
 ## Introduction
@@ -13,7 +13,7 @@ Here is one of the resources I used to create this: https://www.gatsbyjs.com/doc
 
 Along with the \`gatsby-node.js\` API, Gatsby seems to work really well for blogs, and I especially appreciate the lack of templating. Using Liquid a lot in my day-to-day, it's quite refreshing to use the power of pure JavaScript to power a site. It's a little like a superpower.
 
-![](/uploads/marvel.jpeg){: width="668" height="1002"}
+![](/uploads/marvel.jpeg){: width="500" height="500"}
 
 ## The slow march of progress
 
