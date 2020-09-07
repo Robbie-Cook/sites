@@ -1,4 +1,4 @@
-set -e
+set -xe
 
 cd packages/personal-website
 npm i
