@@ -13,8 +13,6 @@ Here is one of the resources I used to create this: https://www.gatsbyjs.com/doc
 
 Along with the \`gatsby-node.js\` API, Gatsby seems to work really well for blogs, and I especially appreciate the lack of templating. Using Liquid a lot in my day-to-day, it's quite refreshing to use the power of pure JavaScript to power a site. It's a little like a superpower.
 
-![](/uploads/marvel.jpeg){: width="500" height="500"}
-
 ## The slow march of progress
 
 It has taken quite a push to get this blog off the ground. Mostly built this weekend, a lot of the learning that I found necessary would not have been possible until recently. I am a bit of a code perfectionist, and so using a third-party platform to completely present the blog, or extending a common template, wouldn't suit me.<br>Complete creative freedom is a requirement in maintaining a blog.
