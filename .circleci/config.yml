@@ -2,7 +2,7 @@ version: 2.1
 
 # Define the jobs we want to run for this project
 jobs:
-  build:
+  publish:
     executor: node/default
     steps:
       - checkout
@@ -14,7 +14,10 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - build
+      - publish
+          filters:
+            branches:
+              only: /master\/.*/
 
 # executors:
 #   node:
