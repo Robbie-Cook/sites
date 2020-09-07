@@ -26,6 +26,23 @@ interface BlogProps {
  */
 const MyBlog: React.FC<BlogProps> = (props) => {
   console.log("data", props.data);
+
+  const posts = [];
+  props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
+    if (edge.node.frontmatter.publish) {
+      posts.push({
+        title: edge.node.frontmatter.title,
+        date: edge.node.frontmatter.date,
+        content: (
+          <div
+            dangerouslySetInnerHTML={{ __html: edge.node.excerpt }}
+          />
+        ),
+        author: edge.node.frontmatter.author,
+        link: `/blog/posts${edge.node.fields.slug}`,
+      });
+    }
+  })
   return (
     <ReactComponentsContext.Provider value={{ type: "dark" }}>
       <div
@@ -54,15 +71,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           </H1>
         </div>
         <Blog
-          posts={props.data?.allMarkdownRemark?.edges?.map((edge) => ({
-            title: edge.node.frontmatter.title,
-            date: edge.node.frontmatter.date,
-            content: (
-              <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
-            ),
-            author: edge.node.frontmatter.author,
-            link: `/blog/posts${edge.node.fields.slug}`,
-          }))}
+          posts={posts}
         />
       </div>
     </ReactComponentsContext.Provider>
@@ -99,6 +108,7 @@ export const pageQuery = graphql`
             title
             author
             date
+            publish
           }
           fields {
             slug
