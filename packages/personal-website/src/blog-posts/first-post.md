@@ -1,5 +1,5 @@
 ---
-date: "2020-09-06"
+date: "2020-09-07"
 title: "My first blog post"
 author: "Robbie Cook"
 publish: false
