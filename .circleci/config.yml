@@ -3,9 +3,10 @@ version: 2.1
 # Define the jobs we want to run for this project
 jobs:
   build:
+    executor: node/default
     steps:
       - checkout
-      - run: npm i
+      - node/install-packages
       - run: lerna publish
 
 orbs:
