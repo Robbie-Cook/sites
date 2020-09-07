@@ -10,7 +10,11 @@ import {
 import ArrowLeft from "../ArrowLeft";
 import facepaint from "facepaint";
 
-const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
+const mq = facepaint([
+  "@media(min-width: 700px)",
+  "@media(min-width: 1120px)",
+  "@media(min-width: 1300px)",
+]);
 
 /**
  * Interface for BlogPost props
@@ -40,16 +44,20 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
         />
 
         <SEO site={props.data.site.siteMetadata} />
-
-        <BlogPost
-          css={css`
-            transform: translate(0, -73px);
-          `}
-          title={post.frontmatter.title}
-          date={post.frontmatter.date}
-          author={post.frontmatter.author}
-          content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
-        />
+        <div
+          css={css(
+            mq({
+              transform: ["", "", "translate(0, -73px)"],
+            })
+          )}
+        >
+          <BlogPost
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            author={post.frontmatter.author}
+            content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+          />
+        </div>
       </div>
     </ReactComponentsContext.Provider>
   );

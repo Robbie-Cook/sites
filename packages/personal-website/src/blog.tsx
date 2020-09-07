@@ -63,6 +63,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         <div
           css={css`
             display: flex;
+            flex-wrap: wrap;
           `}
         >
           <ArrowLeft link="/" />
@@ -74,6 +75,8 @@ const MyBlog: React.FC<BlogProps> = (props) => {
               margin-top: 0 !important;
               margin-right: auto !important;
               margin-left: auto !important;
+
+              transform: translate(-30px, 0);
               /* transform: translate(-30px, 0); */
             `}
           >
