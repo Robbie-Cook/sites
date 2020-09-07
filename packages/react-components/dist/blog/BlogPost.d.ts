@@ -8,7 +8,7 @@ export interface BlogPostProps {
     date: number;
     author: string;
     content: string | JSX.Element;
-    className: string;
+    className?: string;
 }
 /**
  *  A BlogPost component.

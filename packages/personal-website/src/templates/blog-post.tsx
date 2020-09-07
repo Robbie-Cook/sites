@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import {
   BlogPost,
   ReactComponentsContext,
+  SEO,
 } from "@robbie-cook/react-components";
 import ArrowLeft from "../ArrowLeft";
 import facepaint from "facepaint";
@@ -38,6 +39,8 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
           `}
         />
 
+        <SEO site={props.data.site.siteMetadata} />
+
         <BlogPost
           css={css`
             transform: translate(0, -73px);
@@ -58,6 +61,18 @@ export const query = graphql`
       frontmatter {
         title
         date
+        author
+      }
+    }
+    site {
+      siteMetadata {
+        siteTitle
+        siteTitleAlt
+        siteHeadline
+        siteUrl
+        siteDescription
+        siteLanguage
+        siteImage
         author
       }
     }

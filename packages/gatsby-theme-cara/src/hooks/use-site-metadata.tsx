@@ -1,12 +1,12 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby";
 
 type Props = {
   site: {
     siteMetadata: {
-      [key: string]: string
-    }
-  }
-}
+      [key: string]: string;
+    };
+  };
+};
 
 const useSiteMetadata = () => {
   const data = useStaticQuery<Props>(graphql`
@@ -24,9 +24,9 @@ const useSiteMetadata = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.site.siteMetadata
-}
+  return data.site.siteMetadata;
+};
 
-export default useSiteMetadata
+export default useSiteMetadata;

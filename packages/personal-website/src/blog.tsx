@@ -6,9 +6,10 @@ import {
   Theme,
   ReactComponentsContext,
   H1,
+  SEO,
 } from "@robbie-cook/react-components";
 import { ThemeProvider, useTheme } from "emotion-theming";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
 import facepaint from "facepaint";
 
@@ -20,14 +21,20 @@ interface BlogProps {
   data?: any;
 }
 
+type Props = {
+  site: {
+    siteMetadata: {
+      [key: string]: string;
+    };
+  };
+};
+
 const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
 
 /**
  *  A Blog component.
  */
 const MyBlog: React.FC<BlogProps> = (props) => {
-  console.log("data", props.data);
-
   const posts = [];
   props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
     if (edge.node.frontmatter.publish) {
@@ -51,7 +58,8 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           })
         )}
       >
-        {/* <SEO /> */}
+        <SEO site={props.data.site.siteMetadata as any} />
+
         <div
           css={css`
             display: flex;
@@ -90,7 +98,18 @@ export const pageQuery = graphql`
         }
       }
     }
-
+    site {
+      siteMetadata {
+        siteTitle
+        siteTitleAlt
+        siteHeadline
+        siteUrl
+        siteDescription
+        siteLanguage
+        siteImage
+        author
+      }
+    }
     allMarkdownRemark {
       edges {
         node {
