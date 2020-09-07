@@ -20,10 +20,7 @@ interface BlogProps {
   data?: any;
 }
 
-const mq = facepaint([
-  "@media(min-width: 700px)",
-  "@media(min-width: 1120px)",
-]);
+const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
 
 /**
  *  A Blog component.
@@ -54,6 +51,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           })
         )}
       >
+        {/* <SEO /> */}
         <div
           css={css`
             display: flex;
