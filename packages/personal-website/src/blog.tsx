@@ -99,7 +99,7 @@ export const pageQuery = graphql`
       }
     }
     site {
-      siteMetadata {
+      blogMetadata {
         siteTitle
         siteTitleAlt
         siteHeadline
