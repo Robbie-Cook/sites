@@ -4,6 +4,7 @@ title: "Construction of A Blog"
 author: "Robbie Cook"
 publish: false
 ---
-## Hello!
 
-Welcome to my blog! This is my first test post.
+## Introduction
+
+Welcome to my blog! This is a website created in Gatsby, and it uses markdown 
