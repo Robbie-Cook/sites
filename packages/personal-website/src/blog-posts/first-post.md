@@ -1,6 +1,6 @@
 ---
 date: "2020-09-07"
-title: "My first blog post"
+title: "Construction of A Blog"
 author: "Robbie Cook"
 publish: false
 ---
