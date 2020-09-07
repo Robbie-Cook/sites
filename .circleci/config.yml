@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - run: lerna publish
+      - run: npx lerna publish
 
 orbs:
   node: circleci/node@3.0.0
