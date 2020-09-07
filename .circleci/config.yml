@@ -6,9 +6,9 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      - run: git config --global user.email "robbieck7@gmail.com"
       - node/install-packages
-      - npm set //https://registry.npmjs.org/:_authToken $NPM_TOKEN
+      - run: git config --global user.email "robbieck7@gmail.com"
+      - run : npm set //https://registry.npmjs.org/:_authToken $NPM_TOKEN
       - run: npx lerna publish -y
 
 
