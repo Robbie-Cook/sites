@@ -7,8 +7,8 @@ jobs:
       - image: circleci/<language>:<version TAG>
     steps:
       - checkout
-      - npm i
-      - lerna publish
+      - run: npm i
+      - run: lerna publish
 
 orbs:
   node: circleci/node@3.0.0
