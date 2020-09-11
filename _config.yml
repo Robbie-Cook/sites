@@ -2,4 +2,4 @@ markdown: CommonMark
 
 _options:
   image: # Front matter field
-    uploads_dir: "packages/personal-website/static/:title"
+    uploads_dir: "packages/personal-website/static/uploads/:title"
