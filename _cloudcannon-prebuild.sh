@@ -1,4 +1,5 @@
-set -xe
+set -e
+set -o pipefail
 
 cd packages/personal-website
 npm i
