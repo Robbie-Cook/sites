@@ -2,7 +2,7 @@ import React from "react";
 /**
  * Interface for BlogSection props
  */
-interface BlogSectionProps {
+export interface BlogSectionProps {
     children?: any;
 }
 /**
