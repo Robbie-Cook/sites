@@ -6,12 +6,12 @@ import {
   Theme,
   ReactComponentsContext,
   H1,
+  SEO,
 } from "@robbie-cook/react-components";
 import { ThemeProvider, useTheme } from "emotion-theming";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
-
-// @ts-ignore
+import facepaint from "facepaint";
 
 /**
  * Interface for Blog props
@@ -21,21 +21,49 @@ interface BlogProps {
   data?: any;
 }
 
+type Props = {
+  site: {
+    siteMetadata: {
+      [key: string]: string;
+    };
+  };
+};
+
+const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
+
 /**
  *  A Blog component.
  */
 const MyBlog: React.FC<BlogProps> = (props) => {
-  console.log("data", props.data);
+  const posts = [];
+  props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
+    if (edge.node.frontmatter.publish) {
+      posts.push({
+        title: edge.node.frontmatter.title,
+        date: edge.node.frontmatter.date,
+        content: (
+          <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
+        ),
+        author: edge.node.frontmatter.author,
+        link: `/blog/posts${edge.node.fields.slug}`,
+      });
+    }
+  });
   return (
     <ReactComponentsContext.Provider value={{ type: "dark" }}>
       <div
-        css={css`
-          padding: 30px 150px;
-        `}
+        css={css(
+          mq({
+            padding: ["30px 20px", "30px 150px"],
+          })
+        )}
       >
+        <SEO site={props.data.site.siteMetadata as any} />
+
         <div
           css={css`
             display: flex;
+            flex-wrap: wrap;
           `}
         >
           <ArrowLeft link="/" />
@@ -47,23 +75,15 @@ const MyBlog: React.FC<BlogProps> = (props) => {
               margin-top: 0 !important;
               margin-right: auto !important;
               margin-left: auto !important;
+
+              transform: translate(-30px, 0);
               /* transform: translate(-30px, 0); */
             `}
           >
             Blog
           </H1>
         </div>
-        <Blog
-          posts={props.data?.allMarkdownRemark?.edges?.map((edge) => ({
-            title: edge.node.frontmatter.title,
-            date: edge.node.frontmatter.date,
-            content: (
-              <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
-            ),
-            author: edge.node.frontmatter.author,
-            link: `/blog/posts${edge.node.fields.slug}`,
-          }))}
-        />
+        <Blog posts={posts} />
       </div>
     </ReactComponentsContext.Provider>
   );
@@ -81,7 +101,18 @@ export const pageQuery = graphql`
         }
       }
     }
-
+    site {
+      siteMetadata {
+        siteTitle
+        siteTitleAlt
+        siteHeadline
+        siteUrl
+        siteDescription
+        siteLanguage
+        siteImage
+        author
+      }
+    }
     allMarkdownRemark {
       edges {
         node {
@@ -99,6 +130,7 @@ export const pageQuery = graphql`
             title
             author
             date
+            publish
           }
           fields {
             slug

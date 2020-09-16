@@ -6,7 +6,7 @@ import { useTheme } from "../theme/ReactComponentsContext";
 /**
  * Interface for BlogSection props
  */
-interface BlogSectionProps {
+export interface BlogSectionProps {
   children?: any;
 }
 
@@ -26,7 +26,8 @@ const BlogSection: React.FC<BlogSectionProps> = (props) => {
             "Helvetica Neue", Arial, "Noto Sans", sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
             "Noto Color Emoji";
-          font-size: 1.4rem;
+          font-size: 1.18rem;
+          line-height: 2.4rem;
         }
 
         ${theme.type === "dark"
@@ -36,7 +37,7 @@ const BlogSection: React.FC<BlogSectionProps> = (props) => {
           : ``}
       `}
     >
-      {props.children}
+      <span>{props.children}</span>
     </div>
   );
 };
