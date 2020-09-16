@@ -24,7 +24,6 @@ export interface BlogPostProps {
  *  A BlogPost component.
  */
 const BlogPostShort: React.FC<BlogPostProps> = (props) => {
-  const theme = useTheme();
   return (
     <div css={css``}>
       <div>

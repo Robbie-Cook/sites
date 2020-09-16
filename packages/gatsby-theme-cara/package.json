@@ -25,7 +25,7 @@
     "@emotion/styled": "^10.0.23",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "@robbie-cook/react-components": "^5.0.4",
+    "@robbie-cook/react-components": "file:../react-components",
     "@theme-ui/presets": "^0.2.44",
     "antd": "^4.6.1",
     "date-and-time": "^0.14.1",
@@ -56,16 +56,5 @@
     "url": "https://github.com/LekoArts/gatsby-themes.git",
     "directory": "themes/gatsby-theme-cara"
   },
-  "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5",
-  "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@storybook/addon-actions": "^6.0.16",
-    "@storybook/addon-essentials": "^6.0.16",
-    "@storybook/addon-links": "^6.0.16",
-    "@storybook/addons": "^6.0.17",
-    "@storybook/react": "^6.0.16",
-    "@storybook/theming": "^6.0.17",
-    "babel-loader": "^8.1.0",
-    "react-is": "^16.13.1"
-  }
+  "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5"
 }
