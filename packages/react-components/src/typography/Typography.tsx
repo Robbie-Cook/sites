@@ -13,7 +13,8 @@ const headingBaseStyles = css`
  *  A H1 component.
  */
 const H1: React.FC<{ children?: any; className?: string }> = (props) => {
-  const theme = useTheme();
+  // const theme = useTheme();
+  const theme = { type: "dark" };
   return (
     <h1
       css={() =>
@@ -33,20 +34,15 @@ const H1: React.FC<{ children?: any; className?: string }> = (props) => {
  *  A H2 component.
  */
 const H2: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
-  const theme = useTheme();
+  // const theme = useTheme();
+  const theme = { type: "dark" };
   return (
     <h2
-      css={
-        // css`
-
-        // `,
-        () =>
-          css`
-            color: ${theme.type === "dark" ? `white` : `black`};
-            margin: 1.2rem 0;
-            ${headingBaseStyles};
-          `
-      }
+      css={css`
+        color: ${theme.type === "dark" ? `white` : `black`};
+        margin: 1.2rem 0;
+        ${headingBaseStyles};
+      `}
     >
       {props.children}
     </h2>
@@ -61,7 +57,8 @@ const H3: React.FC<{
   className?: string;
 }> = (props) => {
   console.log(props);
-  const theme = useTheme();
+  // const theme = useTheme();
+  const theme = { type: "dark" };
   return (
     <h3
       css={() => {
@@ -84,7 +81,8 @@ const P: React.FC<{
   children?: any;
   className?: string;
 }> = (props) => {
-  const theme = useTheme();
+  // const theme = useTheme();
+  const theme = { type: "dark" };
   return (
     <p
       css={

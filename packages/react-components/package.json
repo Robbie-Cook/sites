@@ -25,5 +25,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "svg-loader": "0.0.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
   }
 }

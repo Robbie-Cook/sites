@@ -14,7 +14,8 @@ export interface BlogSectionProps {
  *  A BlogSection component.
  */
 const BlogSection: React.FC<BlogSectionProps> = (props) => {
-  const theme = useTheme();
+  // const theme = useTheme();
+  const theme = { type: "dark" };
   return (
     <div
       css={css`
