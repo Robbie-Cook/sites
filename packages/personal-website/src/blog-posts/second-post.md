@@ -7,4 +7,4 @@ publish: true
 
 ## Website Updates
 
-Recently, I have had some problems with React Context. My website is split up between two main packages -- the main site, and my react components library.
+Recently, I have had some problems with React Context. My website is split up between two main packages – the main site, and my react components library (
