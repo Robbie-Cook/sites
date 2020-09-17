@@ -5,7 +5,6 @@
   "version": "independent",
   "npmClient": "npm",
   "loglevel": "debug",
-  "registry": "https://registry.npmjs.org/",
   "ignoreChanges": ["CHANGELOG.md", "**/__tests__/**", "**/__mocks__/**"],
   "command": {
     "publish": {
