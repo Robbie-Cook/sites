@@ -8,7 +8,6 @@ import {
   H1,
   SEO,
 } from "@robbie-cook/react-components";
-import { ThemeProvider, useTheme } from "emotion-theming";
 import { graphql, useStaticQuery } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
 import facepaint from "facepaint";
@@ -50,24 +49,23 @@ const MyBlog: React.FC<BlogProps> = (props) => {
     }
   });
   return (
-    <ReactComponentsContext.Provider value={{ type: "dark" }}>
-      <div
-        css={css(
-          mq({
-            padding: ["30px 20px", "30px 150px"],
-          })
-        )}
-      >
-        <SEO site={props.data.site.siteMetadata as any} />
+    <div
+      css={css(
+        mq({
+          padding: ["30px 20px", "30px 150px"],
+        })
+      )}
+    >
+      <SEO site={props.data.site.siteMetadata as any} />
 
-        <div
-          css={css`
-            display: flex;
-            flex-wrap: wrap;
-          `}
-        >
-          <ArrowLeft link="/" />
-          <H1
+      <div
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+        `}
+      >
+        <ArrowLeft link="/" />
+        {/* <H1
             css={css`
               font-size: 4rem;
               text-align: center;
@@ -77,15 +75,13 @@ const MyBlog: React.FC<BlogProps> = (props) => {
               margin-left: auto !important;
 
               transform: translate(-30px, 0);
-              /* transform: translate(-30px, 0); */
             `}
           >
             Blog
-          </H1>
-        </div>
-        <Blog posts={posts} />
+          </H1> */}
       </div>
-    </ReactComponentsContext.Provider>
+      <Blog posts={posts} />
+    </div>
   );
 };
 

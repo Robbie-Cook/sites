@@ -1,16 +1,29 @@
 /**
  * @jsx jsx
  */
-import { ThemeProvider } from "emotion-theming";
 import { jsx, css } from "@emotion/core";
+import {
+  Blog,
+  Theme,
+  ReactComponentsContext,
+  H1,
+  SEO,
+} from "@robbie-cook/react-components";
 
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
-  return <ThemeProvider theme={{ type: "dark" }}>{element}</ThemeProvider>;
+  return (
+    <ReactComponentsContext.Provider>
+      {element}
+    </ReactComponentsContext.Provider>
+  );
 };
 
-export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={{ type: "dark" }}>{element}</ThemeProvider>
-  // element
-);
+export const wrapRootElement = ({ element }) => {
+  return (
+    <ReactComponentsContext.Provider>
+      {element}
+    </ReactComponentsContext.Provider>
+  );
+};

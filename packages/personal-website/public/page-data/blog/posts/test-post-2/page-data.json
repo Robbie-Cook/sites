@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-blog-post-tsx","path":"/blog/posts/test-post-2/","result":{"data":{"markdownRemark":{"html":"<p>Hello 2!</p>","frontmatter":{"title":"My second blog post","date":"2019-05-04","author":"Robbie Cook"}}},"pageContext":{"slug":"/test-post-2/"}},"staticQueryHashes":[]}
