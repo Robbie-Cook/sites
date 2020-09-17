@@ -2,11 +2,11 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import { graphql } from "gatsby";
-// import {
-//   BlogPost,
-//   ReactComponentsContext,
-//   SEO,
-// } from "@robbie-cook/react-components";
+import {
+  BlogPost,
+  ReactComponentsContext,
+  SEO,
+} from "@robbie-cook/react-components";
 import ArrowLeft from "../ArrowLeft";
 import facepaint from "facepaint";
 
@@ -27,40 +27,39 @@ interface BlogPostTemplateProps {
 const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
   const post = props.data.markdownRemark;
   return (
-    <React.Fragment></React.Fragment>
-    // // <ReactComponentsContext.Provider value={{ type: "dark" }}>
-    //   <div
-    //     css={[
-    //       mq({
-    //         padding: ["30px 20px", "30px 150px"],
-    //       }),
-    //     ]}
-    //   >
-    //     <ArrowLeft
-    //       link="/blog"
-    //       css={css`
-    //         position: relative;
-    //         z-index: 2;
-    //       `}
-    //     />
+    <ReactComponentsContext.Provider value={{ type: "dark" }}>
+      <div
+        css={[
+          mq({
+            padding: ["30px 20px", "30px 150px"],
+          }),
+        ]}
+      >
+        <ArrowLeft
+          link="/blog"
+          css={css`
+            position: relative;
+            z-index: 2;
+          `}
+        />
 
-    //     <SEO site={props.data.site.siteMetadata} />
-    //     <div
-    //       css={css(
-    //         mq({
-    //           transform: ["", "", "translate(0, -73px)"],
-    //         })
-    //       )}
-    //     >
-    //       <BlogPost
-    //         title={post.frontmatter.title}
-    //         date={post.frontmatter.date}
-    //         author={post.frontmatter.author}
-    //         content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
-    //       />
-    //     </div>
-    //   </div>
-    // {/* </ReactComponentsContext.Provider> */}
+        <SEO site={props.data.site.siteMetadata} />
+        <div
+          css={css(
+            mq({
+              transform: ["", "", "translate(0, -73px)"],
+            })
+          )}
+        >
+          <BlogPost
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            author={post.frontmatter.author}
+            content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+          />
+        </div>
+      </div>
+    </ReactComponentsContext.Provider>
   );
 };
 export const query = graphql`
