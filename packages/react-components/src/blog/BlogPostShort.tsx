@@ -6,7 +6,7 @@ import { Theme } from "../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
-import { useTheme } from "../theme/ReactComponentsContext";
+// import { useTheme } from "../theme/ReactComponentsContext";
 
 // @ts-ignore
 import Link from "./link.svg";
