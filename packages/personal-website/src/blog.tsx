@@ -11,6 +11,7 @@ import {
 import { graphql, useStaticQuery } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
 import facepaint from "facepaint";
+import date from "date-and-time";
 
 /**
  * Interface for Blog props
@@ -34,7 +35,13 @@ const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
  *  A Blog component.
  */
 const MyBlog: React.FC<BlogProps> = (props) => {
-  const posts = [];
+  const posts: Array<{
+    title: string;
+    date: string;
+    content: any;
+    author: string;
+    link: string;
+  }> = [];
   props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
     if (edge.node.frontmatter.publish) {
       posts.push({
@@ -48,6 +55,17 @@ const MyBlog: React.FC<BlogProps> = (props) => {
       });
     }
   });
+
+  posts.sort((a, b) => {
+    const date1 = new Date(a.date).getTime();
+    const date2 = new Date(b.date).getTime();
+    
+    if (date1 === date2) {
+      return 0;
+    }
+    return date1 > date2 ? -1 : 1;
+  });
+
   return (
     <div
       css={css(
