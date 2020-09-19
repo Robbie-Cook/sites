@@ -6,6 +6,7 @@ import { Theme } from "../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
+import Context from "../theme/ReactComponentsContext";
 
 // import Dot from "./Dot.svg";
 
