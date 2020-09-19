@@ -60,17 +60,21 @@ const H3: React.FC<{
   // const theme = useTheme();
   const theme = { type: "dark" };
   return (
-    <h3
-      css={() => {
-        return css`
-          color: ${theme.type === "dark" ? `white` : `black`};
-          margin: 1.2rem 0;
-        `;
-      }}
-      className={props.className}
-    >
-      {props.children}
-    </h3>
+    <ReactComponentsContext.Consumer>
+      {(value) => (
+        <h3
+          css={() => {
+            return css`
+              color: ${value.type === "dark" ? `white` : `black`};
+              margin: 1.2rem 0;
+            `;
+          }}
+          className={props.className}
+        >
+          {props.children}
+        </h3>
+      )}
+    </ReactComponentsContext.Consumer>
   );
 };
 

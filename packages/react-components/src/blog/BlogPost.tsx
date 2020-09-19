@@ -26,9 +26,6 @@ export interface BlogPostProps {
  *  A BlogPost component.
  */
 const BlogPost: React.FC<BlogPostProps> = (props) => {
-  const context = React.useContext(Context);
-
-  console.log(context)
   return (
     <div className={props.className} css={css``}>
       <div>
