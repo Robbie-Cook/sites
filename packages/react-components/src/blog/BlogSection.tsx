@@ -2,13 +2,6 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import { useTheme } from "../theme/ReactComponentsContext";
-import facepaint from 'facepaint'
-
-const mq = facepaint([
-  '@media(min-width: 420px)',
-  '@media(min-width: 920px)',
-  '@media(min-width: 1120px)'
-])
 
 /**
  * Interface for BlogSection props
@@ -30,24 +23,6 @@ const BlogSection: React.FC<BlogSectionProps> = (props) => {
         line-height: 1.8rem;
 
         & * {
-          a {
-            color: #329cfa;
-            &:visited {
-              color: #96a3ff;
-            }
-          }
-
-          p {
-            margin-bottom: 40px;
-
-            ${mq}
-            @media only screen and (max-width: 600px) {
-              body {
-                background-color: lightblue;
-              }
-            }
-          }
-
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
             "Helvetica Neue", Arial, "Noto Sans", sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
