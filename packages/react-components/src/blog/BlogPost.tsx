@@ -6,6 +6,7 @@ import { Theme } from "../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
+import Context from "../theme/ReactComponentsContext";
 
 // import Dot from "./Dot.svg";
 
@@ -25,6 +26,9 @@ export interface BlogPostProps {
  *  A BlogPost component.
  */
 const BlogPost: React.FC<BlogPostProps> = (props) => {
+  const context = React.useContext(Context);
+
+  console.log(context)
   return (
     <div className={props.className} css={css``}>
       <div>
