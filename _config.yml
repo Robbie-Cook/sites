@@ -1,5 +1,7 @@
 markdown: CommonMark
 
+collections_dir: packages/personal-website
+
 _options:
   image: # Front matter field
     uploads_dir: "packages/personal-website/static/uploads/:title"
