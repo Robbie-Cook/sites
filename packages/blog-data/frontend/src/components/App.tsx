@@ -26,7 +26,10 @@ function App() {
   return (
     <main
       css={css`
-        padding: 60px;
+        padding: 30px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       `}
     >
       <Router>
