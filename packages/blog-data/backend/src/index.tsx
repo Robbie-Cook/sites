@@ -30,6 +30,9 @@ app.get("/files", (req, res) => {
  */
 app.post("/file/:fileName", (req, res) => {
   const filePath = path.resolve(DATA_DIR, req.params.fileName);
+  console.log(
+    `Received request to ${filePath} with body ${JSON.stringify(req.body)}`
+  );
   if (req.params.fileName && req.body.content) {
     console.log(`Setting file ${filePath} to content ${req.body.content}`);
     fs.writeFileSync(filePath, req.body.content);

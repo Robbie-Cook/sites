@@ -7,18 +7,16 @@ function App() {
     <main>
       <H1>Editor</H1>
       <Editor
-        onChange={(text) => {
+        onChange={async (text) => {
           console.log(text);
-          fetch("http://localhost:3001/file/test-post.md", {
-            headers: {
-              "Access-Control-Allow-Origin": "*",
-            },
+          const res = await fetch("http://localhost:3001/file/test-post.md", {
             method: "POST",
             body: JSON.stringify({
               content: text,
             }),
-          }).then((res) => {
-            console.log(res);
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
           });
         }}
       />
