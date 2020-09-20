@@ -10,7 +10,7 @@ import slugify from "slugify";
 import { css, jsx } from "@emotion/core";
 
 async function fetchFiles() {
-  const files = await (await fetch("http://localhost:3001/files")).json();
+  const files = await (await fetch("http://localhost:8080/files")).json();
   return files;
 }
 
@@ -30,6 +30,7 @@ function App() {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
       `}
     >
       <Router>
@@ -45,7 +46,7 @@ function App() {
                 }}
                 onRemoveFile={(file) => {
                   // TODO: move to helper
-                  fetch(`http://localhost:3001/delete-file/${file}`).then(
+                  fetch(`http://localhost:8080/delete-file/${file}`).then(
                     () => {
                       fetchFiles().then((files) => {
                         setFiles(files);
@@ -59,7 +60,7 @@ function App() {
                   newFiles.push(fileSlug);
 
                   // TODO: move to helper
-                  fetch(`http://localhost:3001/file/${fileSlug}`, {
+                  fetch(`http://localhost:8080/file/${fileSlug}`, {
                     method: "POST",
                     body: JSON.stringify({
                       content: "",

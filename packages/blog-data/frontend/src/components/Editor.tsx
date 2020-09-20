@@ -1,7 +1,9 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 import Quill from "quill";
 import "../quill.snow.css";
 import * as _ from "lodash";
+import React from "react";
 
 function Editor(props: { onChange: (text: string) => Promise<void> }) {
   React.useEffect(() => {
@@ -20,7 +22,11 @@ function Editor(props: { onChange: (text: string) => Promise<void> }) {
     );
   });
   return (
-    <div>
+    <div
+      css={css`
+        width: 100%;
+      `}
+    >
       <div id="toolbar">
         <button className="ql-bold">Bold</button>
         <button className="ql-italic">Italic</button>
