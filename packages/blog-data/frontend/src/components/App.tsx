@@ -13,7 +13,6 @@ async function fetchFiles() {
 
 function App() {
   const [files, setFiles] = React.useState<Array<string> | null>(null);
-  const [activeFile, setActiveFile] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     fetchFiles().then((files) => {
@@ -26,7 +25,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact>
-            {files && !activeFile && (
+            {files && (
               <FileTileWrapper
                 files={files}
                 onFileClick={(file) => {
