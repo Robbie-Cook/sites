@@ -2,14 +2,14 @@ import React from "react";
 import Editor from "../components/Editor";
 import { H1 } from "@robbie-cook/react-components";
 
-function EditorPage() {
+function EditorPage(props: { file: string }) {
   return (
     <main>
-      <H1>Editor</H1>
+      <H1>{props.file}</H1>
       <Editor
         onChange={async (text) => {
           console.log(text);
-          const res = await fetch("http://localhost:3001/file/test-post.md", {
+          const res = await fetch(`http://localhost:3001/file/${props.file}`, {
             method: "POST",
             body: JSON.stringify({
               content: text,

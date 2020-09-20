@@ -28,7 +28,7 @@ function App() {
           onFileClick={(file) => setActiveFile(file)}
         />
       )}
-      {activeFile && <EditorPage />}
+      {activeFile && <EditorPage file={activeFile} />}
     </main>
   );
 }
