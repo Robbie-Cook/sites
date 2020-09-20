@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { Card } from "antd";
 
 /**
  * Interface for FileTile props
@@ -16,15 +15,15 @@ interface FileTileProps {
  */
 const FileTile: React.FC<FileTileProps> = (props) => {
   return (
-    <Card
-      title={props.file}
-      // extra={<a href="#">More</a>}
+    <div
       css={css`
+        padding: 30px;
         cursor: pointer;
       `}
-      style={{ width: 300 }}
       onClick={() => props.onFileClick(props.file)}
-    ></Card>
+    >
+      {props.file}
+    </div>
   );
 };
 

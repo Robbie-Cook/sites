@@ -33,7 +33,7 @@ app.post("/file/:fileName", (req, res) => {
   console.log(
     `Received request to ${filePath} with body ${JSON.stringify(req.body)}`
   );
-  if (req.params.fileName && req.body.content) {
+  if ((req.params.fileName && req.body.content) || req.body.content === "") {
     console.log(`Setting file ${filePath} to content ${req.body.content}`);
     fs.writeFileSync(filePath, req.body.content);
     res.sendStatus(200);

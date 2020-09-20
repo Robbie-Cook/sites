@@ -9,12 +9,15 @@ import FileTile from "./FileTile";
 interface FileTileWrapperProps {
   files: Array<string>;
   onFileClick: (file: string) => void;
+  onAddFile: (file: string) => void;
 }
 
 /**
  *  A FileTileWrapper component.
  */
 const FileTileWrapper: React.FC<FileTileWrapperProps> = (props) => {
+  const [fileName, newFileName] = React.useState<string>("New File");
+
   return (
     <div>
       {props.files.map((file) => {
@@ -25,6 +28,22 @@ const FileTileWrapper: React.FC<FileTileWrapperProps> = (props) => {
           />
         );
       })}
+      <figure>
+        <input
+          type="text"
+          value={fileName}
+          onChange={(e) => newFileName(e.target.value)}
+        ></input>
+        <button
+          onClick={() => {
+            if (fileName !== null) {
+              props.onAddFile(fileName);
+            }
+          }}
+        >
+          Add File
+        </button>
+      </figure>
     </div>
   );
 };
