@@ -21,10 +21,22 @@ const FileTile: React.FC<FileTileProps> = (props) => {
       css={css`
         padding: 30px;
         cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        border: 1px solid gray;
+        max-width: 300px;
       `}
       onClick={() => props.onFileClick(props.file)}
     >
-      {props.file}
+      <span
+        css={css`
+          padding: 0 30px;
+        `}
+      >
+        {props.file}
+      </span>
       <Button
         danger
         onClick={(e) => {

@@ -1,11 +1,13 @@
+/** @jsx jsx */
 import React from "react";
 import Editor from "./Editor";
-import { H1 } from "@robbie-cook/react-components";
+import { H1, H3 } from "@robbie-cook/react-components";
 import EditorPage from "../pages/EditorPage";
 import FileTile from "./FileTile";
 import FileTileWrapper from "./FileTileWrapper";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import slugify from "slugify";
+import { css, jsx } from "@emotion/core";
 
 async function fetchFiles() {
   const files = await (await fetch("http://localhost:3001/files")).json();
@@ -22,10 +24,16 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <main
+      css={css`
+        padding: 60px;
+      `}
+    >
       <Router>
         <Switch>
           <Route path="/" exact>
+            <H1>Fox</H1>
+            <H3>Select a file to edit</H3>
             {files && (
               <FileTileWrapper
                 files={files}
