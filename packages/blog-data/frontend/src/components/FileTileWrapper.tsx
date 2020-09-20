@@ -10,6 +10,7 @@ interface FileTileWrapperProps {
   files: Array<string>;
   onFileClick: (file: string) => void;
   onAddFile: (file: string) => void;
+  onRemoveFile: (file: string) => void;
 }
 
 /**
@@ -24,6 +25,7 @@ const FileTileWrapper: React.FC<FileTileWrapperProps> = (props) => {
         return (
           <FileTile
             onFileClick={(file) => props.onFileClick(file)}
+            onRemoveFile={(file) => props.onRemoveFile(file)}
             file={file}
           />
         );

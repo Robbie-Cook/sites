@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
+import { Button } from "antd";
 
 /**
  * Interface for FileTile props
@@ -8,6 +9,7 @@ import React from "react";
 interface FileTileProps {
   file: string;
   onFileClick: (file: string) => void;
+  onRemoveFile: (file: string) => void;
 }
 
 /**
@@ -23,6 +25,15 @@ const FileTile: React.FC<FileTileProps> = (props) => {
       onClick={() => props.onFileClick(props.file)}
     >
       {props.file}
+      <Button
+        danger
+        onClick={(e) => {
+          e.stopPropagation();
+          props.onRemoveFile(props.file);
+        }}
+      >
+        Remove File
+      </Button>
     </div>
   );
 };

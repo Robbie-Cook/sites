@@ -32,6 +32,16 @@ function App() {
                 onFileClick={(file) => {
                   (window as any).location = `/${file}`;
                 }}
+                onRemoveFile={(file) => {
+                  // TODO: move to helper
+                  fetch(`http://localhost:3001/delete-file/${file}`).then(
+                    () => {
+                      fetchFiles().then((files) => {
+                        setFiles(files);
+                      });
+                    }
+                  );
+                }}
                 onAddFile={(file) => {
                   const newFiles = [...files];
                   const fileSlug = `${slugify(file)}.md`;

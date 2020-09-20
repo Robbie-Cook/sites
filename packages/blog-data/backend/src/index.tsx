@@ -25,7 +25,7 @@ app.get("/files", (req, res) => {
 });
 
 /**
- * Update a file. This is probably the most dangerous function, and it needs to
+ * Update a file. This is probably a dangerous function, and it needs to
  * be protected.
  */
 app.post("/file/:fileName", (req, res) => {
@@ -36,6 +36,22 @@ app.post("/file/:fileName", (req, res) => {
   if ((req.params.fileName && req.body.content) || req.body.content === "") {
     console.log(`Setting file ${filePath} to content ${req.body.content}`);
     fs.writeFileSync(filePath, req.body.content);
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(404);
+  }
+});
+
+/**
+ * Delete a file. This is probably the most dangerous function, and it needs to
+ * be protected.
+ */
+app.get("/delete-file/:fileName", (req, res) => {
+  const filePath = path.resolve(DATA_DIR, req.params.fileName);
+  console.log(`Received request to delete ${filePath}`);
+  if (req.params.fileName) {
+    console.log(`Deleting file ${filePath}`);
+    fs.unlinkSync(filePath);
     res.sendStatus(200);
   } else {
     res.sendStatus(404);
