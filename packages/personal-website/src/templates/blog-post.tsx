@@ -27,7 +27,14 @@ interface BlogPostTemplateProps {
 const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
   const post = props.data.markdownRemark;
   return (
-    <ReactComponentsContext.Provider value={{ type: "dark" }}>
+    <ReactComponentsContext.Provider
+      value={{
+        type:
+          localStorage.getItem("theme-ui-color-mode") === "light"
+            ? "light"
+            : "dark",
+      }}
+    >
       <div
         css={[
           mq({

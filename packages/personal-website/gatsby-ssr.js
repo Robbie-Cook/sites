@@ -14,7 +14,14 @@ export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
   return (
-    <ReactComponentsContext.Provider value={{ type: "dark" }}>
+    <ReactComponentsContext.Provider
+      value={{
+        type:
+          localStorage.getItem("theme-ui-color-mode") === "light"
+            ? "light"
+            : "dark",
+      }}
+    >
       {element}
     </ReactComponentsContext.Provider>
   );
@@ -22,7 +29,14 @@ export const wrapPageElement = ({ element, props }) => {
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <ReactComponentsContext.Provider value={{ type: "dark" }}>
+    <ReactComponentsContext.Provider
+      value={{
+        type:
+          localStorage.getItem("theme-ui-color-mode") === "light"
+            ? "light"
+            : "dark",
+      }}
+    >
       {element}
     </ReactComponentsContext.Provider>
   );
