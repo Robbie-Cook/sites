@@ -59,7 +59,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
   posts.sort((a, b) => {
     const date1 = new Date(a.date).getTime();
     const date2 = new Date(b.date).getTime();
-    
+
     if (date1 === date2) {
       return 0;
     }
@@ -80,9 +80,10 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         css={css`
           display: flex;
           flex-wrap: wrap;
+          margin-top: 75px;
         `}
       >
-        <ArrowLeft link="/" />
+        {/* <ArrowLeft link="/" /> */}
         {/* <H1
             css={css`
               font-size: 4rem;
