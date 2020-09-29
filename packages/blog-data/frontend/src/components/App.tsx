@@ -8,9 +8,10 @@ import FileTileWrapper from "./FileTileWrapper";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import slugify from "slugify";
 import { css, jsx } from "@emotion/core";
+import FileHelper from "../util/FileHelper";
 
 async function fetchFiles() {
-  const files = await (await fetch("http://localhost:8080/files")).json();
+  const files = await FileHelper.fetchFiles();
   return files;
 }
 
@@ -44,33 +45,18 @@ function App() {
                 onFileClick={(file) => {
                   (window as any).location = `/${file}`;
                 }}
-                onRemoveFile={(file) => {
-                  // TODO: move to helper
-                  fetch(`http://localhost:8080/delete-file/${file}`).then(
-                    () => {
-                      fetchFiles().then((files) => {
-                        setFiles(files);
-                      });
-                    }
-                  );
+                onRemoveFile={async (file) => {
+                  await FileHelper.deleteFile(file);
+                  const files = await fetchFiles();
+                  setFiles(files);
                 }}
-                onAddFile={(file) => {
+                onAddFile={async (file) => {
                   const newFiles = [...files];
                   const fileSlug = `${slugify(file)}.md`;
                   newFiles.push(fileSlug);
 
-                  // TODO: move to helper
-                  fetch(`http://localhost:8080/file/${fileSlug}`, {
-                    method: "POST",
-                    body: JSON.stringify({
-                      content: "",
-                    }),
-                    headers: {
-                      "Content-type": "application/json; charset=UTF-8",
-                    },
-                  }).then(() => {
-                    setFiles(newFiles);
-                  });
+                  await FileHelper.writeFile(fileSlug, "");
+                  setFiles(newFiles);
                 }}
               />
             )}
