@@ -25,12 +25,12 @@ const Template: Story<ButtonProps & Theme> = (args) => (
 
 export const Dark = Template.bind({});
 Dark.args = {
-  children: "My Awesome Button!",
+  children: "My Awesomer Button!",
   type: "dark",
 };
 
 export const Light = Template.bind({});
 Light.args = {
-  children: "My Awesome Button!",
+  children: "My Awesomer Button!",
   type: "light",
 };

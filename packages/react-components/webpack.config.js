@@ -55,6 +55,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: "markdown-loader",
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
 

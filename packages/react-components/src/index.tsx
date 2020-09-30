@@ -1,3 +1,4 @@
+import "./antd.css";
 import BlogPostShort from "./blog/BlogPostShort";
 import Blog from "./blog/Blog";
 import { Theme } from "./theme/Theme";
