@@ -6,8 +6,10 @@ import ReactComponentsContext from "./theme/ReactComponentsContext";
 import { H1, H2, H3, P } from "./typography/Typography";
 import BlogPost from "./blog/BlogPost";
 import SEO from "./seo/SEO";
+import Button from "./buttons/Button"
 
 export {
+  Button,
   BlogPost,
   BlogPostShort,
   Blog,
