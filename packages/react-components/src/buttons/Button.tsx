@@ -20,12 +20,10 @@ const Button: React.FC<ButtonProps> = (props) => {
     <ReactComponentsContext.Consumer>
       {(value) => (
         <AntButton
-          css={[
-            css`
-              color: ${value.type === "dark" ? "white" : "black"};
-              background-color: transparent;
-            `,
-          ]}
+          css={css`
+            color: ${value.type === "dark" ? "white" : "black"};
+            background-color: transparent;
+          `}
         >
           {props.children}
         </AntButton>
