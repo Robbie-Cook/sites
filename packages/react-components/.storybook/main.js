@@ -20,6 +20,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: "markdown-loader",
     });
+    config.module.rules.push({
+      test: /\.css$/i,
+      use: ["css-loader", "style-loader"],
+    });
 
     // Return the altered config
     return config;
