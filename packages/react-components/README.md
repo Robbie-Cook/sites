@@ -22,6 +22,14 @@ const MyComponent: React.FC = () => {
 
 `npm i @robbie-cook/react-components`
 
+Also, add this to your html file (e.g. public/index.html in Create React App)
+
+```html
+<link
+  href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Vollkorn:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap"
+  rel="stylesheet"
+/>
+```
 ## Components
 
 Check out the components here: https://reactcomponents.robbie.pw
