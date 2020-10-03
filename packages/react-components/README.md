@@ -24,7 +24,7 @@ const MyComponent: React.FC = () => {
 
 ## Components
 
-Check out the components here: reactcomponents.robbie.pw
+Check out the components here: https://reactcomponents.robbie.pw
 
 ---
 
