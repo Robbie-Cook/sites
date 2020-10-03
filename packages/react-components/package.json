@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/react-components",
-  "version": "5.0.12",
+  "version": "5.0.13",
   "description": "A set of react components to use in your projects",
   "main": "dist/index.js",
   "scripts": {
@@ -11,8 +11,9 @@
     "build-storybook": "build-storybook",
     "prepublishOnly": "npm run build"
   },
+  "repository": "https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components",
   "author": "Robbie Cook",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@mdx-js/loader": "^1.6.16",
