@@ -10,6 +10,8 @@ import { Button as AntButton } from "antd";
  */
 export interface ButtonProps {
   children?: any;
+  className?: string;
+  onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
 
 /**
@@ -20,10 +22,12 @@ const Button: React.FC<ButtonProps> = (props) => {
     <ReactComponentsContext.Consumer>
       {(value) => (
         <AntButton
+          className={props.className}
           css={css`
             color: ${value.type === "dark" ? "white" : "black"};
             background-color: transparent;
           `}
+          onClick={props.onClick}
         >
           {props.children}
         </AntButton>

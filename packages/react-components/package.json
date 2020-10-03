@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/react-components",
-  "version": "5.0.8",
+  "version": "5.0.11",
   "description": "A set of react components to use in your projects",
   "main": "dist/index.js",
   "scripts": {
@@ -45,11 +45,14 @@
     "@emotion/styled": "^10.0.27",
     "@types/date-and-time": "^0.13.0",
     "@types/react-helmet": "^6.1.0",
+    "antd": "^4.6.6",
     "date-and-time": "^0.14.1",
     "facepaint": "^1.2.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "svg-loader": "0.0.2"
-  }
+  },
+  "gitHead": "118bdecfcbfcaa94f8b252e972f11b2a6b7b0352"
 }
