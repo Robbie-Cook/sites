@@ -1,6 +1,7 @@
 set -e
 set -o pipefail
 
+echo STORYBOOK
 if [ STORYBOOK ]; then
   cd packages/react-components
   npm i
