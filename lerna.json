@@ -1,9 +1,11 @@
 {
   "packages": [
-    "packages/*"
+    "packages/personal-website",
+    "packages/gatsby-theme-cara",
+    "packages/react-components"
   ],
   "version": "independent",
-  "npmClient": "npm",
+  "npmClient": "yarn",
   "loglevel": "debug",
   "ignoreChanges": ["CHANGELOG.md", "**/__tests__/**", "**/__mocks__/**"],
   "command": {
