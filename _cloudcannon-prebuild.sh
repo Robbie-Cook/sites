@@ -1,17 +1,15 @@
 set -e
 set -o pipefail
 
-npm i -g yarn
-
 if [ $STORYBOOK ]; then
   cd packages/react-components
-  yarn install
+  npm i
   npm run build-storybook
-else
-  cd packages/personal-website
-  rm -rf node_modules
-  yarn install
-  npm run build
+# else
+  # cd packages/personal-website
+  # rm -rf node_modules
+  # npx lerna bootstrap
+  # npm run build
 fi
 
 
