@@ -6,10 +6,10 @@ if [ $STORYBOOK ]; then
   npx lerna bootstrap
   npm run build-storybook
 else
-  cd packages/personal-website
-  rm -rf node_modules
-  npx lerna bootstrap
-  npm run build
+  # cd packages/personal-website
+  # rm -rf node_modules
+  # npx lerna bootstrap
+  # npm run build
 fi
 
 
