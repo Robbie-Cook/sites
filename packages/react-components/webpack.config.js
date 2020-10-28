@@ -17,11 +17,11 @@ module.exports = {
   devtool: "source-map",
 
   resolve: {
-    modules: [
-      path.resolve(__dirname, 'node_modules'),
-      path.resolve(__dirname, '../node_modules'),
-      'node_modules'
-    ],
+    // modules: [
+    //   path.resolve(__dirname, 'node_modules'),
+    //   path.resolve(__dirname, '../node_modules'),
+    //   'node_modules'
+    // ],
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
@@ -64,7 +64,7 @@ module.exports = {
       {
         test: /\.scss$/i,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ["css-loader", "sass-loader"],
       },
     ],
   },

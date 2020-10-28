@@ -79,3 +79,5 @@ junit.xml
 packages/react-components/storybook-static/
 
 packages/react-components/dist/
+
+packages/personal-website/public/

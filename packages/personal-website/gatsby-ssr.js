@@ -14,7 +14,13 @@ export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
   return (
-    <ReactComponentsContext.Provider>{element}</ReactComponentsContext.Provider>
+    <ReactComponentsContext.Provider
+      value={{
+        type: "dark",
+      }}
+    >
+      {element}
+    </ReactComponentsContext.Provider>
   );
 };
 
