@@ -3,7 +3,7 @@
   "version": "1.0.24",
   "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "main": "index.js",
   "publishConfig": {
     "access": "public"
