@@ -3281,12 +3281,13 @@
 
 "@robbie-cook/gatsby-theme-cara@file:../gatsby-theme-cara", "@robbie-cook/gatsby-theme-cara@file:packages/gatsby-theme-cara":
   "resolved" "file:packages/gatsby-theme-cara"
+  "version" "1.0.23"
   dependencies:
     "@emotion/core" "^10.0.22"
     "@emotion/styled" "^10.0.23"
     "@mdx-js/mdx" "^1.5.1"
     "@mdx-js/react" "^1.5.1"
-    "@robbie-cook/react-components" "file:packages/react-components"
+    "@robbie-cook/react-components" "file:../react-components"
     "@theme-ui/presets" "^0.2.44"
     "antd" "^4.6.1"
     "date-and-time" "^0.14.1"
@@ -3304,10 +3305,11 @@
 
 "@robbie-cook/personal-website@file:packages/personal-website":
   "resolved" "file:packages/personal-website"
+  "version" "0.0.25"
   dependencies:
     "@emotion/core" "^10.0.35"
-    "@robbie-cook/gatsby-theme-cara" "file:packages/gatsby-theme-cara"
-    "@robbie-cook/react-components" "file:packages/react-components"
+    "@robbie-cook/gatsby-theme-cara" "file:../gatsby-theme-cara"
+    "@robbie-cook/react-components" "file:../react-components"
     "contentful" "^7.14.6"
     "eslint-config-airbnb" "^18.0.1"
     "facepaint" "^1.2.1"
@@ -3329,14 +3331,17 @@
 
 "@robbie-cook/react-components@file:../react-components", "@robbie-cook/react-components@file:packages/react-components":
   "resolved" "file:packages/react-components"
+  "version" "5.0.17"
   dependencies:
     "@babel/preset-react" "^7.10.4"
     "@emotion/core" "^10.0.35"
     "@emotion/styled" "^10.0.27"
     "@types/date-and-time" "^0.13.0"
     "@types/react-helmet" "^6.1.0"
+    "antd" "^4.6.6"
     "date-and-time" "^0.14.1"
     "facepaint" "^1.2.1"
+    "node-sass" "^4.14.1"
     "react" "^16.13.1"
     "react-dom" "^16.13.1"
     "react-helmet" "^6.1.0"
@@ -6037,6 +6042,7 @@
 
 "avenue-ci@file:packages/avenue-ci":
   "resolved" "file:packages/avenue-ci"
+  "version" "0.1.4"
   dependencies:
     "@apollo/react-hooks" "^3.1.3"
     "@babel/core" "7.6.0"
