@@ -1,6 +1,8 @@
 set -e
 set -o pipefail
 
+npm i -g yarn
+
 if [ $STORYBOOK ]; then
   cd packages/react-components
   yarn install
