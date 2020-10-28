@@ -20,7 +20,13 @@ export const wrapPageElement = ({ element, props }) => {
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <ReactComponentsContext.Provider>{element}</ReactComponentsContext.Provider>
+    <ReactComponentsContext.Provider
+      value={{
+        type: "dark",
+      }}
+    >
+      {element}
+    </ReactComponentsContext.Provider>
   );
 };
 // element
