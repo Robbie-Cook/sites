@@ -1775,14 +1775,16 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@robbie-cook/gatsby-theme-cara@file:../gatsby-theme-cara":
-  version "1.0.23"
+"@robbie-cook/gatsby-theme-cara@^1.0.21":
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/gatsby-theme-cara/-/gatsby-theme-cara-1.0.21.tgz#c141da6918f713e3f8cca20f4f4f4520354c25bd"
+  integrity sha512-k5XZbgU0CNy9tnubCTxdWhXoCoJw1NUNjOX8l6lwSpDI2DgWjgTly5PpW9MtFLdtjzz96+LsHswGzHo+i3cJ+A==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@emotion/styled" "^10.0.23"
     "@mdx-js/mdx" "^1.5.1"
     "@mdx-js/react" "^1.5.1"
-    "@robbie-cook/react-components" "file:../../../../Library/Caches/Yarn/v6/npm-@robbie-cook-gatsby-theme-cara-1.0.23-b331fc0c-9e31-4810-ba0b-b89d6e853a1b-1603879413206/node_modules/@robbie-cook/react-components"
+    "@robbie-cook/react-components" "^5.0.6"
     "@theme-ui/presets" "^0.2.44"
     antd "^4.6.1"
     date-and-time "^0.14.1"
@@ -1798,8 +1800,10 @@
     theme-ui "^0.2.49"
     typescript "^4.0.2"
 
-"@robbie-cook/react-components@file:../react-components":
+"@robbie-cook/react-components@^5.0.17", "@robbie-cook/react-components@^5.0.6":
   version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-5.0.17.tgz#756097b8ca257051ec5144cae05d552866683945"
+  integrity sha512-FCPw60H9vIt5YHDtGQ3WHc42yvKGXEO+X54M5qVr0evIx6Qbk9FFWrkYINZID8k1ubD6zKob4gzGm93q8Mbn+g==
   dependencies:
     "@babel/preset-react" "^7.10.4"
     "@emotion/core" "^10.0.35"

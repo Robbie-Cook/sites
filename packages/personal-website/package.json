@@ -14,13 +14,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "prepublishOnly": "npm run build"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
-    "@robbie-cook/gatsby-theme-cara": "file:../gatsby-theme-cara",
-    "@robbie-cook/react-components": "file:../react-components",
+    "@robbie-cook/gatsby-theme-cara": "^1.0.21",
+    "@robbie-cook/react-components": "^5.0.17",
     "contentful": "^7.14.6",
     "eslint-config-airbnb": "^18.0.1",
     "facepaint": "^1.2.1",

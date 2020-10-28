@@ -10,7 +10,7 @@
     "dev": "webpack --mode=development --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepublishOnly": "npm run build"
+    "preversion": "npm run build"
   },
   "repository": "https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components",
   "author": "Robbie Cook",
