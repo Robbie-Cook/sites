@@ -1034,7 +1034,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
   integrity sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
@@ -1782,7 +1782,7 @@
     "@emotion/styled" "^10.0.23"
     "@mdx-js/mdx" "^1.5.1"
     "@mdx-js/react" "^1.5.1"
-    "@robbie-cook/react-components" "file:../../../../Library/Caches/Yarn/v6/npm-@robbie-cook-gatsby-theme-cara-1.0.23-7b7312c3-4590-4f1b-b6fb-8cbe8485991b-1603878588886/node_modules/@robbie-cook/react-components"
+    "@robbie-cook/react-components" "file:../../../../Library/Caches/Yarn/v6/npm-@robbie-cook-gatsby-theme-cara-1.0.23-b331fc0c-9e31-4810-ba0b-b89d6e853a1b-1603879413206/node_modules/@robbie-cook/react-components"
     "@theme-ui/presets" "^0.2.44"
     antd "^4.6.1"
     date-and-time "^0.14.1"
@@ -2607,7 +2607,7 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antd@^4.6.1, antd@^4.6.6:
+antd@^4.0.0, antd@^4.6.1, antd@^4.6.6:
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/antd/-/antd-4.7.3.tgz#f9fadb3ec2c2a5c65237013cb54993bda72bd798"
   integrity sha512-WrI3exgD0UpTgxotEXlZcMGvEK3ehHVxz28SVWujDGJWZC1L87Mze4W6yVTrVRBfTlwkFsp/7W2Pb7whs3yPag==
@@ -3077,6 +3077,14 @@ babel-plugin-extract-import-names@1.6.19:
   integrity sha512-5kbSEhQdg1ybR9OnxybbyR1PXw51z6T6ZCtX3vYSU6t1pC/+eBlSzWXyU2guStbwQgJyxS+mHWSNnL7PUdzAlw==
   dependencies:
     "@babel/helper-plugin-utils" "7.10.4"
+
+babel-plugin-import@^1.13.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-import/-/babel-plugin-import-1.13.1.tgz#f6cf1acb76c5ce366bae2663ad12bd894316d8db"
+  integrity sha512-2Ohk36qvQAZr2sNXVwOgBFH7/ZQH0lL6igPj6lNIhk5t0uORneeAvHnohClCWbaogUhKGJxAiwbPhymZXPGQiQ==
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
 
 babel-plugin-lodash@3.3.4:
   version "3.3.4"
@@ -6760,6 +6768,14 @@ gatsby-page-utils@^0.2.29:
     glob "^7.1.6"
     lodash "^4.17.20"
     micromatch "^4.0.2"
+
+gatsby-plugin-antd@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-antd/-/gatsby-plugin-antd-2.2.0.tgz#9d9565e3e98e03517854b1b68b7bdcac9ed73d27"
+  integrity sha512-hfELJ/PKxm1e3mvT+BstvVBUatSeqAAD2CkTrBwxSqn5BuRQWBPQmQAYhXQAtHAkLeheebBCAz1dCqZr9qtE0Q==
+  dependencies:
+    antd "^4.0.0"
+    babel-plugin-import "^1.13.0"
 
 gatsby-plugin-emotion@^4.1.16, gatsby-plugin-emotion@^4.3.10:
   version "4.3.14"

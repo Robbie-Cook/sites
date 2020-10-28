@@ -67,6 +67,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    "gatsby-plugin-antd",
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
