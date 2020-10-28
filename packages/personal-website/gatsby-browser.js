@@ -17,7 +17,8 @@ export const wrapPageElement = ({ element, props }) => {
     <ReactComponentsContext.Provider
       value={{
         type:
-          localStorage.getItem("theme-ui-color-mode") === "light"
+          window.localStorage &&
+          window.localStorage.getItem("theme-ui-color-mode") === "light"
             ? "light"
             : "dark",
       }}
@@ -32,7 +33,8 @@ export const wrapRootElement = ({ element }) => {
     <ReactComponentsContext.Provider
       value={{
         type:
-          localStorage.getItem("theme-ui-color-mode") === "light"
+          window.localStorage &&
+          window.localStorage.getItem("theme-ui-color-mode") === "light"
             ? "light"
             : "dark",
       }}

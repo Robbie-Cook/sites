@@ -27,37 +27,43 @@ interface BlogPostTemplateProps {
 const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
   const post = props.data.markdownRemark;
   return (
-    <div
-      css={[
-        mq({
-          padding: ["30px 20px", "30px 150px"],
-        }),
-      ]}
+    <ReactComponentsContext.Provider
+      value={{
+        type: "light",
+      }}
     >
-      <ArrowLeft
-        link="/blog"
-        css={css`
-          position: relative;
-          z-index: 2;
-        `}
-      />
-
-      <SEO site={props.data.site.siteMetadata} />
       <div
-        css={css(
+        css={[
           mq({
-            transform: ["", "", "translate(0, -73px)"],
-          })
-        )}
+            padding: ["30px 20px", "30px 150px"],
+          }),
+        ]}
       >
-        <BlogPost
-          title={post.frontmatter.title}
-          date={post.frontmatter.date}
-          author={post.frontmatter.author}
-          content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+        <ArrowLeft
+          link="/blog"
+          css={css`
+            position: relative;
+            z-index: 2;
+          `}
         />
+
+        <SEO site={props.data.site.siteMetadata} />
+        <div
+          css={css(
+            mq({
+              transform: ["", "", "translate(0, -73px)"],
+            })
+          )}
+        >
+          <BlogPost
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            author={post.frontmatter.author}
+            content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+          />
+        </div>
       </div>
-    </div>
+    </ReactComponentsContext.Provider>
   );
 };
 export const query = graphql`
