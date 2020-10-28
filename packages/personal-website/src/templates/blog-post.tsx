@@ -27,46 +27,37 @@ interface BlogPostTemplateProps {
 const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
   const post = props.data.markdownRemark;
   return (
-    <ReactComponentsContext.Provider
-      value={{
-        type:
-          localStorage.getItem("theme-ui-color-mode") === "light"
-            ? "light"
-            : "dark",
-      }}
+    <div
+      css={[
+        mq({
+          padding: ["30px 20px", "30px 150px"],
+        }),
+      ]}
     >
-      <div
-        css={[
-          mq({
-            padding: ["30px 20px", "30px 150px"],
-          }),
-        ]}
-      >
-        <ArrowLeft
-          link="/blog"
-          css={css`
-            position: relative;
-            z-index: 2;
-          `}
-        />
+      <ArrowLeft
+        link="/blog"
+        css={css`
+          position: relative;
+          z-index: 2;
+        `}
+      />
 
-        <SEO site={props.data.site.siteMetadata} />
-        <div
-          css={css(
-            mq({
-              transform: ["", "", "translate(0, -73px)"],
-            })
-          )}
-        >
-          <BlogPost
-            title={post.frontmatter.title}
-            date={post.frontmatter.date}
-            author={post.frontmatter.author}
-            content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
-          />
-        </div>
+      <SEO site={props.data.site.siteMetadata} />
+      <div
+        css={css(
+          mq({
+            transform: ["", "", "translate(0, -73px)"],
+          })
+        )}
+      >
+        <BlogPost
+          title={post.frontmatter.title}
+          date={post.frontmatter.date}
+          author={post.frontmatter.author}
+          content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+        />
       </div>
-    </ReactComponentsContext.Provider>
+    </div>
   );
 };
 export const query = graphql`
