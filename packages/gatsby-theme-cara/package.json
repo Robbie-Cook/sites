@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/gatsby-theme-cara",
-  "version": "1.0.24",
+  "version": "1.0.26",
   "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
   "license": "MIT",
   "private": false,
@@ -26,7 +26,7 @@
     "@emotion/styled": "^10.0.23",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "@robbie-cook/react-components": "file:../react-components",
+    "@robbie-cook/react-components": "5.0.19",
     "@theme-ui/presets": "^0.2.44",
     "antd": "^4.6.1",
     "date-and-time": "^0.14.1",

@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/react-components",
-  "version": "5.0.18",
+  "version": "5.0.19",
   "description": "A set of react components to use in your projects",
   "main": "dist/index.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2",
     "webpack": "^4.44.2",
+    "webpack-bundle-analyzer": "^3.9.0",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^2.5.2"
   },

@@ -1775,16 +1775,16 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@robbie-cook/gatsby-theme-cara@^1.0.24":
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/gatsby-theme-cara/-/gatsby-theme-cara-1.0.21.tgz#c141da6918f713e3f8cca20f4f4f4520354c25bd"
-  integrity sha512-k5XZbgU0CNy9tnubCTxdWhXoCoJw1NUNjOX8l6lwSpDI2DgWjgTly5PpW9MtFLdtjzz96+LsHswGzHo+i3cJ+A==
+"@robbie-cook/gatsby-theme-cara@1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/gatsby-theme-cara/-/gatsby-theme-cara-1.0.26.tgz#4fb52a943ba3cce7d37f5d1f445a69e50b338f25"
+  integrity sha512-5mm5XGCzotuDJwTU8c3Mv/Vz284t5ppE9FQNA0008vsbfKJhNJx8cEECxuthULI6gd3pLB7IAelgcEx7WrYtfA==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@emotion/styled" "^10.0.23"
     "@mdx-js/mdx" "^1.5.1"
     "@mdx-js/react" "^1.5.1"
-    "@robbie-cook/react-components" "^5.0.6"
+    "@robbie-cook/react-components" "5.0.19"
     "@theme-ui/presets" "^0.2.44"
     antd "^4.6.1"
     date-and-time "^0.14.1"
@@ -1800,29 +1800,10 @@
     theme-ui "^0.2.49"
     typescript "^4.0.2"
 
-"@robbie-cook/react-components@^5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-5.0.18.tgz#03816be40ac426a686753bd5505c79e49b496155"
-  integrity sha512-olhreRVp5/FW8XXwX+Sj5EOXrqYV38lvMIC0WixT3jvKUlOyqQaZsCsPRE6HvAGjgF++w38i5jDXp0saN5JjXA==
-  dependencies:
-    "@babel/preset-react" "^7.10.4"
-    "@emotion/core" "^10.0.35"
-    "@emotion/styled" "^10.0.27"
-    "@types/date-and-time" "^0.13.0"
-    "@types/react-helmet" "^6.1.0"
-    antd "^4.6.6"
-    date-and-time "^0.14.1"
-    facepaint "^1.2.1"
-    node-sass "^4.14.1"
-    react "^16.13.1"
-    react-dom "^16.13.1"
-    react-helmet "^6.1.0"
-    svg-loader "0.0.2"
-
-"@robbie-cook/react-components@^5.0.6":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-5.0.17.tgz#756097b8ca257051ec5144cae05d552866683945"
-  integrity sha512-FCPw60H9vIt5YHDtGQ3WHc42yvKGXEO+X54M5qVr0evIx6Qbk9FFWrkYINZID8k1ubD6zKob4gzGm93q8Mbn+g==
+"@robbie-cook/react-components@5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-5.0.19.tgz#58d3463afca3699b447cdbbe5ee7c66f88c69cd1"
+  integrity sha512-R2ZERaqsQcVHq2atn7+eAM4iDjEU0yc4ljLOODVJGZ1AOQoIpZbi4P2C0p0CvimLjfVnBvOWM2VkG4Khot4kdw==
   dependencies:
     "@babel/preset-react" "^7.10.4"
     "@emotion/core" "^10.0.35"

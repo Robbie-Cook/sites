@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
-    "@robbie-cook/gatsby-theme-cara": "^1.0.24",
-    "@robbie-cook/react-components": "^5.0.18",
+    "@robbie-cook/gatsby-theme-cara": "1.0.26",
+    "@robbie-cook/react-components": "5.0.19",
     "contentful": "^7.14.6",
     "eslint-config-airbnb": "^18.0.1",
     "facepaint": "^1.2.1",
