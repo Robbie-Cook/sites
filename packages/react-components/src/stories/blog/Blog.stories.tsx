@@ -9,6 +9,7 @@ import ReactComponentsContext from "../../theme/ReactComponentsContext";
 
 // @ts-ignore
 import TestPost from "./TestPost.md";
+import { setCssVariables } from '../helpers';
 
 export default {
   title: "Blog/Blog",
@@ -24,6 +25,7 @@ const Template: Story<BlogProps & Theme> = (args) => (
       type: args.type,
     }}
   >
+    {setCssVariables(args.type)}
     <Blog posts={args.posts} />
   </ReactComponentsContext.Provider>
 );
