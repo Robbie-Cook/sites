@@ -6,7 +6,7 @@ import BlogPostShort, { BlogPostProps } from "../../blog/BlogPostShort";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
-import { setCssVariables } from '../helpers';
+import { setTheme } from "bigiron.css";
 
 export default {
   title: "Blog/Blog Post Short",
@@ -22,7 +22,7 @@ const Template: Story<BlogPostProps & Theme> = (args) => (
       type: args.type,
     }}
   >
-    {setCssVariables(args.type)}
+    {setTheme(args.type)}
     <BlogPostShort {...args} />
   </ReactComponentsContext.Provider>
 );
