@@ -2,7 +2,10 @@
 import { BaseStyles } from "theme-ui";
 import React from "react";
 import "bigiron.css/dist/bigiron.css";
-// import "../css/bigiron-overrides.css";
+import { GatsbySeo } from "gatsby-plugin-next-seo";
+import useSiteMetadata from "../hooks/use-site-metadata";
+import Intro from "./sections/intro.mdx";
+import Experience from "./sections/experience.mdx";
 
 /**
  * Interface for CVPage props
@@ -15,10 +18,18 @@ export interface CVPageProps {
  *  A CVPage component.
  */
 const CVPage: React.FC<CVPageProps> = (props) => {
+  const metadata = useSiteMetadata();
+
+
   return (
     // BaseStyles -- forcibly pull stylesheet from theme-ui
     <BaseStyles>
-      <h1>CVPage</h1>
+      <GatsbySeo
+        title="Robbie Cook - CV"
+        description="Robbie Cook's CV"
+      />
+      <Intro />
+      <Experience />
     </BaseStyles>
   );
 };

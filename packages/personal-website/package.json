@@ -32,6 +32,7 @@
     "gatsby-plugin-google-analytics": "^2.1.8",
     "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-netlify": "^2.1.6",
+    "gatsby-plugin-next-seo": "^1.6.1",
     "gatsby-plugin-offline": "^2.2.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.3.10",
@@ -42,6 +43,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.0.7",
     "yoga-layout-prebuilt": "^1.10.0",
     "yurnalist": "^2.1.0"
   },

@@ -18,6 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-theme-ui`
     },
+    'gatsby-plugin-next-seo',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
