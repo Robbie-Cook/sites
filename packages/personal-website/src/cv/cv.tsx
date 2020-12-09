@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/core */
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { BaseStyles } from "theme-ui";
 import React from "react";
+import "bigiron.css/dist/bigiron.css";
+// import "../css/bigiron-overrides.css";
 
 /**
  * Interface for CVPage props
@@ -14,7 +15,12 @@ export interface CVPageProps {
  *  A CVPage component.
  */
 const CVPage: React.FC<CVPageProps> = (props) => {
-  return <div css={css``}>CVPage CVPage</div>;
+  return (
+    // BaseStyles -- forcibly pull stylesheet from theme-ui
+    <BaseStyles>
+      <h1>CVPage</h1>
+    </BaseStyles>
+  );
 };
 
 export default CVPage;

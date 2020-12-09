@@ -16,6 +16,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-theme-ui`
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
