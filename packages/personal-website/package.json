@@ -21,11 +21,11 @@
     "@emotion/core": "^10.0.35",
     "@robbie-cook/gatsby-theme-cara": "1.0.26",
     "@robbie-cook/react-components": "5.0.19",
+    "clipboardy": "^2.3.0",
     "contentful": "^7.14.6",
     "eslint-config-airbnb": "^18.0.1",
     "facepaint": "^1.2.1",
     "gatsby": "^2.24.47",
-    "gatsby-cli": "^2.12.97",
     "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-google-analytics": "^2.1.8",
@@ -37,9 +37,19 @@
     "gatsby-source-filesystem": "^2.3.27",
     "gatsby-transformer-remark": "^2.8.32",
     "gatsby-transformer-sharp": "^2.3.9",
+    "pretty-error": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "yoga-layout-prebuilt": "^1.10.0",
+    "yurnalist": "^2.1.0"
   },
-  "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5"
+  "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5",
+  "devDependencies": {
+    "gatsby-cli": "^2.12.113",
+    "gatsby-recipes": "^0.5.0",
+    "is-valid-path": "^0.1.1",
+    "react-side-effect": "^2.1.1",
+    "update-notifier": "^5.0.1"
+  }
 }
