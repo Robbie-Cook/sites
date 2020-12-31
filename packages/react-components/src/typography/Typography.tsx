@@ -6,8 +6,7 @@ import ReactComponentsContext, {
 } from "../theme/ReactComponentsContext";
 
 const headingBaseStyles = css`
-  font-family: "Lexend Peta", sans-serif;
-  /* font-family: "Vollkorn", serif; */
+  font-family: "Vollkorn", serif;
 `;
 /**
  *  A H1 component.
