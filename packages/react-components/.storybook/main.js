@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -24,6 +26,12 @@ module.exports = {
       test: /\.css$/i,
       use: ["css-loader", "style-loader"],
     });
+
+    // config.module.rules.push({
+    //   test: /\.scss$/,
+    //   use: ['style-loader', 'css-loader', 'sass-loader'],
+    //   include: path.resolve(__dirname, '../src'),
+    // });
 
     // Return the altered config
     return config;

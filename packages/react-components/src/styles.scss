@@ -1,0 +1,14 @@
+h1 {
+  font-family: "Vollkorn", serif;
+  font-size: 3rem;
+
+  @media screen and (min-width: 600px) {
+    font-size: 4.5rem; // TODO: sync with homepage
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  font-family: Vollkorn, serif;
+  margin: 1rem 0;
+}

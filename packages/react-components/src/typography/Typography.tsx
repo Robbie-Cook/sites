@@ -6,7 +6,6 @@ import ReactComponentsContext, {
 } from "../theme/ReactComponentsContext";
 
 const headingBaseStyles = css`
-  font-family: "Lexend Peta", sans-serif;
   font-family: "Vollkorn", serif;
 `;
 /**
@@ -67,8 +66,8 @@ const H3: React.FC<{
         <h3
           css={() => {
             return css`
-              color: ${value.type === "dark" ? `white` : `black`};
-              margin: 1.2rem 0;
+              /* color: ${value.type === "dark" ? `white` : `black`};
+              margin: 1.2rem 0; */
             `;
           }}
           className={props.className}

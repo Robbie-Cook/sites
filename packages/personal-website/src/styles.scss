@@ -1,0 +1,6 @@
+body {
+  background-color: var(
+    --theme-ui-colors-background,
+    var(--theme-ui-colors-background, #141821)
+  ) !important;
+}
