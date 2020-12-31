@@ -1,4 +1,8 @@
-const css = require("../src/antd.scss");
+
+// TODO: get these to be included automatically
+require("../src/antd.scss");
+require("../src/styles.scss");
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 };

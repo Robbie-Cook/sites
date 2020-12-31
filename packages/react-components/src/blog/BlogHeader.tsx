@@ -19,8 +19,7 @@ const BlogHeader: React.FC<BlogHeaderProps> = (props) => {
     <H3
       className={props.className}
       css={css`
-        font-size: 3rem;
-        font-family: Vollkorn, serif;
+
       `}
     >
       {props.children}

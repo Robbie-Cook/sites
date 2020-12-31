@@ -80,7 +80,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         css={css`
           display: flex;
           flex-wrap: wrap;
-          margin-top: 75px;
+          /* margin-top: 75px; */
         `}
       >
         {/* <ArrowLeft link="/" /> */}
@@ -99,6 +99,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
             Blog
           </H1> */}
       </div>
+      <h1>Blog</h1>
       <Blog posts={posts} />
     </div>
   );

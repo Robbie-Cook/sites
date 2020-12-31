@@ -1,5 +1,6 @@
 const nodeExternals = require("webpack-node-externals");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 const path = require("path");
 
 module.exports = {
@@ -65,7 +66,7 @@ module.exports = {
       {
         test: /\.scss$/i,
         exclude: /node_modules/,
-        use: ["css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
@@ -80,7 +81,5 @@ module.exports = {
   //   'react-dom' : 'react-dom' // Case matters here
   // },
   externals: [nodeExternals()],
-  plugins: [
-    new BundleAnalyzerPlugin()
-  ],
+  plugins: [new BundleAnalyzerPlugin()],
 };
