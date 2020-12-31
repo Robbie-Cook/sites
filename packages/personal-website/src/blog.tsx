@@ -12,6 +12,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
 import facepaint from "facepaint";
 import date from "date-and-time";
+import "./styles.scss";
 
 /**
  * Interface for Blog props
