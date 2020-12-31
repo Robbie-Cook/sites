@@ -6,6 +6,7 @@ import { GatsbySeo } from "gatsby-plugin-next-seo";
 import useSiteMetadata from "../hooks/use-site-metadata";
 import Intro from "./sections/intro.mdx";
 import Experience from "./sections/experience.mdx";
+import Education from "./sections/education.mdx";
 
 /**
  * Interface for CVPage props
@@ -30,6 +31,7 @@ const CVPage: React.FC<CVPageProps> = (props) => {
       />
       <Intro />
       <Experience />
+      <Education />
     </BaseStyles>
   );
 };
