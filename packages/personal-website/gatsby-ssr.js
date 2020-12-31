@@ -4,24 +4,6 @@
 import { window, document, exists } from 'browser-monads';
 import { jsx, css } from "@emotion/core";
 
-export const wrapPageElement = ({ element, props }) => {
-  // props provide same data to Layout as Page element will get
-  // including location, data, etc - you don't need to pass it
-  return (
-    <React.Fragment>
-      {element}
-    </React.Fragment>
-  );
-};
-
-export const wrapRootElement = ({ element }) => {
-  return (
-    <React.Fragment>
-      {element}
-    </React.Fragment>
-  );
-};
-// element
 
 const HeadComponents = [
   <link

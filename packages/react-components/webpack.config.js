@@ -2,6 +2,7 @@ const nodeExternals = require("webpack-node-externals");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.tsx"),
@@ -66,7 +67,13 @@ module.exports = {
       {
         test: /\.scss$/i,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          {
+            loader: "isomorphic-style-loader",
+          },
+          "css-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
@@ -81,5 +88,10 @@ module.exports = {
   //   'react-dom' : 'react-dom' // Case matters here
   // },
   externals: [nodeExternals()],
-  plugins: [new BundleAnalyzerPlugin()],
+  plugins: [
+    new BundleAnalyzerPlugin(),
+    new webpack.ProvidePlugin({
+      // "document": "(document || {})"
+    }),
+  ],
 };
