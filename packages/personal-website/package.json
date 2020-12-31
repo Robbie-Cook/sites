@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/personal-website",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "private": true,
   "publishConfig": {
     "access": "public"
@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
-    "@robbie-cook/gatsby-theme-cara": "1.0.26",
-    "@robbie-cook/react-components": "5.0.19",
+    "@robbie-cook/gatsby-theme-cara": "^1.0.27",
+    "@robbie-cook/react-components": "^5.0.20",
     "browser-monads": "^1.0.0",
     "clipboardy": "^2.3.0",
     "contentful": "^7.14.6",
