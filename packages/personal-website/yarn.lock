@@ -1791,16 +1791,16 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@robbie-cook/gatsby-theme-cara@1.0.26":
-  version "1.0.26"
-  resolved "https://registry.npmjs.org/@robbie-cook/gatsby-theme-cara/-/gatsby-theme-cara-1.0.26.tgz"
-  integrity sha512-5mm5XGCzotuDJwTU8c3Mv/Vz284t5ppE9FQNA0008vsbfKJhNJx8cEECxuthULI6gd3pLB7IAelgcEx7WrYtfA==
+"@robbie-cook/gatsby-theme-cara@^1.0.28":
+  version "1.0.28"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/gatsby-theme-cara/-/gatsby-theme-cara-1.0.28.tgz#fb6e6e7e22dabb757ba30539018067a641b7e876"
+  integrity sha512-xAiLLo04P2y4Xm0q9BqHhOHTcpK31Ng+yPDRkw7gZM9JKVsG2tG2woVUlb86eIKvnhEiCG7bv5H7FhQuQHT+TQ==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@emotion/styled" "^10.0.23"
     "@mdx-js/mdx" "^1.5.1"
     "@mdx-js/react" "^1.5.1"
-    "@robbie-cook/react-components" "5.0.19"
+    "@robbie-cook/react-components" "^5.0.21"
     "@theme-ui/presets" "^0.2.44"
     antd "^4.6.1"
     date-and-time "^0.14.1"
@@ -1816,10 +1816,10 @@
     theme-ui "^0.2.49"
     typescript "^4.0.2"
 
-"@robbie-cook/react-components@5.0.19":
-  version "5.0.19"
-  resolved "https://registry.npmjs.org/@robbie-cook/react-components/-/react-components-5.0.19.tgz"
-  integrity sha512-R2ZERaqsQcVHq2atn7+eAM4iDjEU0yc4ljLOODVJGZ1AOQoIpZbi4P2C0p0CvimLjfVnBvOWM2VkG4Khot4kdw==
+"@robbie-cook/react-components@^5.0.21":
+  version "5.0.21"
+  resolved "https://registry.yarnpkg.com/@robbie-cook/react-components/-/react-components-5.0.21.tgz#156b72af6266d5fc0379a3582f762fd37c42a99d"
+  integrity sha512-t1AdYgb7IQNs1HYHDl8RmZaxO9q2buP8M5nv1RR4b+++XcuTUG+2LUKjhaDAvuFLo7+SE6dG891yiCk2KIwM7Q==
   dependencies:
     "@babel/preset-react" "^7.10.4"
     "@emotion/core" "^10.0.35"
@@ -1829,6 +1829,7 @@
     antd "^4.6.6"
     date-and-time "^0.14.1"
     facepaint "^1.2.1"
+    isomorphic-style-loader "^5.1.0"
     node-sass "^4.14.1"
     react "^16.13.1"
     react-dom "^16.13.1"
@@ -8132,7 +8133,7 @@ hoek@4.x.x:
   resolved "https://registry.npmjs.org/hoek/-/hoek-4.2.1.tgz"
   integrity sha512-QLg82fGkfnJ/4iy1xZ81/9SIJiq1NGFUMGs6ParyjBZr6jW2Ufj/snDqTHixNlHdPNwN2RLVD0Pi3igeK9+JfA==
 
-hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -9168,6 +9169,15 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+
+isomorphic-style-loader@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/isomorphic-style-loader/-/isomorphic-style-loader-5.1.0.tgz#4845f90bb9828f3dfecc82d0574c9ed01bbaba2d"
+  integrity sha512-6KBucdRvmz5U5SMrdDUhDyTQ6nRmCjzjopJBDVkfx1+xsoiyNYVlcY1OqSH1SHKYRzVWhqWXIBGgeTl5L7gViw==
+  dependencies:
+    hoist-non-react-statics "^3.0.0"
+    loader-utils "^1.2.3"
+    react "^16.3.0"
 
 isstream@~0.1.2:
   version "0.1.2"
@@ -12822,7 +12832,7 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react@^16.13.1:
+react@^16.13.1, react@^16.3.0:
   version "16.14.0"
   resolved "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==

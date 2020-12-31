@@ -89,7 +89,7 @@ module.exports = {
   // },
   externals: [nodeExternals()],
   plugins: [
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new webpack.ProvidePlugin({
       // "document": "(document || {})"
     }),
