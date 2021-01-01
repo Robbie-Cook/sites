@@ -35,7 +35,7 @@ import "@robbie-cook/react-components/src/styles.scss";
 
 This is because I am having trouble getting `style-loader` to work with Gatsby.
 
----
+--- 
 
 ## Installation
 
