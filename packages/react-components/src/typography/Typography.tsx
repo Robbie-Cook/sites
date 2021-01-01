@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import { css, jsx, SerializedStyles } from "@emotion/core";
 import React, { useContext } from "react";
-import ReactComponentsContext, {
-  useTheme,
-} from "../theme/ReactComponentsContext";
 
 const headingBaseStyles = css`
   font-family: "Vollkorn", serif;
@@ -13,22 +10,17 @@ const headingBaseStyles = css`
  */
 const H1: React.FC<{ children?: any; className?: string }> = (props) => {
   return (
-    <ReactComponentsContext.Consumer>
-      {(value) => (
-        <h1
-          css={() =>
-            css`
-              color: ${value.type === "dark" ? `white` : `black`};
-              margin: 1.2rem 0;
-              ${headingBaseStyles};
-            `
-          }
-          className={props.className}
-        >
-          {props.children}
-        </h1>
-      )}
-    </ReactComponentsContext.Consumer>
+    <h1
+      css={() =>
+        css`
+          margin: 1.2rem 0;
+          ${headingBaseStyles};
+        `
+      }
+      className={props.className}
+    >
+      {props.children}
+    </h1>
   );
 };
 /**
@@ -36,19 +28,14 @@ const H1: React.FC<{ children?: any; className?: string }> = (props) => {
  */
 const H2: React.FC<{ children?: any; css?: SerializedStyles }> = (props) => {
   return (
-    <ReactComponentsContext.Consumer>
-      {(value) => (
-        <h2
-          css={css`
-            color: ${value.type === "dark" ? `white` : `black`};
-            margin: 1.2rem 0;
-            ${headingBaseStyles};
-          `}
-        >
-          {props.children}
-        </h2>
-      )}
-    </ReactComponentsContext.Consumer>
+    <h2
+      css={css`
+        margin: 1.2rem 0;
+        ${headingBaseStyles};
+      `}
+    >
+      {props.children}
+    </h2>
   );
 };
 
@@ -60,23 +47,7 @@ const H3: React.FC<{
   className?: string;
 }> = (props) => {
   console.log(props);
-  return (
-    <ReactComponentsContext.Consumer>
-      {(value) => (
-        <h3
-          css={() => {
-            return css`
-              /* color: ${value.type === "dark" ? `white` : `black`};
-              margin: 1.2rem 0; */
-            `;
-          }}
-          className={props.className}
-        >
-          {props.children}
-        </h3>
-      )}
-    </ReactComponentsContext.Consumer>
-  );
+  return <h3 className={props.className}>{props.children}</h3>;
 };
 
 /**
@@ -87,28 +58,19 @@ const P: React.FC<{
   className?: string;
 }> = (props) => {
   return (
-    <ReactComponentsContext.Consumer>
-      {(value) => (
-        <p
-          css={
-            // css`
-
-            // `,
-            () =>
-              css`
-                color: ${value.type === "dark" ? `white` : `black`};
-                margin: 1.2rem 0;
-                font-family: sans-serif;
-                font-size: 1.05rem;
-                ${headingBaseStyles};
-              `
-          }
-          className={props.className}
-        >
-          {props.children}
-        </p>
-      )}
-    </ReactComponentsContext.Consumer>
+    <p
+      css={() =>
+        css`
+          margin: 1.2rem 0;
+          font-family: sans-serif;
+          font-size: 1.05rem;
+          ${headingBaseStyles};
+        `
+      }
+      className={props.className}
+    >
+      {props.children}
+    </p>
   );
 };
 
