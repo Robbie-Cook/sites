@@ -16,16 +16,20 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
+    config.node = {
+      fs: 'empty'
+    }
+
     // Make whatever fine-grained changes you need
     config.module.rules.push({
       test: /\.md$/,
       exclude: /node_modules/,
       loader: "markdown-loader",
     });
-    config.module.rules.push({
-      test: /\.css$/i,
-      use: ["css-loader", "style-loader"],
-    });
+    // config.module.rules.push({
+    //   test: /\.css$/i,
+    //   use: ["css-loader", "style-loader"],
+    // });
 
     // config.module.rules.push({
     //   test: /\.scss$/,

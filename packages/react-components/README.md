@@ -32,7 +32,7 @@ Also, add this to your html file (e.g. public/index.html in Create React App)
 ```
 ## Components
 
-Check out the components here: https://reactcomponents.robbie.pw
+Check out the components here: https://reactcomponents.robbie.digital
 
 ---
 
@@ -51,7 +51,7 @@ I would hate to make you do a bunch of work and not be able to merge it in.
 
 Reach out to me at one of the following places!
 
-- robbie@robbie.pw
+- robbie@robbie.digital
 
 ---
 

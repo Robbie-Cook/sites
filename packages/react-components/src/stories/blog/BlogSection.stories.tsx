@@ -9,6 +9,7 @@ import ReactComponentsContext from "../../theme/ReactComponentsContext";
 
 // @ts-ignore
 import TestPost from "./TestPost.md";
+import { setTheme } from "bigiron.css";
 
 export default {
   title: "Blog/Blog Section",
@@ -24,6 +25,7 @@ const Template: Story<BlogSectionProps & Theme> = (args) => (
       type: args.type,
     }}
   >
+    {setTheme(args.type)}
     <BlogSection>{args.children}</BlogSection>
   </ReactComponentsContext.Provider>
 );

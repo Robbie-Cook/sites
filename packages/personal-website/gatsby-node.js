@@ -33,9 +33,16 @@ exports.createPages = async ({ graphql, actions }, themeOptions) => {
     });
   });
 
+  // Create blog page
   createPage({
     path: path.resolve(basePath, "blog"),
     component: require.resolve(`./src/blog.tsx`),
+  });
+
+  // Create cv page
+  createPage({
+    path: path.resolve(basePath, "cv"),
+    component: require.resolve(`./src/cv/cv.tsx`),
   });
 };
 

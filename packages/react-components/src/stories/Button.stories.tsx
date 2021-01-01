@@ -5,6 +5,9 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import Button, { ButtonProps } from "../buttons/Button";
 import ReactComponentsContext from "../theme/ReactComponentsContext";
 import { Theme } from "../theme/Theme";
+import { setTheme } from "bigiron.css";
+
+
 export default {
   title: "Button",
   component: Button,
@@ -19,6 +22,7 @@ const Template: Story<ButtonProps & Theme> = (args) => (
       type: args.type,
     }}
   >
+    {setTheme(args.type)}
     <Button>{args.children}</Button>
   </ReactComponentsContext.Provider>
 );

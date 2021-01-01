@@ -7,10 +7,13 @@ import {
   jsx,
 } from "theme-ui";
 
+import { setTheme } from "bigiron.css";
+
 const Footer = () => {
   const [colorMode, setColorMode] = useColorMode();
   const isDark = colorMode === `dark`;
   const toggleColorMode = (e: any) => {
+    setTheme(isDark ? `light` : `dark`)
     setColorMode(isDark ? `light` : `dark`);
   };
 

@@ -5,7 +5,7 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Robbie Cook - Developer`,
-    siteUrl: "https://robbie.pw/",
+    siteUrl: "https://robbie.digital/",
     siteTitle: ``,
     siteHeadline: ``,
     siteDescription: ``,
@@ -16,6 +16,10 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-theme-ui`
+    },
+    'gatsby-plugin-next-seo',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

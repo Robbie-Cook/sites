@@ -20,8 +20,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@robbie-cook/gatsby-theme-cara": "^1.0.28",
-    "@robbie-cook/react-components": "^5.0.21",
     "browser-monads": "^1.0.0",
+    "bigiron.css": "^1.2.13",
     "clipboardy": "^2.3.0",
     "contentful": "^7.14.6",
     "eslint-config-airbnb": "^18.0.1",
@@ -32,6 +32,7 @@
     "gatsby-plugin-google-analytics": "^2.1.8",
     "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-netlify": "^2.1.6",
+    "gatsby-plugin-next-seo": "^1.6.1",
     "gatsby-plugin-offline": "^2.2.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.8.0",
@@ -44,6 +45,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.0.7",
     "yoga-layout-prebuilt": "^1.10.0",
     "yurnalist": "^2.1.0"
   },
