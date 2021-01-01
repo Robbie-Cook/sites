@@ -7,13 +7,23 @@ import React from "react";
  */
 export interface PillProps {
   children?: any;
+  onClick?: () => void;
 }
 
 /**
  * A Pill component.
  */
 const Pill: React.FC<PillProps> = (props) => {
-  return <div css={css``}>{props.children}</div>;
+  return (
+    <button
+      onClick={props.onClick}
+      css={css`
+        border-radius: 24px;
+      `}
+    >
+      {props.children}
+    </button>
+  );
 };
 
 export default Pill;
