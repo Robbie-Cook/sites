@@ -4,7 +4,7 @@
 
 ---
 
-## Example
+## Examples
 
 ```typescript
 import { Button } from "@robbie-cook/react-components"
@@ -15,6 +15,25 @@ const MyComponent: React.FC = () => {
   )
 }
 ```
+
+### Usage with Gatsby
+
+If you are using this project with Gatsby, just import like so:
+```typescript
+
+import {
+  Blog,
+  Theme,
+  ReactComponentsContext,
+  H1,
+  SEO,
+} from "@robbie-cook/react-components";
+import "@robbie-cook/react-components/src/styles.scss";
+```
+
+> N.B. You should only have to import `styles.css` once in your whole App.
+
+This is because I am having trouble getting `style-loader` to work with Gatsby.
 
 ---
 
