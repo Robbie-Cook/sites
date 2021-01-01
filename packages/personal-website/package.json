@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/personal-website",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "private": true,
   "publishConfig": {
     "access": "public"
@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
-    "@robbie-cook/gatsby-theme-cara": "^1.0.28",
-    "browser-monads": "^1.0.0",
+    "@robbie-cook/gatsby-theme-cara": "^1.0.29",
     "bigiron.css": "^1.2.13",
+    "browser-monads": "^1.0.0",
     "clipboardy": "^2.3.0",
     "contentful": "^7.14.6",
     "eslint-config-airbnb": "^18.0.1",

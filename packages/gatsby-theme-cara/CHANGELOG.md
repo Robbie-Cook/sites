@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.29](https://github.com/LekoArts/gatsby-themes/compare/@robbie-cook/gatsby-theme-cara@1.0.28...@robbie-cook/gatsby-theme-cara@1.0.29) (2021-01-01)
+
+**Note:** Version bump only for package @robbie-cook/gatsby-theme-cara
+
+
+
+
+
 ## [1.0.28](https://github.com/LekoArts/gatsby-themes/compare/@robbie-cook/gatsby-theme-cara@1.0.27...@robbie-cook/gatsby-theme-cara@1.0.28) (2020-12-31)
 
 **Note:** Version bump only for package @robbie-cook/gatsby-theme-cara
