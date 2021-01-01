@@ -2,8 +2,6 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 
-// Manually import react-components styles
-import "@robbie-cook/react-components/src/styles.scss";
 import {
   Blog,
   Theme,
@@ -15,6 +13,10 @@ import { graphql, useStaticQuery } from "gatsby";
 import ArrowLeft from "./ArrowLeft";
 import facepaint from "facepaint";
 import date from "date-and-time";
+
+// Manually import react-components styles
+import "@robbie-cook/react-components/src/styles.scss";
+
 import "./styles.scss";
 
 /**
