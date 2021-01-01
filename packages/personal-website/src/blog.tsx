@@ -1,6 +1,9 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
+
+// Manually import react-components styles
+import "@robbie-cook/react-components/src/styles.scss";
 import {
   Blog,
   Theme,
