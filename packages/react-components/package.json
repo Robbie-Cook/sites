@@ -46,7 +46,6 @@
     "@babel/preset-react": "^7.10.4",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
-    "@robbie-cook/personal-website": "file:.yalc/@robbie-cook/personal-website",
     "@types/date-and-time": "^0.13.0",
     "@types/react-helmet": "^6.1.0",
     "antd": "^4.6.6",
