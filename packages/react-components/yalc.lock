@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "@robbie-cook/personal-website": {
-      "signature": "70d2d4866b91297ade073e28dada12af",
-      "file": true
-    }
-  }
-}
