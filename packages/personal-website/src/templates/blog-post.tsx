@@ -59,12 +59,11 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
           <BlogPost
             title={post.frontmatter.title}
             date={post.frontmatter.date}
-            author={"test"}
-            // author={
-            //   Authors[post.frontmatter.author] ?? {
-            //     name: post.frontmatter.author,
-            //   }
-            // }
+            author={
+              Authors[post.frontmatter.author] ?? {
+                name: post.frontmatter.author,
+              }
+            }
             content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
           />
         </div>
