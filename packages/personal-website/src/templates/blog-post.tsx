@@ -9,6 +9,7 @@ import {
 } from "@robbie-cook/react-components";
 import ArrowLeft from "../ArrowLeft";
 import facepaint from "facepaint";
+import Authors from "../data/authors.json";
 
 const mq = facepaint([
   "@media(min-width: 700px)",
@@ -58,7 +59,11 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = (props) => {
           <BlogPost
             title={post.frontmatter.title}
             date={post.frontmatter.date}
-            author={post.frontmatter.author}
+            author={
+              Authors[post.frontmatter.author] ?? {
+                name: post.frontmatter.author,
+              }
+            }
             content={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
           />
         </div>
