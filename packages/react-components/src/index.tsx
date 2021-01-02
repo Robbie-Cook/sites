@@ -9,7 +9,9 @@ import { H1, H2, H3, P } from "./typography/Typography";
 import BlogPost from "./blog/BlogPost";
 import SEO from "./seo/SEO";
 import Button from "./buttons/Button";
+import Nav from "./nav/Nav";
 
+// Export all antd components as well, in case you need them
 import {
   Affix,
   Anchor,
@@ -151,4 +153,5 @@ export {
   H3,
   P,
   SEO,
+  Nav
 };
