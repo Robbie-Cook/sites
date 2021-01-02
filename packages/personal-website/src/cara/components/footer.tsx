@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import {
-  Footer as ThemeFooter,
   Styled,
   Flex,
   useColorMode,
@@ -18,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <ThemeFooter>
+    <div>
       <button
         sx={{
           variant: `buttons.toggle`,
@@ -50,7 +49,7 @@ const Footer = () => {
           a: { color: `text` },
         }}
       ></Flex>
-    </ThemeFooter>
+    </div>
   );
 };
 
