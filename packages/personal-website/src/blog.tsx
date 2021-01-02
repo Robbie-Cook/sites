@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
+import Authors from "./data/authors.json";
 
 import {
   Blog,
@@ -18,7 +19,7 @@ import date from "date-and-time";
 import "@robbie-cook/react-components/src/styles.scss";
 
 import "./styles.scss";
-import { BlogPostProps } from '@robbie-cook/react-components/dist/blog/BlogPostShort';
+import { BlogPostProps } from "@robbie-cook/react-components/dist/blog/BlogPostShort";
 
 /**
  * Interface for Blog props
@@ -44,16 +45,21 @@ const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
 const MyBlog: React.FC<BlogProps> = (props) => {
   const posts: Array<BlogPostProps> = [];
   props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
-    if (process?.env.NODE_ENV === "development" || edge.node.frontmatter.publish) {
+    if (
+      process?.env.NODE_ENV === "development" ||
+      edge.node.frontmatter.publish
+    ) {
       posts.push({
         title: edge.node.frontmatter.title,
         date: edge.node.frontmatter.date,
         content: (
           <div dangerouslySetInnerHTML={{ __html: edge.node.excerpt }} />
         ),
-        author: edge.node.frontmatter.author,
+        author: Authors[edge.node.frontmatter.author] ?? {
+          name: edge.node.frontmatter.author,
+        },
         link: `/blog/posts${edge.node.fields.slug}`,
-        tags: edge.node.frontmatter.tags
+        tags: edge.node.frontmatter.tags,
       });
     }
   });
