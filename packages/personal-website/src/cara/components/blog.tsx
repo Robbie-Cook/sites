@@ -5,6 +5,8 @@ import Inner from "../elements/inner"
 import Content from "../elements/content"
 import SVG from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
+
+// @ts-ignore
 import BlogMDX from "../sections/Blog.mdx"
 
 const Blog = ({ offset }: { offset: number }) => (

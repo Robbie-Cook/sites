@@ -15,11 +15,13 @@ module.exports = {
     basePath: "/",
   },
   plugins: [
-    `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-theme-ui`
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sections`,
+        path: `${__dirname}/src/cara/sections/`,
+      },
     },
-    'gatsby-plugin-next-seo',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,16 +29,18 @@ module.exports = {
         path: `${__dirname}/src/blog-posts/`,
       },
     },
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+    },
+    "gatsby-plugin-next-seo",
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts all options defined by `babel-plugin-emotion` plugin.
       },
-    },
-    {
-      resolve: `@robbie-cook/gatsby-theme-cara`,
-      options: {},
     },
     {
       resolve: `gatsby-plugin-google-analytics`,

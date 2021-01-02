@@ -1,10 +1,10 @@
 import React from "react"
 import { Parallax } from "react-spring/renderprops-addons.cjs"
-import Layout from "../components/layout"
-import Hero from "../components/hero/hero"
-import Projects from "../components/projects"
-import About from "../components/about"
-import Contact from "../components/contact"
+import Layout from "../cara/components/layout"
+import Hero from "../cara/components/hero/hero"
+import Projects from "../cara/components/projects"
+import About from "../cara/components/about"
+import Contact from "../cara/components/contact"
 
 const Cara = () => (
   <Layout>

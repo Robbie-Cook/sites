@@ -7,6 +7,11 @@ exports.createPages = async ({ graphql, actions }, themeOptions) => {
 
   const basePath = themeOptions.basePath || standardBasePath;
 
+  createPage({
+    path: basePath,
+    component: require.resolve(`./src/templates/cara.tsx`),
+  });
+
   const result = await graphql(`
     query {
       allMarkdownRemark {
