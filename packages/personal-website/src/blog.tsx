@@ -18,6 +18,7 @@ import date from "date-and-time";
 import "@robbie-cook/react-components/src/styles.scss";
 
 import "./styles.scss";
+import { BlogPostProps } from '@robbie-cook/react-components/dist/blog/BlogPostShort';
 
 /**
  * Interface for Blog props
@@ -41,13 +42,7 @@ const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
  *  A Blog component.
  */
 const MyBlog: React.FC<BlogProps> = (props) => {
-  const posts: Array<{
-    title: string;
-    date: string;
-    content: any;
-    author: string;
-    link: string;
-  }> = [];
+  const posts: Array<BlogPostProps> = [];
   props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
     if (edge.node.frontmatter.publish) {
       posts.push({
@@ -58,9 +53,20 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         ),
         author: edge.node.frontmatter.author,
         link: `/blog/posts${edge.node.fields.slug}`,
+        tags: edge.node.frontmatter.tags
       });
     }
   });
+
+  let filters = [];
+  props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
+    if (edge.node.frontmatter.tags) {
+      for (const tag of edge.node.frontmatter.tags) {
+        filters.push(tag);
+      }
+    }
+  });
+  filters = Array.from(new Set(filters));
 
   posts.sort((a, b) => {
     const date1 = new Date(a.date).getTime();
@@ -106,7 +112,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           </H1> */}
       </div>
       <h1>Blog</h1>
-      <Blog posts={posts} />
+      <Blog posts={posts} filters={filters} />
     </div>
   );
 };
@@ -153,6 +159,7 @@ export const pageQuery = graphql`
             author
             date
             publish
+            tags
           }
           fields {
             slug
