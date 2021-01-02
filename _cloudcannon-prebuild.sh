@@ -7,7 +7,7 @@ if [ $STORYBOOK ]; then
   npx yarn run build-storybook
 else
   cd packages/personal-website
-  npx yarn cache clean
+  rm -rf .cache
   npx yarn install
   npx yarn run build
 fi
