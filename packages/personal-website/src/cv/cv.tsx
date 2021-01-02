@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/core */
+/** @jsx jsx */
 import { BaseStyles } from "theme-ui";
 import React from "react";
 import "bigiron.css/dist/bigiron.css";
