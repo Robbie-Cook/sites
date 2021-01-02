@@ -9,6 +9,7 @@ export interface NavProps {
   pages: {
     name: string;
     href: string;
+    active?: boolean;
   }[];
 }
 
@@ -22,6 +23,9 @@ const Nav: React.FC<NavProps> = (props) => {
         <a
           css={css`
             margin-right: 20px;
+            ${page.active
+              ? "border-bottom: 2px solid var(--links);"
+              : `color: var(--text-muted);`}
           `}
           href={page.href}
         >

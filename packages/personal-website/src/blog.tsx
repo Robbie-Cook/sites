@@ -2,6 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import Authors from "./data/authors.json";
+import { Nav } from "@robbie-cook/react-components";
 
 import {
   Blog,
@@ -92,6 +93,19 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         })
       )}
     >
+      <Nav
+        pages={[
+          {
+            name: "Home",
+            href: "/",
+          },
+          {
+            name: "Blog",
+            href: "/blog",
+            active: true, // Could also be based off window.location.pathname
+          },
+        ]}
+      />
       <SEO site={props.data.site.siteMetadata as any} />
 
       <div
@@ -102,20 +116,6 @@ const MyBlog: React.FC<BlogProps> = (props) => {
         `}
       >
         {/* <ArrowLeft link="/" /> */}
-        {/* <H1
-            css={css`
-              font-size: 4rem;
-              text-align: center;
-              margin-bottom: 90px !important;
-              margin-top: 0 !important;
-              margin-right: auto !important;
-              margin-left: auto !important;
-
-              transform: translate(-30px, 0);
-            `}
-          >
-            Blog
-          </H1> */}
       </div>
       <h1>Blog</h1>
       <Blog posts={posts} filters={filters} />
