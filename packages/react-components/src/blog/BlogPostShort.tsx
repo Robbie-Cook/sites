@@ -18,6 +18,7 @@ export interface BlogPostProps {
   author: string;
   content: string | JSX.Element;
   link: string;
+  tags?: Array<string>;
 }
 
 /**

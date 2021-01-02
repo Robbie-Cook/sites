@@ -14,6 +14,7 @@ export interface BlogProps {
   date: number;
   author: string;
   content: string;
+  tags?: Array<string>;
 }
 
 /**

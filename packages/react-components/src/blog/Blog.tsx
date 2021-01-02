@@ -11,6 +11,19 @@ export interface BlogProps {
 }
 
 /**
+ * A function which determines whether a string is included in a
+ * list of strings, regardless of casing.
+ */
+function listIncludesString(str: string, list: string[]) {
+  for (const s of list) {
+    if (s.toLowerCase() === str.toLowerCase()) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
  *  A Blog component.
  */
 const Blog: React.FC<BlogProps> = (props) => {
@@ -33,16 +46,27 @@ const Blog: React.FC<BlogProps> = (props) => {
           })) ?? []),
         ]}
       />
-      {props.posts.map((post) => (
-        <div
-          key={post.date}
-          css={css`
-            margin-bottom: 75px;
-          `}
-        >
-          <BlogPostShort {...post} />
-        </div>
-      ))}
+      {props.posts
+        .filter((post) => {
+          // Filter posts by topic.
+          console.log('pt', post.tags)
+          if (filter) {
+            if (!post.tags || !listIncludesString(filter, post.tags)) {
+              return false;
+            }
+          }
+          return true;
+        })
+        .map((post) => (
+          <div
+            key={post.date}
+            css={css`
+              margin-bottom: 75px;
+            `}
+          >
+            <BlogPostShort {...post} />
+          </div>
+        ))}
     </div>
   );
 };

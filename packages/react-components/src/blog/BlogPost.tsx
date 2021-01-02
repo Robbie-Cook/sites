@@ -20,6 +20,7 @@ export interface BlogPostProps {
   author: string;
   content: string | JSX.Element;
   className?: string;
+  tags?: Array<string>;
 }
 
 /**
