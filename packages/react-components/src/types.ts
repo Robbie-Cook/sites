@@ -4,3 +4,8 @@ export type Filters = Array<{
   onClick: () => void;
 }>;
 
+export type Authors = {
+  name: string;
+  email: string;
+  image: string;
+};

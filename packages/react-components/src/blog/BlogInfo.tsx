@@ -7,10 +7,11 @@ import date from "date-and-time";
 /**
  * Interface for BlogInfo props
  */
-interface BlogInfoProps {
+export interface BlogInfoProps {
   children?: any;
   date: number | string;
   author: string;
+  image?: string;
 }
 
 /**
@@ -46,6 +47,27 @@ const BlogInfo: React.FC<BlogInfoProps> = (props) => {
           flex-shrink: 0;
         `}
       ></span>
+      {props.image && (
+        <span
+          css={css`
+            margin: 0 15px 0 14px;
+          `}
+        >
+          <picture
+            css={css`
+              * {
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                overflow: hidden;
+              }
+            `}
+          >
+            <source srcSet={props.image} media="(min-width: 800px)" />
+            <img src={props.image} alt="author-image" />
+          </picture>
+        </span>
+      )}
       <P
         css={css`
           margin: 0;

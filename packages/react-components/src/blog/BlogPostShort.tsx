@@ -10,15 +10,17 @@ import BlogSection from "./BlogSection";
 
 // @ts-ignore
 import Link from "./link.svg";
+import { Authors } from '../types';
 
 export interface BlogPostProps {
   children?: any;
   title: string;
   date: number;
-  author: string;
+  author: Authors;
   content: string | JSX.Element;
   link: string;
   tags?: Array<string>;
+  authorImage?: string;
 }
 
 /**
@@ -74,7 +76,11 @@ const BlogPostShort: React.FC<BlogPostProps> = (props) => {
         >
           <BlogHeader>{props.title}</BlogHeader>
         </a>
-        <BlogInfo date={props.date} author={props.author} />
+        <BlogInfo
+          date={props.date}
+          author={props.author.name}
+          image={props.author.image}
+        />
       </div>
       <BlogSection>{props.content}</BlogSection>
     </div>

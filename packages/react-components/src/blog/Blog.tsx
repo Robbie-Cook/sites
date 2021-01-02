@@ -49,7 +49,6 @@ const Blog: React.FC<BlogProps> = (props) => {
       {props.posts
         .filter((post) => {
           // Filter posts by topic.
-          console.log('pt', post.tags)
           if (filter) {
             if (!post.tags || !listIncludesString(filter, post.tags)) {
               return false;

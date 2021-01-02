@@ -7,6 +7,7 @@ import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
 import Context from "../theme/ReactComponentsContext";
+import { Authors } from "../types";
 
 // import Dot from "./Dot.svg";
 
@@ -17,7 +18,7 @@ export interface BlogPostProps {
   children?: any;
   title: string;
   date: number;
-  author: string;
+  author: Authors;
   content: string | JSX.Element;
   className?: string;
   tags?: Array<string>;
@@ -45,7 +46,11 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
             margin-bottom: 70px;
           `}
         >
-          <BlogInfo date={props.date} author={props.author} />
+          <BlogInfo
+            date={props.date}
+            author={props.author.name}
+            image={props.author.image}
+          />
         </div>
       </div>
       <BlogSection>{props.content}</BlogSection>
