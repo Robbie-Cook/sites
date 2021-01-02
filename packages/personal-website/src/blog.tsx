@@ -44,7 +44,7 @@ const mq = facepaint(["@media(min-width: 700px)", "@media(min-width: 1120px)"]);
 const MyBlog: React.FC<BlogProps> = (props) => {
   const posts: Array<BlogPostProps> = [];
   props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
-    if (edge.node.frontmatter.publish) {
+    if (process?.env.NODE_ENV === "development" || edge.node.frontmatter.publish) {
       posts.push({
         title: edge.node.frontmatter.title,
         date: edge.node.frontmatter.date,
