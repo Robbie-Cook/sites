@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 import { BaseStyles } from "theme-ui";
 import React from "react";
 import "bigiron.css/dist/bigiron.css";
