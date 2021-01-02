@@ -6,6 +6,8 @@ import Inner from "../elements/inner"
 import Content from "../elements/content"
 import SVG from "./svg"
 import { UpDown, UpDownWide, waveAnimation } from "../styles/animations"
+
+// @ts-ignore
 import ContactMDX from "../sections/contact.mdx"
 import Footer from "./footer"
 
