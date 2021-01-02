@@ -2,12 +2,12 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import { H3, P } from "../typography/Typography";
-import { Theme } from "../theme/Theme";
+import { Theme } from "../../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
-import Context from "../theme/ReactComponentsContext";
-import { Authors } from "../types";
+import Context from "../../theme/ReactComponentsContext";
+import { Authors } from "../../types";
 
 // import Dot from "./Dot.svg";
 
