@@ -62,6 +62,16 @@ const MyBlog: React.FC<BlogProps> = (props) => {
     }
   });
 
+  let filters = [];
+  props.data?.allMarkdownRemark?.edges?.forEach((edge) => {
+    if (edge.node.frontmatter.tags) {
+      for (const tag of edge.node.frontmatter.tags) {
+        filters.push(tag);
+      }
+    }
+  });
+  filters = Array.from(new Set(filters));
+
   posts.sort((a, b) => {
     const date1 = new Date(a.date).getTime();
     const date2 = new Date(b.date).getTime();
@@ -106,7 +116,7 @@ const MyBlog: React.FC<BlogProps> = (props) => {
           </H1> */}
       </div>
       <h1>Blog</h1>
-      <Blog posts={posts} />
+      <Blog posts={posts} filters={filters} />
     </div>
   );
 };
@@ -153,6 +163,7 @@ export const pageQuery = graphql`
             author
             date
             publish
+            tags
           }
           fields {
             slug
