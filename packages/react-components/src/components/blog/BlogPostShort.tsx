@@ -2,7 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import { H3, P } from "../typography/Typography";
-import { Theme } from "../theme/Theme";
+import { Theme } from "../../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
@@ -10,7 +10,7 @@ import BlogSection from "./BlogSection";
 
 // @ts-ignore
 import Link from "./link.svg";
-import { Authors } from '../types';
+import { Authors } from '../../types';
 
 export interface BlogPostProps {
   children?: any;

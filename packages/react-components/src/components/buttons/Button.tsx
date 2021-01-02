@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import ReactComponentsContext from "../theme/ReactComponentsContext";
+import ReactComponentsContext from "../../theme/ReactComponentsContext";
 
 import { Button as AntButton } from "antd";
 

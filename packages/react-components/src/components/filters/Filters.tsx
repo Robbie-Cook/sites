@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import Pill from "../Pill";
-import { Filters as FiltersInterface } from '../types';
+import Pill from "../../Pill";
+import { Filters as FiltersInterface } from '../../types';
 
 /**
  * Interface for Filters props

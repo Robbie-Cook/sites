@@ -1,15 +1,15 @@
 import "./antd.scss";
 import "bigiron.css/dist/bigiron.css";
 import "./styles.scss";
-import BlogPostShort from "./blog/BlogPostShort";
-import Blog from "./blog/Blog";
+import BlogPostShort from "./components/blog/BlogPostShort";
+import Blog from "./components/blog/Blog";
 import { Theme } from "./theme/Theme";
 import ReactComponentsContext from "./theme/ReactComponentsContext";
-import { H1, H2, H3, P } from "./typography/Typography";
-import BlogPost from "./blog/BlogPost";
+import { H1, H2, H3, P } from "./components/typography/Typography";
+import BlogPost from "./components/blog/BlogPost";
 import SEO from "./seo/SEO";
-import Button from "./buttons/Button";
-import Nav from "./nav/Nav";
+import Button from "./components/buttons/Button";
+import Nav from "./components/nav/Nav";
 
 // Export all antd components as well, in case you need them
 import {

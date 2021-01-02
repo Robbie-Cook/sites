@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import ReactComponentsContext, { useTheme } from "../theme/ReactComponentsContext";
+import ReactComponentsContext, { useTheme } from "../../theme/ReactComponentsContext";
 
 /**
  * Interface for BlogSection props

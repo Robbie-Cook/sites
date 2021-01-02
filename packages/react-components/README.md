@@ -2,6 +2,14 @@
 
 > Need some components in your React? Here be some.
 
+## Demo
+
+Check out the components here: https://reactcomponents.robbie.digital
+
+## Context
+
+This component library is primarily used in https://robbie.digital.
+
 ---
 
 ## Examples
@@ -49,9 +57,6 @@ Also, add this to your html file (e.g. public/index.html in Create React App)
   rel="stylesheet"
 />
 ```
-## Components
-
-Check out the components here: https://reactcomponents.robbie.digital
 
 ---
 
