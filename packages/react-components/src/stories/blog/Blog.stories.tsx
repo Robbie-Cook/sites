@@ -2,7 +2,7 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import Blog, { BlogProps } from "../../blog/Blog";
+import Blog, { BlogProps } from "../../components/blog/Blog";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
@@ -10,7 +10,6 @@ import { setTheme } from "bigiron.css";
 
 // @ts-ignore
 import TestPost from "./TestPost.md";
-import { setCssVariables } from '../helpers';
 
 export default {
   title: "Blog/Blog",

@@ -2,7 +2,7 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import BlogInfo, { BlogInfoProps } from "../../blog/BlogInfo";
+import BlogInfo, { BlogInfoProps } from "../../components/blog/BlogInfo";
 import { Theme } from "../../theme/Theme";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
 import { setTheme } from "bigiron.css";

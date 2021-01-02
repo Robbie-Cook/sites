@@ -2,7 +2,7 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import Filters, { FiltersProps } from "../filters/Filters";
+import Filters, { FiltersProps } from "../components/filters/Filters";
 import ReactComponentsContext from "../theme/ReactComponentsContext";
 import { Theme } from "../theme/Theme";
 import { setTheme } from "bigiron.css";
