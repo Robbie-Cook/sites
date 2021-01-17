@@ -1,5 +1,4 @@
 import "./antd.scss";
-import "bigiron.css/dist/bigiron.css";
 import "./styles.scss";
 import BlogPostShort from "./components/blog/BlogPostShort";
 import Blog from "./components/blog/Blog";

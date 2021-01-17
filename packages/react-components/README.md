@@ -15,7 +15,8 @@ This component library is primarily used in https://robbie.digital.
 ## Examples
 
 ```typescript
-import { Button } from "@robbie-cook/react-components"
+import "bigiron.css/dist/bigiron.min.css";
+import { Button } from "@robbie-cook/react-components";
 
 const MyComponent: React.FC = () => {
   return (
@@ -56,6 +57,8 @@ Also, add this to your html file (e.g. public/index.html in Create React App)
   href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Vollkorn:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap"
   rel="stylesheet"
 />
+
+and remember to import `bigiron.css` (https://bigiron.robbie.digital) too.
 ```
 
 ---
