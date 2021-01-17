@@ -45,7 +45,6 @@
   "private": true,
   "dependencies": {
     "@robbie-cook/personal-website": "file:packages/personal-website",
-    "@robbie-cook/react-components": "file:packages/react-components",
-    "avenue-ci": "file:packages/avenue-ci"
+    "@robbie-cook/react-components": "file:packages/react-components"
   }
 }
