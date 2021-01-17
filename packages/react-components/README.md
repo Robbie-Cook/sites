@@ -1,6 +1,7 @@
 # React Components
 
-> Need some components in your React? Here be some.
+> Need some components in your React? Here be some. Designed to be used with
+> bigiron.css
 
 ## Demo
 
