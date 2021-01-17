@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/react-components",
-  "version": "5.0.31",
+  "version": "5.1.0",
   "description": "A set of react components to use in your projects",
   "main": "dist/index.js",
   "scripts": {
@@ -62,5 +62,5 @@
     "storybook": "6.0",
     "svg-loader": "0.0.2"
   },
-  "gitHead": "082a52653e3f7bc5daa42d235390fa640ebe73c8"
+  "gitHead": "93045503eab09eab7841dac2b4f60c01cc42c5b3"
 }
