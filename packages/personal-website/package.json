@@ -60,7 +60,7 @@
   "gitHead": "19b3f03dcb8909fe16f27d1aafd4e6d3c893b0d5",
   "devDependencies": {
     "gatsby-cli": "^2.12.113",
-    "gatsby-recipes": "^0.5.0",
+    "gatsby-recipes": "^0.9.1",
     "is-valid-path": "^0.1.1",
     "react-side-effect": "^2.1.1",
     "update-notifier": "^5.0.1"
