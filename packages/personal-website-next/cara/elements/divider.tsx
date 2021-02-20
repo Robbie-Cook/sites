@@ -1,4 +1,7 @@
-import { css } from '@emotion/react'
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { css, jsx } from "theme-ui"
 import React from "react"
 import { ParallaxLayer } from "react-spring/renderprops-addons"
 

@@ -20,8 +20,8 @@
     "bigiron.css": "^2.0.4",
     "next": "10.0.7",
     "next-transpile-modules": "^6.3.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-spring": "^8.0.27",
     "svg-inline-loader": "^0.8.2",
     "theme-ui": "^0.3.5"

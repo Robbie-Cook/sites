@@ -1,4 +1,6 @@
-import { keyframes, css } from "@emotion/core"
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { keyframes, css, jsx } from "@emotion/react"
 import styled from "@emotion/styled"
 
 const wave = keyframes`

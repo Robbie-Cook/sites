@@ -1,9 +1,10 @@
-/** @jsxImportSource @emotion/react */
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from "react";
 import { Global } from "@emotion/core";
 import { SEO } from "@robbie-cook/react-components";
 import useSiteMetadata from "../hooks/use-site-metadata";
-import { css } from '@emotion/react';
+import { jsx, css } from 'theme-ui';
 
 type LayoutProps = { children?: React.ReactNode; className?: string };
 
