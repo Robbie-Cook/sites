@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/compare/@robbie-cook/react-components@5.1.0...@robbie-cook/react-components@5.2.0) (2021-02-20)
+
+
+### Bug Fixes
+
+* fixed broken deps ([747f25d](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/commit/747f25d7cecd9a6b2455e493cdecf1187637512c))
+
+
+### Features
+
+* Added Descriptions story ([f103dae](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/commit/f103dae2f3ad80957d2385b196953a1255123f7d))
+* Adding official avatar story ([854c788](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/commit/854c788e90f8920fff73042f5b4ac6c3d33ed43b))
+
+
+
+
+
 # [5.1.0](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/compare/@robbie-cook/react-components@5.0.31...@robbie-cook/react-components@5.1.0) (2021-01-17)
 
 **Note:** Version bump only for package @robbie-cook/react-components
