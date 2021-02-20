@@ -3,7 +3,6 @@
 import React from "react";
 import { Global } from "@emotion/core";
 import { SEO } from "@robbie-cook/react-components";
-import useSiteMetadata from "../hooks/use-site-metadata";
 import { jsx, css } from 'theme-ui';
 
 
