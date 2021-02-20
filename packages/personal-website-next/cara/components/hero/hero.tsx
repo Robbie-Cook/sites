@@ -6,8 +6,9 @@ import Inner from "../../elements/inner";
 import Content from "../../elements/content";
 import SVG from "../svg";
 import { UpDown, UpDownWide } from "../../styles/animations";
+// @ts-ignore
 import Intro from "../../sections/intro.mdx";
-import { HeroImage } from "./hero-image";
+// @ts-ignore
 import Avatar from "./meAsAvatar.svg";
 
 const Hero = ({ offset }: { offset: number }) => (
