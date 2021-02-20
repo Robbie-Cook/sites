@@ -1,17 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { Global } from "@emotion/core";
-import { css, Styled, jsx } from "theme-ui";
 import { SEO } from "@robbie-cook/react-components";
 import useSiteMetadata from "../hooks/use-site-metadata";
+import { css } from '@emotion/react';
 
 type LayoutProps = { children?: React.ReactNode; className?: string };
 
 const Layout = ({ children, className }: LayoutProps) => {
-  const site = useSiteMetadata();
-
   return (
-    <Styled.root data-testid="theme-root">
+    <React.Fragment>
       <Global
         styles={css({
           "*": {
@@ -40,13 +38,12 @@ const Layout = ({ children, className }: LayoutProps) => {
           },
         })}
       />
-      <SEO site={site as any} />
       <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Vollkorn:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap"
         rel="stylesheet"
       ></link>
       <main className={className}>{children}</main>
-    </Styled.root>
+    </React.Fragment>
   );
 };
 

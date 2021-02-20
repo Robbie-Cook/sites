@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, Flex } from "theme-ui";
 import React from "react";
 
 /**
@@ -7,16 +6,16 @@ import React from "react";
  */
 export function HeroImage({ src }: { src: string }) {
   return (
-    <Flex
-      sx={{
-        display: ['none', 'none', 'none', 'flex', 'flex', 'flex'],
+    <div
+      style={{
+        display: "flex",
         height: "100%",
         marginRight: "50px",
         flex: "0 0 400px",
         minWidth: "300px",
       }}
     >
-      <img src={src} alt="me" sx={{ width: "100%" }} />
-    </Flex>
+      <img src={src} alt="me" style={{ width: "100%" }} />
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { jsx } from "theme-ui"
 import Divider from "../../elements/divider"
 import Inner from "../../elements/inner"
 import Content from "../../elements/content"
