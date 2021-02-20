@@ -14,7 +14,6 @@ type ContentProps = {
 
 const Content = ({ speed, offset, children, className, factor }: ContentProps) => (
   <ParallaxLayer
-    className={className}
     css={css({
       padding: [3, 4, 4, 5],
       display: `flex`,
