@@ -83,3 +83,5 @@ packages/react-components/dist/
 packages/personal-website/public/
 
 packages/react-components/.yalc/
+
+**/*.next/**/*
