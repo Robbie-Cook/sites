@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { css } from "@emotion/react";
 import Divider from "../../elements/divider";
 import Inner from "../../elements/inner";
 import Content from "../../elements/content";
@@ -150,10 +151,16 @@ const Hero = ({ offset }: { offset: number }) => (
         sx={{
           display: `flex`,
           flexDirection: ["column", , "row", "row", "row"],
+          alignItems: "center",
         }}
       >
         {/* <HeroImage src={<Avatar />} /> */}
         <div
+          css={css`
+            @media screen and (min-width: 400px) {
+              max-width: 40vw;
+            }
+          `}
           style={{
             display: "flex",
             height: "100%",
