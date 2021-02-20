@@ -7,19 +7,17 @@ import {
   jsx,
 } from "theme-ui";
 
-import { setTheme } from "bigiron.css";
-
 const Footer = () => {
   const [colorMode, setColorMode] = useColorMode();
   const isDark = colorMode === `dark`;
   const toggleColorMode = (e: any) => {
-    setTheme(isDark ? `light` : `dark`)
+    // setTheme(isDark ? `light` : `dark`)
     setColorMode(isDark ? `light` : `dark`);
   };
 
   return (
     <div>
-      <button
+      {/* <button
         sx={{
           variant: `buttons.toggle`,
           fontWeight: `semibold`,
@@ -32,7 +30,7 @@ const Footer = () => {
         aria-label="Toggle dark mode"
       >
         {isDark ? `Light` : `Dark`} Theme
-      </button>
+      </button> */}
       Copyright &copy; {new Date().getFullYear()}. All rights reserved.
       <br />
       This website was proudly made with the excellent{" "}
