@@ -1,4 +1,5 @@
-/** @jsxImportSource @emotion/react */
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import {
   Styled,
   Flex,
