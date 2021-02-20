@@ -19,6 +19,7 @@
     "babel-loader": "^8.2.2",
     "bigiron.css": "^2.0.4",
     "next": "10.0.7",
+    "next-seo": "^4.19.0",
     "next-transpile-modules": "^6.3.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
