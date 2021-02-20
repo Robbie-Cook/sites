@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.1](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/compare/@robbie-cook/react-components@5.2.0...@robbie-cook/react-components@5.2.1) (2021-02-20)
+
+**Note:** Version bump only for package @robbie-cook/react-components
+
+
+
+
+
 # [5.2.0](https://github.com/Robbie-Cook/gatsby-sites/tree/master/packages/react-components/compare/@robbie-cook/react-components@5.1.0...@robbie-cook/react-components@5.2.0) (2021-02-20)
 
 

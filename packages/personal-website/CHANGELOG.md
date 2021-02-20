@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/Robbie-Cook/gatsby-sites/compare/@robbie-cook/personal-website@0.1.1...@robbie-cook/personal-website@0.1.2) (2021-02-20)
+
+**Note:** Version bump only for package @robbie-cook/personal-website
+
+
+
+
+
 ## [0.1.1](https://github.com/Robbie-Cook/gatsby-sites/compare/@robbie-cook/personal-website@0.1.0...@robbie-cook/personal-website@0.1.1) (2021-02-20)
 
 **Note:** Version bump only for package @robbie-cook/personal-website
