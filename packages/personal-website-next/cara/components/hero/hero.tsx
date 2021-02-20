@@ -6,6 +6,7 @@ import SVG from "../svg"
 import { UpDown, UpDownWide } from "../../styles/animations"
 import Intro from "../../sections/intro.mdx"
 import { HeroImage } from './hero-image'
+import Avatar from "./meAsAvatar.svg";
 
 const Hero = ({ offset }: { offset: number }) => (
   <div>
@@ -39,7 +40,8 @@ const Hero = ({ offset }: { offset: number }) => (
     </Divider>
     <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset}>
       <Inner sx={{ display: `flex`, flexDirection: ['column',,'row','row', 'row'] }}>
-        <HeroImage src={`/meAsAvatar.svg`} />
+        {/* <HeroImage src={<Avatar />} /> */}
+        <Avatar />
         <div sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <Intro />
         </div>
