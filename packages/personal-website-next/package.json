@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
   },
   "dependencies": {
     "@babel/preset-react": "^7.12.13",
@@ -28,7 +30,13 @@
     "theme-ui": "^0.3.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@storybook/addon-actions": "^6.1.19",
+    "@storybook/addon-essentials": "^6.1.19",
+    "@storybook/addon-links": "^6.1.19",
+    "@storybook/react": "^6.1.19",
     "file-loader": "^6.2.0",
+    "react-is": "^17.0.1",
     "react-svg-loader": "^3.0.3",
     "typescript": "^4.1.5"
   }

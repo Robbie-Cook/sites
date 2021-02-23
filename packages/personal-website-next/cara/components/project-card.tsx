@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import { css } from '@emotion/react'
 import React from "react"
 import { jsx } from "theme-ui"
 
@@ -15,6 +16,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
     href={link}
     target="_blank"
     rel="noreferrer noopener"
+    className="project-card"
     sx={{
       width: `100%`,
       boxShadow: `lg`,
