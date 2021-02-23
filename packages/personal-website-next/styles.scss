@@ -4,9 +4,18 @@ body {
     var(--theme-ui-colors-background, #141821)
   ) !important;
 
-  max-width: inherit!important;  
+  max-width: inherit !important;
 }
 
 h1 {
-  font-size: 3rem!important;
+  font-size: 3rem !important;
+}
+
+.project-card {
+  @media screen and (min-width: 400px) {
+    min-width: 0;
+    * {
+      word-wrap: break-word;
+    }
+  }
 }
