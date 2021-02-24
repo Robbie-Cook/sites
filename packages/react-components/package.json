@@ -59,7 +59,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "storybook": "6.0",
+    "storybook": "6.1",
     "svg-loader": "0.0.2"
   },
   "gitHead": "2afc78fe725f9a67427d6d3aaa99007574bce24c"
