@@ -43,13 +43,8 @@
     "webpack-node-externals": "^2.5.2"
   },
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "dependencies": {
-    "@robbie-cook/gatsby-theme-cara": "file:packages/gatsby-theme-cara",
     "@robbie-cook/personal-website": "file:packages/personal-website",
-    "@robbie-cook/react-components": "file:packages/react-components",
-    "avenue-ci": "file:packages/avenue-ci"
+    "@robbie-cook/react-components": "file:packages/react-components"
   }
 }

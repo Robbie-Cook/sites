@@ -1,5 +1,8 @@
 const nodeExternals = require("webpack-node-externals");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.tsx"),
@@ -17,6 +20,11 @@ module.exports = {
   devtool: "source-map",
 
   resolve: {
+    // modules: [
+    //   path.resolve(__dirname, 'node_modules'),
+    //   path.resolve(__dirname, '../node_modules'),
+    //   'node_modules'
+    // ],
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
@@ -34,6 +42,7 @@ module.exports = {
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: "file-loader",
@@ -55,6 +64,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: "markdown-loader",
       },
+      {
+        test: /\.scss$/i,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "isomorphic-style-loader",
+          },
+          "css-loader",
+          "sass-loader",
+        ],
+      },
     ],
   },
 
@@ -68,5 +88,10 @@ module.exports = {
   //   'react-dom' : 'react-dom' // Case matters here
   // },
   externals: [nodeExternals()],
-  plugins: [],
+  plugins: [
+    // new BundleAnalyzerPlugin(),
+    new webpack.ProvidePlugin({
+      // "document": "(document || {})"
+    }),
+  ],
 };

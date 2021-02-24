@@ -1,0 +1,12 @@
+body {
+  background-color: var(
+    --theme-ui-colors-background,
+    var(--theme-ui-colors-background, #141821)
+  ) !important;
+
+  max-width: inherit!important;  
+}
+
+h1 {
+  font-size: 3rem!important;
+}

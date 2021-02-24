@@ -75,5 +75,17 @@ cypress/screenshots
 
 junit.xml
 junit.xml
+
+packages/react-components/storybook-static/
+
+packages/react-components/dist/
+
 packages/personal-website/public/
 packages/react-components/dist/
+
+packages/react-components/.yalc/
+
+**/*/.next/**/*
+packages/personal-website-next/.next/
+
+packages/personal-website-legacy/public/
