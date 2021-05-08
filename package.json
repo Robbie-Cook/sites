@@ -44,7 +44,7 @@
   },
   "private": true,
   "dependencies": {
-    "@robbie-cook/personal-website": "file:packages/personal-website",
+    "@robbie-cook/personal-website-next": "file:packages/personal-website-next",
     "@robbie-cook/react-components": "file:packages/react-components"
   }
 }

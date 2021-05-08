@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/personal-website",
+    "packages/personal-website-next",
     "packages/react-components"
   ],
   "version": "independent",

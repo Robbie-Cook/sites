@@ -17,8 +17,8 @@ import { Authors } from "../../types";
 export interface BlogPostProps {
   children?: any;
   title: string;
-  date: number;
-  author: Authors;
+  date?: number;
+  author?: Authors;
   content: string | JSX.Element;
   className?: string;
   tags?: Array<string>;
@@ -48,8 +48,8 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
         >
           <BlogInfo
             date={props.date}
-            author={props.author.name}
-            image={props.author.image}
+            author={props.author?.name ?? ""}
+            image={props.author?.image ?? ""}
           />
         </div>
       </div>
