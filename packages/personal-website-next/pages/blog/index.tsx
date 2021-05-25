@@ -42,6 +42,7 @@ export function getStaticProps(context: any) {
             ...curr,
             date: curr.date?.toString() ?? null,
             content: `${removeMd(curr.content).split(' ').slice(0, 60).join(' ')}...`,
+            link: `/blog/posts/${curr.slug}`
           },
         ],
         []
