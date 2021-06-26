@@ -47,10 +47,10 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
           `}
         >
           <BlogInfo
-            date={props.date}
+            date={props.date || 0}
             author={props.author?.name ?? ""}
             image={props.author?.image ?? ""}
-          />
+          /> 
         </div>
       </div>
       <BlogSection>{props.content}</BlogSection>

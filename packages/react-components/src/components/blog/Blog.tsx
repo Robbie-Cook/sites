@@ -60,7 +60,7 @@ const Blog: React.FC<BlogProps> = (props) => {
           <div
             key={post.date}
             css={css`
-              margin-bottom: 75px;
+              margin: 50px 0;
             `}
           >
             <BlogPostShort {...post} />
