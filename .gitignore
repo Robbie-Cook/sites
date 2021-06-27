@@ -85,3 +85,4 @@ packages/personal-website/public/
 packages/react-components/.yalc/
 
 **/*/.next/**/*
+**/*/node_modules
