@@ -83,7 +83,7 @@ const BlogPostShort: React.FC<BlogPostProps> = (props) => {
           image={props.author.image}
         />
       </div>
-      <BlogSection>{props.content}</BlogSection>
+      {/* <BlogSection>{props.content}</BlogSection> */}
     </div>
   );
 };

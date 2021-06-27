@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "start": "rollup -c",
+    "start": "rollup -c -w",
     "dev": "webpack --mode=development --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
