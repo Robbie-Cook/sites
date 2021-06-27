@@ -48,8 +48,17 @@ const H3: React.FC<{
   children?: any;
   className?: string;
 }> = (props) => {
-  console.log(props);
-  return <h3 className={props.className}>{props.children}</h3>;
+  return (
+    <h3
+      css={css`
+        margin: 1.2rem 0;
+        ${headingBaseStyles};
+      `}
+      className={props.className}
+    >
+      {props.children}
+    </h3>
+  );
 };
 
 /**
