@@ -87,6 +87,8 @@ const Heading: React.FC<{ level: 1 | 2 | 3; children: any }> = ({
       return <H2>{children}</H2>;
     case 3:
       return <H3>{children}</H3>;
+    default:
+      return <H1>{children}</H1>;
   }
 };
 export { Heading, P };
