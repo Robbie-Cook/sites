@@ -7,7 +7,7 @@ import { jsx } from "@emotion/react";
 
 const Post: React.FC<{
   title: string;
-  date?: any;
+  date?: number;
   author?: any;
   content: any;
 }> = (props) => {
@@ -22,6 +22,7 @@ const Post: React.FC<{
         }
       `}
     >
+      {/* @ts-ignore */}
       <BlogPost
         {...props}
         content={

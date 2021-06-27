@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { Blog } from "@robbie-cook/react-components";
-import { BlogProps } from "@robbie-cook/react-components/dist/blog/Blog";
+import { Blog, BlogProps } from "@robbie-cook/react-components";
 import { getAllPosts, getPostBySlug } from "../lib/PostHelper";
 import React from "react";
 import { jsx, css } from "@emotion/react";
@@ -36,15 +35,20 @@ export function getStaticProps(context: any) {
     props: {
       posts: posts.reduce(
         (acc, curr) => [
+          // @ts-ignore
           ...acc,
           {
             ...curr,
             date: curr.date?.toString() ?? null,
-            content: `${removeMd(curr.content).split(' ').slice(0, 60).join(' ')?.replace(/&nbsp;/g, '')}...`,
+            content: `${removeMd(curr.content)
+              .split(" ")
+              .slice(0, 60)
+              .join(" ")
+              ?.replace(/&nbsp;/g, "")}...`,
             link: `/posts/${curr.slug}`,
             author: {
-              name: curr.author
-            }
+              name: curr.author,
+            },
           },
         ],
         []
