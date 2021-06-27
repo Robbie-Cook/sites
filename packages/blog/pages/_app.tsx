@@ -5,9 +5,9 @@ import Theme from "./theme-ui";
 import Helmet from "react-helmet";
 import { ThemeProvider } from "theme-ui";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={Theme as any}>
       <Helmet>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
