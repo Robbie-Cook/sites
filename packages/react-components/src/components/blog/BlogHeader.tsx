@@ -20,7 +20,7 @@ const BlogHeader: React.FC<BlogHeaderProps> = (props) => {
     <H3
       className={props.className}
       css={css`
-
+        font-weight: normal;
       `}
     >
       {props.children}

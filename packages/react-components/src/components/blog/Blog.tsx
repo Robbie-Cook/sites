@@ -3,9 +3,7 @@
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import BlogPostShort, { BlogPostProps } from "./BlogPostShort";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
 import Filters from "../filters/Filters";
-import { Filters as FiltersInterface } from "../../types";
 export interface BlogProps {
   posts: Array<Omit<BlogPostProps, "short">>;
   filters?: Array<string>;
