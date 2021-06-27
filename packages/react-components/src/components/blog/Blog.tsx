@@ -46,7 +46,7 @@ const Blog: React.FC<BlogProps> = (props) => {
           })) ?? []),
         ]}
       /> */}
-      <Heading level={2}>Blog</Heading>
+      <Heading level={1}>Blog</Heading>
       {props.posts
         .filter((post) => {
           // Filter posts by topic.
