@@ -17,7 +17,13 @@ interface BlogHeaderProps {
  */
 const BlogHeader: React.FC<BlogHeaderProps> = (props) => {
   return (
-    <Heading level={3} className={props.className} css={css``}>
+    <Heading
+      level={3}
+      className={props.className}
+      css={css`
+        margin: 0;
+      `}
+    >
       {props.children}
     </Heading>
   );

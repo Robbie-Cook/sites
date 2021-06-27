@@ -46,5 +46,8 @@
   "workspaces": [
     "packages/personal-website",
     "packages/react-components"
-  ]
+  ],
+  "dependencies": {
+    "@changesets/cli": "^2.16.0"
+  }
 }
