@@ -1,5 +1,10 @@
 {
   "name": "root",
+  "workspaces": [
+    "packages/personal-website-next",
+    "packages/personal-website-redo",
+    "packages/react-components"
+  ],
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/helper-create-regexp-features-plugin": "^7.7.4",
@@ -43,10 +48,6 @@
     "webpack-node-externals": "^2.5.2"
   },
   "private": true,
-  "workspaces": [
-    "packages/personal-website",
-    "packages/react-components"
-  ],
   "dependencies": {
     "@changesets/cli": "^2.16.0"
   }
