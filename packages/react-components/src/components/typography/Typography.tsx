@@ -5,6 +5,7 @@ import React, { useContext } from "react";
 
 const headingBaseStyles = css`
   font-family: "Vollkorn", serif;
+  font-weight: normal;
 `;
 /**
  *  A H1 component.
@@ -75,4 +76,17 @@ const P: React.FC<{
   );
 };
 
-export { H1, H2, H3, P };
+const Heading: React.FC<{ level: 1 | 2 | 3; children: any }> = ({
+  level,
+  children,
+}) => {
+  switch (level) {
+    case 1:
+      return <H1>{children}</H1>;
+    case 2:
+      return <H2>{children}</H2>;
+    case 3:
+      return <H3>{children}</H3>;
+  }
+};
+export { Heading, P };
