@@ -1,16 +1,13 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { H3, P } from "../typography/Typography";
-import { Theme } from "../../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
-import BlogSection from "./BlogSection";
-// import { useTheme } from "../theme/ReactComponentsContext";
 
 // @ts-ignore
 import Link from "./link.svg";
-import { Authors } from '../../types';
+import { Authors } from "../../types";
 
 export interface BlogPostProps {
   children?: any;
@@ -33,7 +30,8 @@ const BlogPostShort: React.FC<BlogPostProps> = (props) => {
         <a
           href={props.link}
           css={css`
-            color: #3899ef;
+            color: var(--text-bright);
+            text-decoration: none !important;
             display: flex;
             align-items: center;
 
@@ -60,8 +58,8 @@ const BlogPostShort: React.FC<BlogPostProps> = (props) => {
 
               content: "";
               display: flex;
-              width: 30px;
-              height: 30px;
+              width: 22px;
+              height: 22px;
 
               margin-left: 10px;
 
@@ -82,7 +80,6 @@ const BlogPostShort: React.FC<BlogPostProps> = (props) => {
           image={props.author.image}
         />
       </div>
-      <BlogSection>{props.content}</BlogSection>
     </div>
   );
 };

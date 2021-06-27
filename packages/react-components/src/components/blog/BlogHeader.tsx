@@ -1,7 +1,8 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { H3 } from "../typography/Typography";
+import { Heading } from "../typography/Typography";
 
 /**
  * Interface for BlogHeader props
@@ -16,14 +17,9 @@ interface BlogHeaderProps {
  */
 const BlogHeader: React.FC<BlogHeaderProps> = (props) => {
   return (
-    <H3
-      className={props.className}
-      css={css`
-
-      `}
-    >
+    <Heading level={3} className={props.className} css={css``}>
       {props.children}
-    </H3>
+    </Heading>
   );
 };
 

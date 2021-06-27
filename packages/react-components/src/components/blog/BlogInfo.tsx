@@ -1,7 +1,8 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { P } from "../typography/Typography";
+import { Text } from "../typography/Typography";
 import date from "date-and-time";
 
 /**
@@ -25,13 +26,13 @@ const BlogInfo: React.FC<BlogInfoProps> = (props) => {
         align-items: center;
       `}
     >
-      <P
+      <Text
         css={css`
           margin: 0;
         `}
       >
         {date.format(new Date(props.date), "D MMMM Y")}
-      </P>
+      </Text>
       <span
         css={css`
           display: flex;
@@ -68,13 +69,13 @@ const BlogInfo: React.FC<BlogInfoProps> = (props) => {
           </picture>
         </span>
       )}
-      <P
+      <Text
         css={css`
           margin: 0;
         `}
       >
         {props.author}
-      </P>
+      </Text>
     </span>
   );
 };

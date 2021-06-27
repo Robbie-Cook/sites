@@ -43,8 +43,8 @@
     "webpack-node-externals": "^2.5.2"
   },
   "private": true,
-  "dependencies": {
-    "@robbie-cook/personal-website": "file:packages/personal-website",
-    "@robbie-cook/react-components": "file:packages/react-components"
-  }
+  "workspaces": [
+    "packages/personal-website",
+    "packages/react-components"
+  ]
 }

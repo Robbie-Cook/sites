@@ -1,10 +1,10 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
 import BlogPostShort, { BlogPostProps } from "./BlogPostShort";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
 import Filters from "../filters/Filters";
-import { Filters as FiltersInterface } from "../../types";
+import { Heading } from "../typography/Typography";
 export interface BlogProps {
   posts: Array<Omit<BlogPostProps, "short">>;
   filters?: Array<string>;
@@ -31,7 +31,7 @@ const Blog: React.FC<BlogProps> = (props) => {
 
   return (
     <div>
-      <Filters
+      {/* <Filters
         filters={[
           { text: "All", onClick: () => setFilter(null), active: !filter },
           ...(props.filters?.map((f) => ({
@@ -45,7 +45,8 @@ const Blog: React.FC<BlogProps> = (props) => {
             },
           })) ?? []),
         ]}
-      />
+      /> */}
+      <Heading level={2}>Blog</Heading>
       {props.posts
         .filter((post) => {
           // Filter posts by topic.
@@ -60,7 +61,7 @@ const Blog: React.FC<BlogProps> = (props) => {
           <div
             key={post.date}
             css={css`
-              margin-bottom: 75px;
+              margin: 50px 0;
             `}
           >
             <BlogPostShort {...post} />
