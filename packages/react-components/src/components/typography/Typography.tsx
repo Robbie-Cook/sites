@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx, SerializedStyles } from "@emotion/core";
 import React, { useContext } from "react";

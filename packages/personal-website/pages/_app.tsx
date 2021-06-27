@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles.scss";
 import "../cara/styles/animations";
 import "../cara/styles/utils";
-import Theme from "theme-ui";
+import Theme from "./theme-ui";
 import Helmet from "react-helmet";
 import { ThemeProvider } from "theme-ui";
 
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap"
           rel="stylesheet"
         />
-      </Helmet>
+      </Helmet>Î
       <Component {...pageProps} />
     </ThemeProvider>
   );

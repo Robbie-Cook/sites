@@ -1,4 +1,10 @@
+const withPlugins = require('next-compose-plugins');
+
 const withMDX = require("@next/mdx")();
+
+const withTM = require("next-transpile-modules")([
+  "@robbie-cook/react-components",
+]);
 
 const webpack = (config, options) => {
   config.module.rules.push({
@@ -9,4 +15,6 @@ const webpack = (config, options) => {
   return config;
 };
 
-module.exports = withMDX({ webpack });
+// module.exports = withTM({ webpack: withMDX({ webpack }) });
+
+module.exports = withPlugins([withTM], [withMDX], webpack);
