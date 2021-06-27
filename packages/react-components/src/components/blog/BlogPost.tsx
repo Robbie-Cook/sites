@@ -2,13 +2,11 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import React from "react";
-import { H3, P } from "../typography/Typography";
-import { Theme } from "../../theme/Theme";
 import BlogInfo from "./BlogInfo";
 import BlogHeader from "./BlogHeader";
 import BlogSection from "./BlogSection";
-import Context from "../../theme/ReactComponentsContext";
 import { Authors } from "../../types";
+import { Heading } from "../typography/Typography";
 
 // import Dot from "./Dot.svg";
 
@@ -30,16 +28,17 @@ export interface BlogPostProps {
  */
 const BlogPost: React.FC<BlogPostProps> = (props) => {
   return (
-    <div className={props.className} css={css``}>
+    <div {...props} css={css``}>
       <div>
-        <BlogHeader
+        <Heading
+          level={1}
           css={css`
             text-align: center;
             margin-top: 0;
           `}
         >
           {props.title}
-        </BlogHeader>
+        </Heading>
         <div
           css={css`
             display: flex;
@@ -51,7 +50,7 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
             date={props.date || 0}
             author={props.author?.name ?? ""}
             image={props.author?.image ?? ""}
-          /> 
+          />
         </div>
       </div>
       <BlogSection>{props.content}</BlogSection>

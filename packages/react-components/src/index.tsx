@@ -4,7 +4,7 @@ import BlogPostShort from "./components/blog/BlogPostShort";
 import Blog from "./components/blog/Blog";
 import { Theme } from "./theme/Theme";
 import ReactComponentsContext from "./theme/ReactComponentsContext";
-import { Heading, P } from "./components/typography/Typography";
+import { Heading, Text } from "./components/typography/Typography";
 import BlogPost from "./components/blog/BlogPost";
 import SEO from "./seo/SEO";
 import Button from "./components/buttons/Button";
@@ -148,7 +148,7 @@ export {
   Theme,
   ReactComponentsContext,
   Heading,
-  P,
+  Text as P,
   SEO,
   Nav,
 };
