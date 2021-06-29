@@ -13,9 +13,9 @@ h1 {
   margin: 1.2rem 0;
 }
 
-p,
-span {
+p {
+  margin: 0;
   font-family: var(--font-family);
   font-size: 0.96rem;
-  // line-height: 2.1rem;
+  line-height: 2.1rem;
 }
