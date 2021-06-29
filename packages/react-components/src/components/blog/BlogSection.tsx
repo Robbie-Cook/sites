@@ -25,6 +25,12 @@ const BlogSection: React.FC<BlogSectionProps> = (props) => {
             margin-top: 20px;
             line-height: 1.8rem;
 
+            & img {
+              margin: 50px 0;
+              object-fit: cover;
+              max-width: 100%;
+              width: 400px;
+            }
             /* & * {
               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                 "Helvetica Neue", Arial, "Noto Sans", sans-serif,
