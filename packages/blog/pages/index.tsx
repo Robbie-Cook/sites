@@ -22,7 +22,6 @@ const BlogPage: React.FC<any> = (props) => {
   return (
     <div
       css={css`
-        padding: 60px 20%;
       `}
     >
       <NextSeo
