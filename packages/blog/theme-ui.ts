@@ -1,5 +1,6 @@
 import { tailwind } from "@theme-ui/presets";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   ...tailwind,
   initialColorMode: `dark`,
@@ -34,6 +35,9 @@ export default {
         icon_brightest: tailwind.colors.gray[2],
         icon_darker: tailwind.colors.gray[4],
         icon_darkest: tailwind.colors.gray[6],
+      },
+      dark: {
+        background: '#1b1b1b',
       },
     },
   },

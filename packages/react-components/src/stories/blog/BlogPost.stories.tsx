@@ -6,7 +6,6 @@ import BlogPost, { BlogPostProps } from "../../components/blog/BlogPost";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
-import { setTheme } from "bigiron.css";
 
 export default {
   title: "Blog/BlogPost",
@@ -22,7 +21,6 @@ const Template: Story<BlogPostProps & Theme> = (args) => (
       type: args.type,
     }}
   >
-    {setTheme(args.type)}
     <BlogPost {...args} />
   </ReactComponentsContext.Provider>
 );
@@ -31,7 +29,7 @@ export const Dark = Template.bind({});
 Dark.args = {
   title: "My blog post",
   author: "Robbie Cook",
-  content: PlaceholderBlogText,
+  content: <p>{PlaceholderBlogText}</p>,
   date: Date.now(),
 
   type: "dark",
@@ -41,7 +39,7 @@ export const Light = Template.bind({});
 Light.args = {
   title: "My blog post",
   author: "Robbie Cook",
-  content: PlaceholderBlogText,
+  content: <p>{PlaceholderBlogText}</p>,
   date: Date.now(),
 
   type: "light",

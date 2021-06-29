@@ -17,7 +17,8 @@ export interface BlogPostProps {
   children?: any;
   title: string;
   date?: number;
-  author?: Authors;
+  author?: string;
+  authorImage?: string;
   content: string | JSX.Element;
   className?: string;
   tags?: Array<string>;
@@ -43,13 +44,13 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
           css={css`
             display: flex;
             justify-content: center;
-            margin-bottom: 70px;
+            margin-bottom: 35px;
           `}
         >
           <BlogInfo
             date={props.date || 0}
-            author={props.author?.name ?? ""}
-            image={props.author?.image ?? ""}
+            author={props.author ?? ""}
+            image={props.authorImage}
           />
         </div>
       </div>

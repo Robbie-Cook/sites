@@ -17,8 +17,8 @@ const Post: React.FC<{
         padding: 50px 100px;
 
         @media only screen and (max-width: 700px) {
-          padding-left: 50px;
-          padding-right: 50px;
+          padding-left: 25px;
+          padding-right: 25px;
         }
       `}
     >

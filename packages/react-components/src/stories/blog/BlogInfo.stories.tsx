@@ -22,7 +22,6 @@ const Template: Story<BlogInfoProps & Theme> = (args) => (
       type: args.type,
     }}
   >
-    {setTheme(args.type)}
     <BlogInfo {...args} />
   </ReactComponentsContext.Provider>
 );
