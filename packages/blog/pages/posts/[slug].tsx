@@ -3,13 +3,15 @@ import { BlogPost } from "@robbie-cook/react-components";
 import { getAllPosts, getPostBySlug } from "../../lib/PostHelper";
 import marked from "marked";
 import css from "@emotion/css";
-import { jsx } from "@emotion/react";
+import React from "react";
+import { NextSeo } from "next-seo";
 
 const Post: React.FC<{
   title: string;
   date?: number;
   author?: any;
   content: any;
+  description: string;
 }> = (props) => {
   return (
     <div
@@ -22,6 +24,10 @@ const Post: React.FC<{
         }
       `}
     >
+      <NextSeo
+        title={props.title}
+        description={props.description ?? `${props.title} - ${props.author}`}
+      />
       {/* @ts-ignore */}
       <BlogPost
         {...props}
