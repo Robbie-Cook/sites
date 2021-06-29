@@ -29,7 +29,7 @@ export const Dark = Template.bind({});
 Dark.args = {
   title: "My blog post",
   author: "Robbie Cook",
-  content: PlaceholderBlogText,
+  content: <p>{PlaceholderBlogText}</p>,
   date: Date.now(),
 
   type: "dark",
@@ -39,7 +39,7 @@ export const Light = Template.bind({});
 Light.args = {
   title: "My blog post",
   author: "Robbie Cook",
-  content: PlaceholderBlogText,
+  content: <p>{PlaceholderBlogText}</p>,
   date: Date.now(),
 
   type: "light",
