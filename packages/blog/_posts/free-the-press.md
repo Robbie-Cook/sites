@@ -26,6 +26,6 @@ This is the point where I'm supposed to remind you that the real power is in us,
 
 Chin up, and keep fighting for your neighbours;
 
-[![leal](/leal.jpg)](leal.jpg))
+[![leal](/leal.jpg)](leal.jpg)
 
 - Robbie

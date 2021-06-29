@@ -54,7 +54,9 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
           />
         </div>
       </div>
-      <BlogSection>{props.content}</BlogSection>
+      <BlogSection>
+        <div>{props.content}</div>
+      </BlogSection>
     </div>
   );
 };
