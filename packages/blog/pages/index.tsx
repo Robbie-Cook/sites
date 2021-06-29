@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { Blog, BlogProps } from "@robbie-cook/react-components";
+import { Blog } from "@robbie-cook/react-components";
 import { getAllPosts, getPostBySlug } from "../lib/PostHelper";
 import React from "react";
 import { jsx, css } from "@emotion/react";
@@ -10,13 +10,13 @@ import removeMd from "remove-markdown";
  */
 export interface BlogPageProps {
   children?: any;
-  posts?: BlogProps;
+  posts?: any;
 }
 
 /**
  *  A Blog component.
  */
-const BlogPage: React.FC<BlogProps> = (props) => {
+const BlogPage: React.FC<any> = (props) => {
   console.log(props.posts);
   return (
     <div
