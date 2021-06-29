@@ -1,8 +1,16 @@
 ---
-date: 2020-06-29 00:00:00
-title: 
+date: 2021-06-29 00:00:00
+title: Test
 author: Robbie Cook
 publish: true
-tags: 
-	- "Development"
+tags:
 ---
+## Free the press
+
+The press 
+
+### Assange and Snowden
+
+### youtubers
+
+### China
