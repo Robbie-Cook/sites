@@ -4,6 +4,7 @@ import { getAllPosts, getPostBySlug } from "../lib/PostHelper";
 import React from "react";
 import { jsx, css } from "@emotion/react";
 import removeMd from "remove-markdown";
+import { NextSeo } from 'next-seo';
 
 /**
  * Interface for Blog props
@@ -24,6 +25,10 @@ const BlogPage: React.FC<any> = (props) => {
         padding: 60px 20%;
       `}
     >
+      <NextSeo
+        title="Robbie's Blog"
+        description="Robbie's blog on web development, React, and more!"
+      />
       <Blog posts={props.posts} />
     </div>
   );
