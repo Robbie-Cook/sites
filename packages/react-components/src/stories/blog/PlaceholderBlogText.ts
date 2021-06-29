@@ -1,28 +1,5 @@
-export default `Urganda la desconocida
-  Si de llegarte a los bue-,
-  libro, fueres con letu-,
-  no te dirá el boquirru-
-  que no pones bien los de-.
-  Mas si el pan no se te cue-
-  por ir a manos de idio-,
-  verás de manos a bo-,
-  aun no dar una en el cla-,
-  si bien se comen las ma-
-  por mostrar que son curio-.
-  Y, pues la expiriencia ense-
-  que el que a buen árbol se arri-
-  buena sombra le cobi-,
-  en Béjar tu buena estre-
-  un árbol real te ofre-
-  que da príncipes por fru-,
-  en el cual floreció un du-
-  que es nuevo Alejandro Ma-:
-  llega a su sombra, que a osa-
-  favorece la fortu-.
-  De un noble hidalgo manche-
-  contarás las aventu-,
-  a quien ociosas letu-,
-  trastornaron la cabe-:
+export default `Welcome to my blog! It's created in Gatsby, and it uses Markdown with frontmatter to render the content. 
+The actual renderer is Markdown Remark, and it integrates really well into Gatsby.
   damas, armas, caballe-,
   le provocaron de mo-,
   que, cual Orlando furio-,
@@ -120,4 +97,4 @@ alma y cuerpo adornara, y del famoso
 caballero que hiciste venturoso
 mirara alguna desigual pelea!
 ¡Oh, quién tan castamente se escapara
-del señor Amadís`
+del señor Amadís`;

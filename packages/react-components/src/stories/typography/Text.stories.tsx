@@ -5,6 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Text } from "../../components/typography/Typography";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
 import { Theme } from "../../theme/Theme";
+import { setTheme } from "bigiron.css";
 
 export default {
   title: "Typography/Text",
@@ -20,6 +21,7 @@ const Template: Story<Theme> = (args) => (
       type: args.type,
     }}
   >
+    {setTheme(args.type)}
     <Text {...args} />
   </ReactComponentsContext.Provider>
 );

@@ -4,7 +4,8 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Heading } from "../../components/typography/Typography";
 import ReactComponentsContext from "../../theme/ReactComponentsContext";
-import { Theme } from "../../theme/Theme";
+import { setTheme } from "bigiron.css";
+
 export default {
   title: "Typography/Heading",
   component: Heading,
@@ -20,6 +21,7 @@ const All = (args) => {
         type: args.type,
       }}
     >
+      {setTheme(args.type)}
       <>
         <Heading level={1}>Level 1 Heading!</Heading>
         <Heading level={2}>Level 2 Heading!</Heading>

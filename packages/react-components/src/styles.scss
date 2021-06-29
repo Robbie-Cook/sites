@@ -1,3 +1,7 @@
+:root {
+  --font-family: "Playfair Display", serif;
+}
+
 h1,
 h2,
 h3 {
@@ -7,4 +11,11 @@ h3 {
 
 h1 {
   margin: 1.2rem 0;
+}
+
+p,
+span {
+  font-family: var(--font-family);
+  font-size: 0.96rem;
+  // line-height: 2.1rem;
 }
