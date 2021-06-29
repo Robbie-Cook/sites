@@ -36,14 +36,10 @@ const BlogSection: React.FC<BlogSectionProps> = (props) => {
               margin-bottom: 45px;
               margin-top: 45px;
             }
-            /* & * {
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-                "Noto Color Emoji";
-              font-size: 1.18rem;
-              line-height: 2.4rem;
-            } */
+
+            & p {
+              margin-bottom: 30px;
+            }
 
             ${theme.type === "dark"
               ? css`
