@@ -24,7 +24,7 @@ const BlogPage: React.FC<any> = (props) => {
         @media screen and (min-width: 700px) {
           padding: 60px 20%;
         }
-        padding: 20px 0px;
+        padding: 20px 20px;
       `}
     >
       <NextSeo
