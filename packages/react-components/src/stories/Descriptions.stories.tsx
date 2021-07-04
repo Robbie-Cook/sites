@@ -3,7 +3,7 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Descriptions } from "antd";
-import ReactComponentsContext from "../theme/ReactComponentsContext";
+import ReactComponentsContext, { ReactComponentsTheme } from "../theme/ReactComponentsContext";
 import { Theme } from "../theme/Theme";
 import { setTheme } from "bigiron.css";
 import { DescriptionsProps } from "antd/lib/descriptions";
@@ -17,14 +17,9 @@ export default {
 } as Meta;
 
 const Template: Story<DescriptionsProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <Descriptions {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 const props: DescriptionsProps = {

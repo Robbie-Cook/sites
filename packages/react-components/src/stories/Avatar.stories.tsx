@@ -3,10 +3,9 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Avatar } from "antd";
-import ReactComponentsContext from "../theme/ReactComponentsContext";
 import { Theme } from "../theme/Theme";
-import { setTheme } from "bigiron.css";
-import { AvatarProps } from 'antd/lib/avatar';
+import { AvatarProps } from "antd/lib/avatar";
+import { ReactComponentsTheme } from '../theme';
 
 export default {
   title: "Avatar",
@@ -17,20 +16,15 @@ export default {
 } as Meta;
 
 const Template: Story<AvatarProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <Avatar {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 const props: AvatarProps = {
-	children: "My Awesomer Avatar!",
-	src: 'https://picsum.photos/200/300',
-	size: 'large'
+  children: "My Awesomer Avatar!",
+  src: "https://picsum.photos/200/300",
+  size: "large",
 };
 
 export const Dark = Template.bind({});

@@ -5,7 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import BlogPost, { BlogPostProps } from "../../components/blog/BlogPost";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
+import { ReactComponentsTheme } from '../../theme';
 
 export default {
   title: "Blog/BlogPost",
@@ -16,13 +16,9 @@ export default {
 } as Meta;
 
 const Template: Story<BlogPostProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
+  <ReactComponentsTheme theme={args.type}>
     <BlogPost {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 export const Dark = Template.bind({});

@@ -2,14 +2,16 @@ import React from "react";
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import BlogSection, { BlogSectionProps } from "../../components/blog/BlogSection";
+import BlogSection, {
+  BlogSectionProps,
+} from "../../components/blog/BlogSection";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
 
 // @ts-ignore
 import TestPost from "./TestPost.md";
 import { setTheme } from "bigiron.css";
+import { ReactComponentsTheme } from '../../theme';
 
 export default {
   title: "Blog/Blog Section",
@@ -20,14 +22,9 @@ export default {
 } as Meta;
 
 const Template: Story<BlogSectionProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <BlogSection>{args.children}</BlogSection>
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 export const Dark = Template.bind({});

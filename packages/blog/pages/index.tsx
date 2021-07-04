@@ -19,25 +19,35 @@ export interface BlogPageProps {
  */
 const BlogPage: React.FC<any> = (props) => {
   return (
-    <div
-      css={css`
-        @media screen and (min-width: 700px) {
-          padding: 60px 20%;
-        }
-        padding: 20px 20px;
-      `}
-    >
+    <div>
       <NextSeo
         title="Robbie's Blog"
         description="Robbie's blog on web development, eact, and more!"
       />
-      <Blog posts={props.posts} />
+      <Blog {...props} />
     </div>
   );
 };
 
 export function getStaticProps(context: any) {
-  const posts = getAllPosts(["slug", "content", "author", "date", "title"]);
+  const posts = getAllPosts([
+    "slug",
+    "content",
+    "author",
+    "date",
+    "title",
+    "tags",
+  ]);
+
+  const preSet = posts.reduce((acc, curr) => {
+    for (const tag of curr?.tags) {
+      acc.push(tag);
+    }
+    return acc;
+  }, []);
+  // @ts-ignore
+  const filters = [...new Set<string>(preSet)] ?? null;
+
   return {
     props: {
       posts: posts.reduce(
@@ -60,6 +70,7 @@ export function getStaticProps(context: any) {
         ],
         []
       ),
+      filters,
     },
   };
 }

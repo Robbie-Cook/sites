@@ -4,9 +4,9 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 
 import BlogInfo, { BlogInfoProps } from "../../components/blog/BlogInfo";
 import { Theme } from "../../theme/Theme";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
 import { setTheme } from "bigiron.css";
 import md5 from "md5";
+import { ReactComponentsTheme } from '../../theme';
 
 export default {
   title: "Blog/BlogInfo",
@@ -17,13 +17,9 @@ export default {
 } as Meta;
 
 const Template: Story<BlogInfoProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
+  <ReactComponentsTheme theme={args.type}>
     <BlogInfo {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 const props: BlogInfoProps = {
