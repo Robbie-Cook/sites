@@ -53,7 +53,7 @@
     "@types/md5": "^2.2.1",
     "@types/react-helmet": "^6.1.0",
     "antd": "^4.16.5",
-    "bigiron.css": "^2.1.0",
+    "bigiron.css": "^2.1.2",
     "date-and-time": "^0.14.1",
     "facepaint": "^1.2.1",
     "isomorphic-style-loader": "^5.1.0",
