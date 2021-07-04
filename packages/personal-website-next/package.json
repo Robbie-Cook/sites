@@ -1,43 +1,36 @@
 {
-  "name": "personal-website-next",
-  "version": "0.1.3",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll"
-  },
-  "dependencies": {
-    "@babel/preset-react": "^7.12.13",
-    "@emotion/react": "^11.1.5",
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^10.0.7",
-    "@robbie-cook/react-components": "^5.2.1",
-    "@svgr/webpack": "^5.5.0",
-    "@theme-ui/presets": "^0.3.5",
-    "@types/theme-ui": "^0.3.7",
-    "babel-loader": "^8.2.2",
-    "bigiron.css": "^2.0.4",
-    "next": "10.0.7",
-    "next-seo": "^4.19.0",
-    "next-transpile-modules": "^6.3.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-spring": "^8.0.27",
-    "svg-inline-loader": "^0.8.2",
-    "theme-ui": "^0.3.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.1",
-    "@storybook/addon-actions": "^6.1.19",
-    "@storybook/addon-essentials": "^6.1.19",
-    "@storybook/addon-links": "^6.1.19",
-    "@storybook/react": "^6.1.19",
-    "file-loader": "^6.2.0",
-    "react-is": "^17.0.1",
-    "react-svg-loader": "^3.0.3",
-    "typescript": "^4.1.5"
-  }
+	"name": "personal-website-next",
+	"version": "0.1.3",
+	"private": true,
+	"dependencies": {
+		"@babel/preset-react": "^7.12.13",
+		"@emotion/react": "^11.1.5",
+		"@mdx-js/loader": "^1.6.22",
+		"@next/mdx": "^10.0.7",
+		"@robbie-cook/react-components": "^5.2.1",
+		"@svgr/webpack": "^5.5.0",
+		"@theme-ui/presets": "^0.3.5",
+		"@types/theme-ui": "^0.3.7",
+		"babel-loader": "^8.2.2",
+		"bigiron.css": "^2.0.4",
+		"next": "10.0.7",
+		"next-seo": "^4.19.0",
+		"next-transpile-modules": "^6.3.0",
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0",
+		"react-spring": "^8.0.27",
+		"svg-inline-loader": "^0.8.2",
+		"theme-ui": "^0.3.5"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.13.1",
+		"@storybook/addon-actions": "^6.1.19",
+		"@storybook/addon-essentials": "^6.1.19",
+		"@storybook/addon-links": "^6.1.19",
+		"@storybook/react": "^6.1.19",
+		"file-loader": "^6.2.0",
+		"react-is": "^17.0.1",
+		"react-svg-loader": "^3.0.3",
+		"typescript": "^4.1.5"
+	}
 }
