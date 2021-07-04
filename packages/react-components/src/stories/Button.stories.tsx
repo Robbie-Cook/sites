@@ -3,7 +3,7 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import Button, { ButtonProps } from "../components/buttons/Button";
-import ReactComponentsContext from "../theme/ReactComponentsContext";
+import ReactComponentsContext, { ReactComponentsTheme } from "../theme/ReactComponentsContext";
 import { Theme } from "../theme/Theme";
 import { setTheme } from "bigiron.css";
 
@@ -16,14 +16,9 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <Button {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 const props: ButtonProps = {

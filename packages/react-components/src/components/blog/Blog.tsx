@@ -31,7 +31,8 @@ const Blog: React.FC<BlogProps> = (props) => {
 
   return (
     <div>
-      {/* <Filters
+      <Heading level={1}>Blog</Heading>
+      <Filters
         filters={[
           { text: "All", onClick: () => setFilter(null), active: !filter },
           ...(props.filters?.map((f) => ({
@@ -45,8 +46,7 @@ const Blog: React.FC<BlogProps> = (props) => {
             },
           })) ?? []),
         ]}
-      /> */}
-      <Heading level={1}>Blog</Heading>
+      />
       {props.posts
         .filter((post) => {
           // Filter posts by topic.

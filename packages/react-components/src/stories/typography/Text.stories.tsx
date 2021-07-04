@@ -3,9 +3,8 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Text } from "../../components/typography/Typography";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
+import { ReactComponentsTheme } from "../../theme/ReactComponentsContext";
 import { Theme } from "../../theme/Theme";
-import { setTheme } from "bigiron.css";
 
 export default {
   title: "Typography/Text",
@@ -16,14 +15,9 @@ export default {
 } as Meta;
 
 const Template: Story<Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <Text {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 const children = `My Awesomer Text! \n Sint aliqua duis pariatur velit ipsum exercitation culpa ea excepteur laborum commodo quis. Voluptate occaecat ullamco ut minim cillum laboris dolor sit aute aliquip fugiat veniam dolore. Magna cillum sit proident et irure exercitation tempor aute reprehenderit magna ea pariatur ipsum. Magna excepteur ea exercitation voluptate aliquip aliquip anim cillum.

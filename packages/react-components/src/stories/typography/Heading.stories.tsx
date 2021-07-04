@@ -3,7 +3,9 @@ import React, { AllHTMLAttributes } from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Heading } from "../../components/typography/Typography";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
+import ReactComponentsContext, {
+  ReactComponentsTheme,
+} from "../../theme/ReactComponentsContext";
 import { setTheme } from "bigiron.css";
 
 export default {
@@ -16,18 +18,13 @@ export default {
 
 const All = (args) => {
   return (
-    <ReactComponentsContext.Provider
-      value={{
-        type: args.type,
-      }}
-    >
-      {setTheme(args.type)}
+    <ReactComponentsTheme type={args.type}>
       <>
         <Heading level={1}>Level 1 Heading!</Heading>
         <Heading level={2}>Level 2 Heading!</Heading>
         <Heading level={3}>Level 3 Heading!</Heading>
       </>
-    </ReactComponentsContext.Provider>
+    </ReactComponentsTheme>
   );
 };
 

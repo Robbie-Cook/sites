@@ -5,8 +5,8 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import BlogHeader, { BlogPostProps } from "../../components/blog/BlogHeader";
 import { Theme } from "../../theme/Theme";
 import PlaceholderBlogText from "./PlaceholderBlogText";
-import ReactComponentsContext from "../../theme/ReactComponentsContext";
 import { setTheme } from "bigiron.css";
+import { ReactComponentsTheme } from "../../theme";
 
 export default {
   title: "Blog/Blog Header",
@@ -17,14 +17,9 @@ export default {
 } as Meta;
 
 const Template: Story<BlogPostProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <BlogHeader {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 export const Dark = Template.bind({});

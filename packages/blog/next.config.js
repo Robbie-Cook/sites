@@ -1,4 +1,6 @@
-const withPlugins = require('next-compose-plugins');
+const withPlugins = require("next-compose-plugins");
+
+const CircularDependencyPlugin = require("circular-dependency-plugin");
 
 const withMDX = require("@next/mdx")();
 
@@ -11,6 +13,15 @@ const webpack = (config, options) => {
     test: /\.svg$/,
     use: ["@svgr/webpack"],
   });
+
+  config.plugins.push(
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true,
+      allowAsyncCycles: false,
+      cwd: process.cwd(),
+    }),
+  )
 
   return config;
 };

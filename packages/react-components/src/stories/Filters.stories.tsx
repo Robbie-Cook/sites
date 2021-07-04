@@ -3,9 +3,8 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import Filters, { FiltersProps } from "../components/filters/Filters";
-import ReactComponentsContext from "../theme/ReactComponentsContext";
 import { Theme } from "../theme/Theme";
-import { setTheme } from "bigiron.css";
+import { ReactComponentsTheme } from "../theme";
 
 export default {
   title: "Filters",
@@ -16,14 +15,9 @@ export default {
 } as Meta;
 
 const Template: Story<FiltersProps & Theme> = (args) => (
-  <ReactComponentsContext.Provider
-    value={{
-      type: args.type,
-    }}
-  >
-    {setTheme(args.type)}
+  <ReactComponentsTheme theme={args.type}>
     <Filters {...args} />
-  </ReactComponentsContext.Provider>
+  </ReactComponentsTheme>
 );
 
 export const Dark = Template.bind({});

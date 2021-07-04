@@ -4,23 +4,27 @@ import { css, jsx } from "@emotion/core";
 import React from "react";
 
 /**
- * Interface for Pill props
+ * Interface for Tag props
  */
-export interface PillProps {
+export interface TagProps {
   children?: any;
   onClick?: () => void;
   active?: boolean;
 }
 
 /**
- * A Pill component.
+ * A Tag component.
  */
-const Pill: React.FC<PillProps> = (props) => {
+const Tag: React.FC<TagProps> = (props) => {
   return (
     <button
       onClick={props.onClick}
       css={css`
-        border-radius: 24px;
+        height: 34px;
+        font-size: 13px;
+        line-height: 13px;
+        padding: 0 16px;
+        /* border-radius: 0; */
 
         ${props.active ? `box-shadow: 0 0 0 2px var(--focus);` : ``}
       `}
@@ -30,4 +34,4 @@ const Pill: React.FC<PillProps> = (props) => {
   );
 };
 
-export default Pill;
+export default Tag;

@@ -11,7 +11,7 @@ export default class Template {
       >
         {setTheme(args.type)}
         {component()}
-      </ReactComponentsContext.Provider>
+     <ReactComponentsTheme
     );
   }
 }

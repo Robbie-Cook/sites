@@ -1,6 +1,6 @@
 {
   "name": "@robbie-cook/react-components",
-  "version": "6.0.4",
+  "version": "6.0.6",
   "description": "A set of react components to use in your projects",
   "main": "dist/index.js",
   "scripts": {
@@ -53,7 +53,7 @@
     "@types/md5": "^2.2.1",
     "@types/react-helmet": "^6.1.0",
     "antd": "^4.16.5",
-    "bigiron.css": "^2.0.6",
+    "bigiron.css": "^2.1.3",
     "date-and-time": "^0.14.1",
     "facepaint": "^1.2.1",
     "isomorphic-style-loader": "^5.1.0",
@@ -67,5 +67,5 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "gitHead": "2afc78fe725f9a67427d6d3aaa99007574bce24c"
+  "gitHead": "5670dc139dbff75163001a2b25b19d29395987f0"
 }
