@@ -3,7 +3,8 @@
   "workspaces": [
     "packages/personal-website-next",
     "packages/personal-website-redo",
-    "packages/react-components"
+    "packages/react-components",
+    "packages/editor"
   ],
   "devDependencies": {
     "@babel/core": "^7.11.4",
