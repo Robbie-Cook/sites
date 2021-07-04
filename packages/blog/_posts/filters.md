@@ -3,7 +3,7 @@ date: 2020-12-07 00:00:00
 title: Blog Update - Filters
 author: Robbie Cook
 publish: false
-tags: 
+tags:
   - "Development"
   - "Blog Updates"
 ---

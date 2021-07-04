@@ -4,7 +4,8 @@ title: Construction of A Blog
 author: Robbie Cook
 publish: true
 tags: 
-	- "Development"
+  - "Development" 
+  - "Blog Updates"
 ---
 
 ## Introduction
