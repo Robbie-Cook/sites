@@ -1,5 +1,5 @@
 ---
-date: 2021-07-05 00:00:00
+date: 2021-07-04 00:00:00
 title: Next JS
 author: Robbie Cook
 publish: true
