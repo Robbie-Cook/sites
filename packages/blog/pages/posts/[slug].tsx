@@ -44,6 +44,7 @@ export async function getStaticProps({ params }) {
     "author",
     "date",
     "title",
+    "description"
   ]);
   const content = marked(post.content || "");
 
