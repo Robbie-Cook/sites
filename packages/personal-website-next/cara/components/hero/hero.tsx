@@ -159,15 +159,15 @@ const Hero = ({ offset }: { offset: number }) => (
           css={css`
             @media screen and (min-width: 400px) {
               max-width: 40vw;
+              margin-right: 50px;
             }
+
+            display: flex;
+            height: 100%;
+            flex: 0 0 400px;
+            width: 80%;
           `}
-          style={{
-            display: "flex",
-            height: "100%",
-            marginRight: "50px",
-            flex: "0 0 400px",
-            minWidth: "300px",
-          }}
+          style={{}}
         >
           <Avatar />
         </div>
