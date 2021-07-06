@@ -1,11 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {
-  Styled,
-  Flex,
-  useColorMode,
-  jsx,
-} from "theme-ui";
+import { css } from "@emotion/react";
+import { Styled, Flex, useColorMode, jsx } from "theme-ui";
 
 const Footer = () => {
   const [colorMode, setColorMode] = useColorMode();
@@ -16,7 +12,12 @@ const Footer = () => {
   };
 
   return (
-    <div>
+    <div
+      css={css`
+        position: absolute;
+        bottom: 0;
+      `}
+    >
       {/* <button
         sx={{
           variant: `buttons.toggle`,
